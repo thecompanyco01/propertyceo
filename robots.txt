@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://propertyceo.vercel.app/sitemap.xml

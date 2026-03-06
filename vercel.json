@@ -1,12 +1,15 @@
 {
-  "version": 2,
-  "name": "propertyceo",
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "api/waitlist.js", "use": "@vercel/node" }
+  "rewrites": [
+    { "source": "/blog/:slug", "destination": "/blog/:slug.html" },
+    { "source": "/api/waitlist", "destination": "/api/waitlist.js" }
   ],
-  "routes": [
-    { "src": "/api/waitlist", "dest": "/api/waitlist.js" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
   ]
 }

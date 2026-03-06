@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyCEO Blog — Growth Guides for Property Managers</title>
+    <meta name="description" content="Free guides and frameworks for property managers who want to scale their business. Marketing, pricing, operations, and growth strategies that actually work.">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog">
+    <meta property="og:title" content="PropertyCEO Blog — Growth Guides for Property Managers">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .blog-header { max-width: 1000px; margin: 0 auto; padding: 60px 40px 40px; }
+        .blog-header h1 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 12px; }
+        .blog-header p { color: var(--text-muted); font-size: 18px; }
+        .blog-grid { max-width: 1000px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .blog-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; transition: transform 0.2s, border-color 0.2s; }
+        .blog-card:hover { transform: translateY(-4px); border-color: rgba(233,69,96,0.3); }
+        .blog-card a { text-decoration: none; color: inherit; }
+        .card-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .blog-card h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; letter-spacing: -0.5px; }
+        .blog-card p { color: var(--text-muted); font-size: 15px; line-height: 1.5; margin-bottom: 12px; }
+        .card-meta { font-size: 13px; color: var(--text-muted); opacity: 0.7; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav, .blog-header, .blog-grid { padding-left: 20px; padding-right: 20px; } .blog-header h1 { font-size: 32px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/" class="back-link">← Home</a>
+    </nav>
+
+    <div class="blog-header">
+        <h1>The PropertyCEO Blog</h1>
+        <p>Free guides and frameworks for property managers who want to stop managing and start scaling.</p>
+    </div>
+
+    <div class="blog-grid">
+        <div class="blog-card">
+            <a href="/blog/how-to-grow-property-management-business">
+                <div class="card-badge">Growth Strategy</div>
+                <h2>How to Grow Your Property Management Business in 2026</h2>
+                <p>The real playbook for going from 50 to 500+ doors. Numbers, systems, hiring, and marketing — no fluff.</p>
+                <div class="card-meta">12 min read · Mar 6, 2026</div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="/blog/property-management-kpis">
+                <div class="card-badge">Operations</div>
+                <h2>15 Property Management KPIs That Actually Matter</h2>
+                <p>Stop tracking vanity metrics. These 15 KPIs separate growing PM companies from ones that plateau.</p>
+                <div class="card-meta">10 min read · Mar 6, 2026</div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="/blog/property-management-pricing-strategy">
+                <div class="card-badge">Revenue</div>
+                <h2>Property Management Pricing Strategy: How to Charge More</h2>
+                <p>Most PMs undercharge by 20-30%. Here's the framework that lets you raise fees and keep clients.</p>
+                <div class="card-meta">11 min read · Mar 6, 2026</div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="/blog/property-management-marketing-ideas">
+                <div class="card-badge">Marketing</div>
+                <h2>12 Marketing Ideas That Actually Get New Owners</h2>
+                <p>Forget generic advice. 12 strategies ranked by ROI — from Google Ads to agent partnerships.</p>
+                <div class="card-meta">14 min read · Mar 6, 2026</div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="/blog/property-management-automation">
+                <div class="card-badge">Systems & Ops</div>
+                <h2>20 Tasks You Should Stop Doing Manually</h2>
+                <p>You're spending 15+ hours/week on automatable tasks. Here's what to automate and what tools to use.</p>
+                <div class="card-meta">13 min read · Mar 6, 2026</div>
+            </a>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p></footer>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management Automation: 20 Tasks You Should Stop Doing Manually</title>
+    <meta name="description" content="You're spending 15+ hours a week on tasks that should be automated. Here are 20 property management workflows to automate today, with tools and setup guides.">
+    <meta name="keywords" content="property management automation, property management workflow, property management systems, property management SOPs">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/property-management-automation">
+    <meta property="og:title" content="Property Management Automation: 20 Tasks You Should Stop Doing Manually">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Property Management Automation: 20 Tasks You Should Stop Doing Manually","author":{"@type":"Organization","name":"PropertyCEO"},"datePublished":"2026-03-06"}
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 18px; font-weight: 700; margin: 28px 0 8px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .auto-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 20px 24px; margin: 16px 0; display: flex; gap: 16px; align-items: flex-start; }
+        .auto-num { background: rgba(233,69,96,0.15); color: var(--accent); font-weight: 800; font-size: 14px; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+        .auto-info h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+        .auto-info p { margin: 0; font-size: 15px; }
+        .auto-info .tools { font-size: 13px; color: var(--accent); margin-top: 6px; }
+        .time-save { display: inline-block; background: rgba(0,210,106,0.12); color: #00d26a; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .email-form { display: flex; gap: 12px; max-width: 420px; margin: 16px auto 0; }
+        .email-form input { flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.1); border-radius: 10px; background: rgba(255,255,255,0.05); color: white; font-size: 15px; font-family: inherit; outline: none; }
+        .email-form input:focus { border-color: var(--accent); }
+        .email-form input::placeholder { color: var(--text-muted); }
+        .btn-primary { padding: 14px 24px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .form-success { display: none; color: #00d26a; font-weight: 600; font-size: 16px; padding: 16px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } .email-form { flex-direction: column; } .auto-card { flex-direction: column; gap: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/" class="back-link">← Back to Home</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Systems & Ops</div>
+        <h1>Property Management Automation: 20 Tasks You Should Stop Doing Manually</h1>
+        <div class="article-meta">March 6, 2026 · 13 min read · By PropertyCEO</div>
+
+        <p>If you're managing more than 50 doors and still manually sending rent reminders, typing up maintenance work orders, or copying data between spreadsheets — you're burning 15-20 hours a week on work a computer should be doing.</p>
+        
+        <p>Here are 20 tasks to automate, organized by category, with the tools to do it.</p>
+
+        <h2>Tenant Communication (Save 4-6 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">1</div>
+            <div class="auto-info">
+                <h4>Rent Payment Reminders <span class="time-save">2 hrs/week</span></h4>
+                <p>Auto-send reminders on the 1st, 3rd, and 5th of each month. Include payment link. Escalate tone each time.</p>
+                <div class="tools">Tools: AppFolio, Buildium, or Zapier + your PM software</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">2</div>
+            <div class="auto-info">
+                <h4>Lease Expiration Notices <span class="time-save">1 hr/week</span></h4>
+                <p>90/60/30-day automated emails to tenants with lease renewal options and rent adjustment. No more tracking expiration dates manually.</p>
+                <div class="tools">Tools: PM software auto-workflows or Calendly + email automation</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">3</div>
+            <div class="auto-info">
+                <h4>Move-In/Move-Out Instructions <span class="time-save">30 min/week</span></h4>
+                <p>Trigger automated email sequences when lease status changes. Include utility setup guides, inspection checklists, key return instructions.</p>
+                <div class="tools">Tools: Email sequences in your PM software</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">4</div>
+            <div class="auto-info">
+                <h4>Maintenance Status Updates <span class="time-save">1 hr/week</span></h4>
+                <p>Auto-text tenants when a work order is received, assigned, scheduled, and completed. They stop calling you asking "what's the status?"</p>
+                <div class="tools">Tools: Property Meld, Latchel, or built-in PM software notifications</div>
+            </div>
+        </div>
+
+        <h2>Owner Communication (Save 3-5 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">5</div>
+            <div class="auto-info">
+                <h4>Monthly Owner Statements <span class="time-save">2 hrs/week</span></h4>
+                <p>Auto-generate and email owner statements by the 10th of each month. Include income, expenses, maintenance summary. Your PM software does this — turn it on.</p>
+                <div class="tools">Tools: AppFolio, Buildium, Rent Manager — all have auto-statements</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">6</div>
+            <div class="auto-info">
+                <h4>Vacancy Notifications <span class="time-save">30 min/week</span></h4>
+                <p>Auto-notify owners when a notice-to-vacate is received, including your plan for re-leasing and timeline expectations.</p>
+                <div class="tools">Tools: Email template triggered by status change</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">7</div>
+            <div class="auto-info">
+                <h4>Annual Tax Document Distribution <span class="time-save">4 hrs/year</span></h4>
+                <p>Auto-generate and send 1099s and year-end statements in January. Set it up once, never think about it again.</p>
+                <div class="tools">Tools: Your PM software + accounting integration</div>
+            </div>
+        </div>
+
+        <h2>Leasing (Save 3-4 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">8</div>
+            <div class="auto-info">
+                <h4>Listing Syndication <span class="time-save">1 hr/week</span></h4>
+                <p>List a vacancy once, auto-publish to Zillow, Apartments.com, Facebook Marketplace, Realtor.com. No more logging into 6 platforms.</p>
+                <div class="tools">Tools: Buildium, AppFolio, or Tenant Turner</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">9</div>
+            <div class="auto-info">
+                <h4>Showing Scheduling <span class="time-save">2 hrs/week</span></h4>
+                <p>Let prospects self-schedule showings online. Auto-confirm, auto-remind, auto-follow-up if they no-show. Stop playing phone tag.</p>
+                <div class="tools">Tools: Tenant Turner, Showdigs, Rently</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">10</div>
+            <div class="auto-info">
+                <h4>Application Processing <span class="time-save">1 hr/week</span></h4>
+                <p>Online applications with auto-screening: credit check, criminal background, eviction history, income verification. Get a approve/deny recommendation in minutes.</p>
+                <div class="tools">Tools: TransUnion SmartMove, RentPrep, built-in PM software screening</div>
+            </div>
+        </div>
+
+        <h2>Maintenance (Save 3-4 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">11</div>
+            <div class="auto-info">
+                <h4>Work Order Triage <span class="time-save">1 hr/week</span></h4>
+                <p>Auto-categorize incoming maintenance requests by priority. Emergency (water leak, no heat) → immediate dispatch. Routine → queue for next business day.</p>
+                <div class="tools">Tools: Property Meld, Latchel (AI triage)</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">12</div>
+            <div class="auto-info">
+                <h4>Vendor Dispatch <span class="time-save">1 hr/week</span></h4>
+                <p>Auto-assign vendors based on work order category. Plumbing → your plumber. HVAC → your HVAC guy. Include property access instructions automatically.</p>
+                <div class="tools">Tools: Property Meld, or Zapier connecting your PM software to vendor SMS</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">13</div>
+            <div class="auto-info">
+                <h4>Preventive Maintenance Scheduling <span class="time-save">30 min/week</span></h4>
+                <p>Auto-schedule HVAC filter changes, gutter cleaning, pest control on recurring calendars. Prevents expensive emergency repairs.</p>
+                <div class="tools">Tools: Google Calendar automations, PM software recurring tasks</div>
+            </div>
+        </div>
+
+        <h2>Accounting (Save 2-3 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">14</div>
+            <div class="auto-info">
+                <h4>Rent Collection & Late Fees <span class="time-save">1 hr/week</span></h4>
+                <p>Auto-charge late fees on the 6th. Auto-send late notices. Auto-post payments from tenant portals. Zero manual entry.</p>
+                <div class="tools">Tools: Your PM software — this should already be on</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">15</div>
+            <div class="auto-info">
+                <h4>Owner Payments/Distributions <span class="time-save">1 hr/week</span></h4>
+                <p>Auto-calculate and ACH owner distributions on the 10th-15th. Include statement. No manual checks, no trips to the bank.</p>
+                <div class="tools">Tools: PM software ACH integration</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">16</div>
+            <div class="auto-info">
+                <h4>Invoice Processing <span class="time-save">30 min/week</span></h4>
+                <p>Vendors email invoices → auto-extract amount, property, category → create bill in your PM software. No more manual data entry from PDFs.</p>
+                <div class="tools">Tools: DEXT (formerly Receipt Bank), Zapier + AI extraction</div>
+            </div>
+        </div>
+
+        <h2>Marketing & Growth (Save 2-3 hrs/week)</h2>
+
+        <div class="auto-card">
+            <div class="auto-num">17</div>
+            <div class="auto-info">
+                <h4>Review Requests <span class="time-save">30 min/week</span></h4>
+                <p>Auto-send a review request to every new owner at the 60-day mark and every tenant at move-in + 6 months. Include direct Google Review link.</p>
+                <div class="tools">Tools: Birdeye, Podium, or Mailchimp automation</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">18</div>
+            <div class="auto-info">
+                <h4>Lead Follow-Up <span class="time-save">1 hr/week</span></h4>
+                <p>Owner lead comes in → auto-send intro email within 5 minutes → auto-schedule follow-up call for next business day → auto-send drip emails for 30 days if they don't sign.</p>
+                <div class="tools">Tools: CRM (HubSpot free tier, FollowUpBoss) + email sequences</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">19</div>
+            <div class="auto-info">
+                <h4>Social Media Posting <span class="time-save">1 hr/week</span></h4>
+                <p>Batch-create 30 days of posts. Schedule them. Auto-share new listings to Facebook and Instagram. Stop posting in real-time.</p>
+                <div class="tools">Tools: Buffer, Hootsuite, or Meta Business Suite (free)</div>
+            </div>
+        </div>
+
+        <div class="auto-card">
+            <div class="auto-num">20</div>
+            <div class="auto-info">
+                <h4>Market Rent Analysis <span class="time-save">30 min/week</span></h4>
+                <p>Auto-pull comp data for your portfolio monthly. Flag units renting 10%+ below market. Send owner a rent increase recommendation with data.</p>
+                <div class="tools">Tools: Rentometer API, Zillow Rental Manager, or manual Zillow + Apartments.com comps</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p>💡 Total time saved by automating all 20: 15-20 hours per week. That's a full-time employee's worth of labor. At $25/hr, that's $32,500/year in recovered capacity — without hiring.</p>
+        </div>
+
+        <h2>Where to Start</h2>
+        <p>Don't try to automate everything at once. Here's the priority order:</p>
+        <ol>
+            <li><strong>Week 1:</strong> Turn on automated rent reminders and late fees (items 1, 14)</li>
+            <li><strong>Week 2:</strong> Set up auto-owner statements (item 5)</li>
+            <li><strong>Week 3:</strong> Enable listing syndication and self-scheduled showings (items 8, 9)</li>
+            <li><strong>Week 4:</strong> Implement maintenance status notifications (item 4)</li>
+            <li><strong>Month 2:</strong> Build your lead follow-up sequence (item 18)</li>
+            <li><strong>Month 3:</strong> Everything else</li>
+        </ol>
+
+        <div class="cta-inline">
+            <h3>Get the automation implementation guide</h3>
+            <p>Step-by-step setup instructions for each automation, with screenshots and templates. Coming soon.</p>
+            <form class="email-form" id="blog-cta-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+            <div class="form-success" id="blog-cta-success">✅ You're on the list!</div>
+        </div>
+    </article>
+
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p></footer>
+    <script>
+    const form = document.getElementById('blog-cta-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = form.querySelector('input').value;
+        fetch('/api/waitlist', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({email, timestamp: new Date().toISOString(), source: 'blog-automation'}) }).catch(()=>{});
+        form.style.display = 'none';
+        document.getElementById('blog-cta-success').style.display = 'block';
+    });
+    </script>
+</body>
+</html>
