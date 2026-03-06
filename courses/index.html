@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Property Management Growth Playbook — PropertyCEO</title>
+    <meta name="description" content="The complete business growth system for property managers. Go from 50 to 500+ doors with proven frameworks, scripts, templates, and SOPs. $197 one-time.">
+    <link rel="canonical" href="https://propertyceo.vercel.app/courses">
+    <meta property="og:title" content="The Property Management Growth Playbook — PropertyCEO">
+    <meta property="og:description" content="Go from 50 to 500+ doors with the complete growth system. Scripts, templates, SOPs, and frameworks that actually work.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://propertyceo.vercel.app/courses">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"The Property Management Growth Playbook","description":"Complete business growth system for property managers","brand":{"@type":"Brand","name":"PropertyCEO"},"offers":{"@type":"Offer","price":"197","priceCurrency":"USD","availability":"https://schema.org/PreOrder"}}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; --success: #00d26a; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+
+        .hero { max-width: 800px; margin: 0 auto; padding: 80px 40px 60px; text-align: center; }
+        .hero .badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
+        .hero h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 em { color: var(--accent); font-style: normal; }
+        .hero .subtitle { font-size: 20px; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+        .hero .price-box { display: inline-block; background: var(--card-bg); border: 2px solid var(--accent); border-radius: 16px; padding: 24px 40px; margin-bottom: 24px; }
+        .hero .price-box .price { font-size: 48px; font-weight: 900; color: var(--accent); }
+        .hero .price-box .price-note { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+        .hero .price-box .old-price { font-size: 20px; color: var(--text-muted); text-decoration: line-through; margin-right: 12px; }
+
+        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 16px 40px; border-radius: 10px; font-size: 18px; font-weight: 700; text-decoration: none; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+        .cta-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; }
+
+        .section { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
+        .section h2 { font-size: 32px; font-weight: 800; margin-bottom: 24px; letter-spacing: -1px; }
+        .section h3 { font-size: 20px; font-weight: 700; margin: 24px 0 12px; }
+        .section p { color: var(--text-muted); margin-bottom: 16px; font-size: 16px; }
+
+        .pain-points { background: var(--card-bg); border-radius: 16px; padding: 40px; margin: 40px 0; }
+        .pain-point { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; }
+        .pain-point:last-child { margin-bottom: 0; }
+        .pain-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+        .pain-text { font-size: 16px; }
+        .pain-text strong { color: var(--text); }
+
+        .modules { display: grid; gap: 20px; margin: 40px 0; }
+        .module-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; transition: border-color 0.2s; }
+        .module-card:hover { border-color: rgba(233,69,96,0.3); }
+        .module-num { display: inline-block; background: var(--accent); color: white; width: 32px; height: 32px; border-radius: 8px; text-align: center; line-height: 32px; font-weight: 800; font-size: 14px; margin-bottom: 12px; }
+        .module-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--text); }
+        .module-card p { color: var(--text-muted); font-size: 15px; margin-bottom: 12px; }
+        .module-card ul { list-style: none; padding: 0; }
+        .module-card ul li { color: var(--text-muted); font-size: 14px; padding: 4px 0; padding-left: 20px; position: relative; }
+        .module-card ul li::before { content: "✓"; color: var(--success); position: absolute; left: 0; font-weight: 700; }
+
+        .guarantee { text-align: center; background: var(--card-bg); border-radius: 16px; padding: 48px 40px; margin: 40px 0; }
+        .guarantee .icon { font-size: 48px; margin-bottom: 16px; }
+        .guarantee h2 { margin-bottom: 12px; }
+        .guarantee p { max-width: 500px; margin: 0 auto; }
+
+        .final-cta { text-align: center; padding: 80px 40px; }
+        .final-cta h2 { font-size: 36px; font-weight: 900; margin-bottom: 12px; letter-spacing: -1px; }
+        .final-cta p { color: var(--text-muted); font-size: 18px; margin-bottom: 32px; }
+
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .testimonial { background: var(--card-bg); border-radius: 12px; padding: 24px; }
+        .testimonial .stars { color: #ffc107; font-size: 16px; margin-bottom: 12px; }
+        .testimonial .quote { color: var(--text-muted); font-size: 15px; font-style: italic; margin-bottom: 12px; }
+        .testimonial .author { font-size: 14px; font-weight: 600; }
+        .testimonial .role { font-size: 13px; color: var(--text-muted); }
+
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            nav, .hero, .section, .final-cta { padding-left: 20px; padding-right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog" class="back-link">Blog →</a>
+    </nav>
+
+    <div class="hero">
+        <div class="badge">🚀 Launch Price — 60% Off</div>
+        <h1>The Property Management <em>Growth Playbook</em></h1>
+        <p class="subtitle">The complete system to go from 50 to 500+ doors. Scripts, templates, SOPs, and frameworks that actually work.</p>
+        
+        <div class="price-box">
+            <span class="old-price">$497</span>
+            <span class="price">$197</span>
+            <div class="price-note">One-time payment · Lifetime access · All future updates</div>
+        </div>
+        <br><br>
+        <a href="#buy" class="cta-btn">Get the Playbook → $197</a>
+        <div class="cta-sub">30-day money-back guarantee · Instant access</div>
+    </div>
+
+    <div class="section">
+        <div class="pain-points">
+            <h2 style="margin-bottom: 24px;">Sound familiar?</h2>
+            <div class="pain-point">
+                <div class="pain-icon">😤</div>
+                <div class="pain-text"><strong>Stuck under 100 doors</strong> — You've been at the same size for years. You know you should grow but don't know what lever to pull next.</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">📞</div>
+                <div class="pain-text"><strong>No pipeline of new owners</strong> — You get referrals sometimes, but it's unpredictable. You don't have a system for consistently getting new management contracts.</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">⏰</div>
+                <div class="pain-text"><strong>Working 60+ hours/week</strong> — You're doing everything yourself: leasing, maintenance, accounting, owner relations. There's no time for growth because you're drowning in operations.</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">💰</div>
+                <div class="pain-text"><strong>Undercharging and know it</strong> — Your competitors charge more for worse service. But you're afraid to raise fees because you might lose clients.</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">🤷</div>
+                <div class="pain-text"><strong>No idea where to start scaling</strong> — Hire first? Market first? Raise prices? Build systems? You need a roadmap, not more generic advice.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>What's inside the Playbook</h2>
+        <p>6 modules. 200+ pages. Every framework, script, and template you need to go from overwhelmed operator to CEO of a real business.</p>
+
+        <div class="modules">
+            <div class="module-card">
+                <div class="module-num">1</div>
+                <h3>Owner Acquisition Machine</h3>
+                <p>Build a predictable pipeline of new property owners who want to hire you.</p>
+                <ul>
+                    <li>12 proven outreach scripts (cold call, email, LinkedIn, direct mail)</li>
+                    <li>The "Investor Magnet" content strategy that attracts owners to you</li>
+                    <li>How to close management agreements at premium rates</li>
+                    <li>Realtor partnership framework (the #1 referral source most PMs miss)</li>
+                    <li>Google Ads template specifically for property management</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-num">2</div>
+                <h3>Pricing for Profit</h3>
+                <p>Stop leaving money on the table. Charge what you're worth.</p>
+                <ul>
+                    <li>The 3-tier pricing model that maximizes revenue per door</li>
+                    <li>Fee structure template with 15+ revenue streams</li>
+                    <li>How to raise fees on existing clients without losing them</li>
+                    <li>Competitor pricing analysis framework</li>
+                    <li>Calculator: your true cost per door (most PMs undercount by 40%)</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-num">3</div>
+                <h3>Systems That Scale</h3>
+                <p>Build operations that run without you touching everything.</p>
+                <ul>
+                    <li>Complete SOP library: leasing, maintenance, inspections, move-in/out</li>
+                    <li>Tech stack recommendations by portfolio size</li>
+                    <li>Automation playbook: 20 tasks you should stop doing manually</li>
+                    <li>Vendor management system template</li>
+                    <li>The "80/20 Audit" — find what's eating your time</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-num">4</div>
+                <h3>Hiring & Team Building</h3>
+                <p>Make your first (and second, and third) hire without it blowing up.</p>
+                <ul>
+                    <li>When to hire (the exact door count where it makes financial sense)</li>
+                    <li>Job descriptions and interview scorecards for every PM role</li>
+                    <li>Compensation structures that retain good people</li>
+                    <li>Training program template (get new hires productive in 2 weeks)</li>
+                    <li>The VA playbook: what to outsource and what to keep in-house</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-num">5</div>
+                <h3>KPIs & Financial Mastery</h3>
+                <p>Know your numbers. Make decisions based on data, not gut feelings.</p>
+                <ul>
+                    <li>The 15 KPIs that actually predict PM company growth</li>
+                    <li>Monthly financial dashboard template</li>
+                    <li>Profit margin benchmarks by portfolio size</li>
+                    <li>Cash flow forecasting for growth phases</li>
+                    <li>When to take on debt vs. grow organically</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-num">6</div>
+                <h3>The 500-Door Roadmap</h3>
+                <p>The quarter-by-quarter plan to go from where you are to 500+ doors.</p>
+                <ul>
+                    <li>Phase 1 (0-100 doors): Foundation and first hires</li>
+                    <li>Phase 2 (100-250 doors): Departmentalize and systematize</li>
+                    <li>Phase 3 (250-500 doors): Scale marketing and add revenue streams</li>
+                    <li>Acquisition strategy: buying other PM companies</li>
+                    <li>Exit planning: what buyers look for in a PM company</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Plus these bonuses</h2>
+        <div class="modules">
+            <div class="module-card">
+                <div class="module-num">🎁</div>
+                <h3>Management Agreement Template</h3>
+                <p>Attorney-reviewed management agreement template with profit-maximizing fee structures. Customizable for your market. Value: $500+</p>
+            </div>
+            <div class="module-card">
+                <div class="module-num">🎁</div>
+                <h3>Owner Onboarding Checklist</h3>
+                <p>The exact 47-step checklist we use to onboard new owners professionally. Sets expectations right and prevents 90% of owner complaints.</p>
+            </div>
+            <div class="module-card">
+                <div class="module-num">🎁</div>
+                <h3>Marketing Swipe File</h3>
+                <p>50+ proven marketing messages: email sequences, social posts, ad copy, direct mail pieces. Copy, customize, send.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="guarantee">
+            <div class="icon">🛡️</div>
+            <h2>30-Day Money-Back Guarantee</h2>
+            <p>If the Playbook doesn't give you at least one actionable strategy to grow your portfolio in 30 days, email us for a full refund. No questions, no hassle.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Who this is for</h2>
+        <div class="pain-points">
+            <div class="pain-point">
+                <div class="pain-icon">✅</div>
+                <div class="pain-text"><strong>Property managers with 20-200 doors</strong> who want a clear roadmap to scale</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">✅</div>
+                <div class="pain-text"><strong>Solo operators</strong> who want to build a team and stop doing everything</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">✅</div>
+                <div class="pain-text"><strong>Realtors adding PM</strong> as a revenue stream and want to do it right</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">✅</div>
+                <div class="pain-text"><strong>Anyone starting a PM company</strong> who wants to avoid expensive mistakes</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">❌</div>
+                <div class="pain-text"><strong>Not for large enterprise PMs</strong> with 1000+ doors — you've already figured this out</div>
+            </div>
+            <div class="pain-point">
+                <div class="pain-icon">❌</div>
+                <div class="pain-text"><strong>Not for people who won't take action</strong> — this only works if you implement it</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="buy" class="final-cta">
+        <h2>Ready to stop managing and start scaling?</h2>
+        <p>Join the waitlist for launch access at 60% off.</p>
+        <form id="buyForm" style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+            <input type="email" id="buyEmail" placeholder="your@email.com" required style="flex: 1; min-width: 250px; padding: 16px 20px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); background: var(--card-bg); color: var(--text); font-size: 16px; font-family: Inter, sans-serif;">
+            <button type="submit" class="cta-btn" style="white-space: nowrap;">Get Early Access →</button>
+        </form>
+        <div class="cta-sub" id="buyMsg">Launch price: $197 (regular $497) · You'll be first to know when we open</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p>
+        <p style="margin-top: 8px;"><a href="/" style="color: var(--accent); text-decoration: none;">Home</a> · <a href="/blog" style="color: var(--accent); text-decoration: none;">Blog</a></p>
+    </footer>
+
+    <script>
+    document.getElementById('buyForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('buyEmail').value;
+        const msg = document.getElementById('buyMsg');
+        try {
+            const res = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, timestamp: new Date().toISOString(), source: 'course-page' })
+            });
+            if (res.ok) {
+                msg.innerHTML = '🎉 <strong>You\'re on the list!</strong> We\'ll email you the moment the Playbook launches.';
+                msg.style.color = '#00d26a';
+                document.getElementById('buyEmail').value = '';
+            } else {
+                msg.textContent = 'Something went wrong. Try again?';
+                msg.style.color = var(--accent);
+            }
+        } catch(err) {
+            msg.textContent = 'Network error. Please try again.';
+        }
+    });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>

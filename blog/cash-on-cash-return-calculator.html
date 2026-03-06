@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash on Cash Return Calculator — Free Tool for Rental Investors (2026)</title>
+    <meta name="description" content="Calculate cash on cash return on your rental property investment. Accounts for financing, operating expenses, and vacancy. Includes benchmarks by market.">
+    <meta name="keywords" content="cash on cash return calculator, cash on cash return, rental property cash on cash, investment property returns">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/cash-on-cash-return-calculator">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Cash on Cash Return Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0;--success:#00d26a}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}.logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}.back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}article{max-width:720px;margin:0 auto;padding:40px 24px 80px}h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-1.5px}.article-meta{color:var(--text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}h2{font-size:26px;font-weight:800;margin:48px 0 16px}h3{font-size:20px;font-weight:700;margin:32px 0 12px}p{margin-bottom:20px;color:var(--text-muted);font-size:17px}strong{color:var(--text)}ul,ol{margin:0 0 24px 24px;color:var(--text-muted)}li{margin-bottom:8px;font-size:17px}.data-badge{display:inline-block;background:rgba(0,180,255,.12);color:#00b4ff;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:700;margin-bottom:8px}
+        .calc-container{background:var(--card-bg);border:2px solid rgba(233,69,96,.2);border-radius:20px;padding:36px;margin:32px 0}.calc-container h2{margin-top:0;text-align:center;font-size:24px}
+        .calc-section-title{font-size:16px;font-weight:700;color:var(--accent);margin:20px 0 12px;text-transform:uppercase;letter-spacing:.5px}
+        .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0}
+        .calc-field label{display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:var(--text)}.calc-field input{width:100%;padding:12px 14px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:16px;font-family:inherit;outline:none}.calc-field input:focus{border-color:var(--accent)}.calc-field .hint{font-size:11px;color:var(--text-muted);margin-top:3px}
+        .calc-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:16px}.calc-btn:hover{background:#d63851}
+        .calc-result{text-align:center;padding:24px;margin-top:20px;border-radius:16px;display:none}.calc-result.show{display:block}
+        .calc-result .big-number{font-size:56px;font-weight:900;letter-spacing:-2px}.calc-result .big-number.good{color:var(--success)}.calc-result .big-number.ok{color:#ffc107}.calc-result .big-number.low{color:var(--accent)}
+        .calc-result .verdict{font-size:18px;font-weight:600;margin-top:8px}.calc-result .breakdown{text-align:left;background:rgba(0,0,0,.2);border-radius:12px;padding:16px;margin-top:16px;font-size:14px;color:var(--text-muted)}.calc-result .breakdown div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        .highlight-box{background:var(--card-bg);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}
+        table{width:100%;border-collapse:collapse;margin:24px 0}th{text-align:left;padding:12px 16px;background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:700}td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;color:var(--text-muted)}
+        .cta-inline{background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(22,33,62,.8));border:1px solid rgba(233,69,96,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}.cta-inline h3{margin-top:0;color:var(--text)}.email-form{display:flex;gap:12px;max-width:420px;margin:16px auto 0}.email-form input{flex:1;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:15px;font-family:inherit;outline:none}.email-form input:focus{border-color:var(--accent)}.email-form input::placeholder{color:var(--text-muted)}.btn-primary{padding:14px 24px;background:var(--accent);color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}.form-success{display:none;color:#00d26a;font-weight:600;font-size:16px;padding:16px}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,.05)}
+        @media(max-width:600px){nav{padding:20px}.calc-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.calc-result .big-number{font-size:42px}}
+    </style>
+</head>
+<body>
+    <nav><a href="/" class="logo">Property<span>CEO</span></a><a href="/blog" class="back-link">← Blog</a></nav>
+    <article>
+        <h1>Cash on Cash Return Calculator</h1>
+        <div class="article-meta">Free tool · Updated March 2026 · By PropertyCEO</div>
+
+        <p><span class="data-badge">📊 5,400 monthly searches for "cash on cash return" — a core investor metric</span></p>
+
+        <p>Cash on cash return measures the annual pre-tax cash flow relative to the total cash you invested. Unlike cap rate, it accounts for financing — making it the best metric for evaluating leveraged investments.</p>
+
+        <div class="calc-container">
+            <h2>💰 Calculate Cash on Cash Return</h2>
+            
+            <div class="calc-section-title">Purchase Details</div>
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label>Purchase Price ($)</label>
+                    <input type="number" id="purchasePrice" placeholder="250000">
+                </div>
+                <div class="calc-field">
+                    <label>Down Payment (%)</label>
+                    <input type="number" id="downPayment" placeholder="25" value="25">
+                </div>
+                <div class="calc-field">
+                    <label>Closing Costs ($)</label>
+                    <input type="number" id="closingCosts" placeholder="5000">
+                    <div class="hint">Typically 2-5% of purchase price</div>
+                </div>
+                <div class="calc-field">
+                    <label>Rehab/Repair Costs ($)</label>
+                    <input type="number" id="rehabCosts" placeholder="0">
+                </div>
+            </div>
+
+            <div class="calc-section-title">Loan Details</div>
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label>Interest Rate (%)</label>
+                    <input type="number" id="interestRate" placeholder="7.0" value="7.0" step="0.1">
+                </div>
+                <div class="calc-field">
+                    <label>Loan Term (years)</label>
+                    <input type="number" id="loanTerm" placeholder="30" value="30">
+                </div>
+            </div>
+
+            <div class="calc-section-title">Income & Expenses</div>
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label>Monthly Rent ($)</label>
+                    <input type="number" id="monthlyRent" placeholder="2000">
+                </div>
+                <div class="calc-field">
+                    <label>Other Monthly Income ($)</label>
+                    <input type="number" id="otherIncome" placeholder="0">
+                    <div class="hint">Laundry, parking, pet fees, etc.</div>
+                </div>
+                <div class="calc-field">
+                    <label>Monthly Operating Expenses ($)</label>
+                    <input type="number" id="monthlyExpenses" placeholder="600">
+                    <div class="hint">Taxes, insurance, maintenance, management</div>
+                </div>
+                <div class="calc-field">
+                    <label>Vacancy Rate (%)</label>
+                    <input type="number" id="vacancyRate" placeholder="5" value="5">
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateCoC()">Calculate Cash on Cash Return</button>
+            
+            <div class="calc-result" id="calcResult">
+                <div class="big-number" id="cocResult">—</div>
+                <div class="verdict" id="cocVerdict"></div>
+                <div class="breakdown" id="cocBreakdown"></div>
+            </div>
+        </div>
+
+        <h2>What Is Cash on Cash Return?</h2>
+        
+        <div class="highlight-box">
+            <p>📐 Cash on Cash Return = Annual Pre-Tax Cash Flow ÷ Total Cash Invested × 100</p>
+        </div>
+
+        <p><strong>Total Cash Invested</strong> includes your down payment, closing costs, and any rehab costs — every dollar you put into the deal out of pocket.</p>
+        <p><strong>Annual Pre-Tax Cash Flow</strong> is your rental income minus all expenses including mortgage payments (principal + interest).</p>
+
+        <h2>Cap Rate vs. Cash on Cash Return</h2>
+
+        <table>
+            <tr><th>Metric</th><th>Cap Rate</th><th>Cash on Cash</th></tr>
+            <tr><td>Accounts for financing?</td><td>❌ No</td><td>✅ Yes</td></tr>
+            <tr><td>Best for comparing</td><td>Properties in same market</td><td>Investment returns on YOUR money</td></tr>
+            <tr><td>Use when</td><td>Evaluating property value</td><td>Evaluating deal profitability</td></tr>
+            <tr><td>Typical "good" range</td><td>5-8%</td><td>8-12%+</td></tr>
+        </table>
+
+        <h2>What's a Good Cash on Cash Return?</h2>
+
+        <p><span class="data-badge">📊 Based on investor benchmarks and market data analysis</span></p>
+
+        <table>
+            <tr><th>CoC Return</th><th>Rating</th><th>Typical Scenario</th></tr>
+            <tr><td>12%+</td><td>🟢 Excellent</td><td>Value-add properties, tertiary markets, high leverage</td></tr>
+            <tr><td>8-12%</td><td>🟢 Good</td><td>Standard buy-and-hold in B/C markets</td></tr>
+            <tr><td>5-8%</td><td>🟡 Moderate</td><td>Stable markets, Class A properties, lower leverage</td></tr>
+            <tr><td>2-5%</td><td>🟠 Low</td><td>Appreciation plays in expensive markets</td></tr>
+            <tr><td>&lt;2%</td><td>🔴 Poor</td><td>Overpriced, or banking entirely on appreciation</td></tr>
+        </table>
+
+        <p><strong>Important:</strong> Cash on cash return is heavily influenced by leverage. A property that returns 5% cap rate can return 10%+ cash on cash with the right financing. But leverage also amplifies risk — if rents drop or vacancy rises, your cash on cash can go negative fast.</p>
+
+        <h2>How to Improve Cash on Cash Return</h2>
+
+        <ol>
+            <li><strong>Increase rent:</strong> Even $50/month adds $600/year to cash flow, which could improve CoC by 1-2%</li>
+            <li><strong>Reduce vacancy:</strong> Better tenant screening and retention = more consistent income</li>
+            <li><strong>Negotiate better loan terms:</strong> Lower interest rate directly improves cash flow</li>
+            <li><strong>Add income streams:</strong> Pet rent, storage, parking, laundry</li>
+            <li><strong>Reduce operating costs:</strong> Better insurance quotes, energy efficiency, preventive maintenance</li>
+            <li><strong>Hire a property manager:</strong> Counter-intuitive, but a good PM often increases net income through higher rents, lower vacancy, and better maintenance costs</li>
+        </ol>
+
+        <div class="cta-inline">
+            <h3>Learn to analyze deals like a pro</h3>
+            <p>Our upcoming PM Financial Playbook covers deal analysis, pricing strategy, and unit economics.</p>
+            <form class="email-form" id="blog-cta-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+            <div class="form-success" id="blog-cta-success">✅ You're on the list!</div>
+        </div>
+
+        <h2>Related Calculators</h2>
+        <ul>
+            <li><a href="/blog/cap-rate-calculator" style="color:var(--accent)">Cap Rate Calculator</a></li>
+            <li><a href="/blog/rental-property-roi-calculator" style="color:var(--accent)">Rental Property ROI Calculator</a></li>
+        </ul>
+    </article>
+    <footer><p>&copy; 2026 PropertyCEO.</p></footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+    function calculateCoC(){
+        const pp=parseFloat(document.getElementById('purchasePrice').value)||0;
+        const dp=(parseFloat(document.getElementById('downPayment').value)||25)/100;
+        const cc=parseFloat(document.getElementById('closingCosts').value)||0;
+        const rehab=parseFloat(document.getElementById('rehabCosts').value)||0;
+        const rate=(parseFloat(document.getElementById('interestRate').value)||7)/100/12;
+        const term=(parseFloat(document.getElementById('loanTerm').value)||30)*12;
+        const rent=parseFloat(document.getElementById('monthlyRent').value)||0;
+        const other=parseFloat(document.getElementById('otherIncome').value)||0;
+        const expenses=parseFloat(document.getElementById('monthlyExpenses').value)||0;
+        const vacancy=(parseFloat(document.getElementById('vacancyRate').value)||5)/100;
+        if(pp<=0||rent<=0){alert('Please enter purchase price and monthly rent');return}
+        const downAmt=pp*dp;const loanAmt=pp-downAmt;
+        const mortgage=loanAmt*(rate*Math.pow(1+rate,term))/(Math.pow(1+rate,term)-1);
+        const totalCashInvested=downAmt+cc+rehab;
+        const grossMonthly=rent+other;
+        const effectiveMonthly=grossMonthly*(1-vacancy);
+        const monthlyCashFlow=effectiveMonthly-expenses-mortgage;
+        const annualCashFlow=monthlyCashFlow*12;
+        const coc=(annualCashFlow/totalCashInvested)*100;
+        const el=document.getElementById('calcResult');
+        const numEl=document.getElementById('cocResult');
+        const verdictEl=document.getElementById('cocVerdict');
+        const breakdownEl=document.getElementById('cocBreakdown');
+        numEl.textContent=coc.toFixed(2)+'%';
+        numEl.className='big-number '+(coc>=8?'good':coc>=5?'ok':'low');
+        let verdict=coc>=12?'🟢 Excellent return':'';
+        if(!verdict)verdict=coc>=8?'🟢 Good return — solid cash flowing investment':'';
+        if(!verdict)verdict=coc>=5?'🟡 Moderate — acceptable in stable/appreciating markets':'';
+        if(!verdict)verdict=coc>=0?'🟠 Low — make sure appreciation potential justifies this':'🔴 Negative cash flow — this deal loses money monthly';
+        verdictEl.textContent=verdict;
+        breakdownEl.innerHTML=`
+            <div><span>Down Payment (${(dp*100).toFixed(0)}%)</span><span>$${downAmt.toLocaleString()}</span></div>
+            <div><span>Closing Costs</span><span>$${cc.toLocaleString()}</span></div>
+            <div><span>Rehab Costs</span><span>$${rehab.toLocaleString()}</span></div>
+            <div><span><strong>Total Cash Invested</strong></span><span><strong>$${totalCashInvested.toLocaleString()}</strong></span></div>
+            <div style="border:none;height:8px"></div>
+            <div><span>Monthly Rent + Other</span><span>$${grossMonthly.toLocaleString()}</span></div>
+            <div><span>Vacancy (${(vacancy*100).toFixed(0)}%)</span><span>-$${(grossMonthly*vacancy).toFixed(0)}</span></div>
+            <div><span>Operating Expenses</span><span>-$${expenses.toLocaleString()}</span></div>
+            <div><span>Mortgage Payment</span><span>-$${mortgage.toFixed(0)}</span></div>
+            <div><span><strong>Monthly Cash Flow</strong></span><span><strong>$${monthlyCashFlow.toFixed(0)}</strong></span></div>
+            <div><span><strong>Annual Cash Flow</strong></span><span><strong>$${annualCashFlow.toFixed(0)}</strong></span></div>
+            <div><span><strong>Cash on Cash Return</strong></span><span><strong>${coc.toFixed(2)}%</strong></span></div>
+        `;
+        el.classList.add('show');
+    }
+    document.getElementById('blog-cta-form').addEventListener('submit',function(e){e.preventDefault();const email=this.querySelector('input').value;fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,timestamp:new Date().toISOString(),source:'calc-coc'})}).catch(()=>{});this.style.display='none';document.getElementById('blog-cta-success').style.display='block';});
+    </script>
+</body>
+</html>

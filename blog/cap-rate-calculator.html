@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Rate Calculator — Free Capitalization Rate Calculator (2026)</title>
+    <meta name="description" content="Free cap rate calculator for rental property investors. Calculate capitalization rate instantly. Includes what's a good cap rate by market, and how to use cap rate for investment decisions.">
+    <meta name="keywords" content="cap rate calculator, capitalization rate calculator, rental property cap rate, what is a good cap rate">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/cap-rate-calculator">
+    <meta property="og:title" content="Cap Rate Calculator — Free Capitalization Rate Calculator">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Cap Rate Calculator","description":"Free capitalization rate calculator for rental property investors","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0;--success:#00d26a}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}.logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}.back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}article{max-width:720px;margin:0 auto;padding:40px 24px 80px}h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-1.5px}.article-meta{color:var(--text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}h2{font-size:26px;font-weight:800;margin:48px 0 16px;letter-spacing:-.5px}h3{font-size:20px;font-weight:700;margin:32px 0 12px}p{margin-bottom:20px;color:var(--text-muted);font-size:17px}strong{color:var(--text)}ul,ol{margin:0 0 24px 24px;color:var(--text-muted)}li{margin-bottom:8px;font-size:17px}.data-badge{display:inline-block;background:rgba(0,180,255,.12);color:#00b4ff;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:700;margin-bottom:8px}
+        .calc-container{background:var(--card-bg);border:2px solid rgba(233,69,96,.2);border-radius:20px;padding:36px;margin:32px 0}
+        .calc-container h2{margin-top:0;text-align:center;font-size:24px}
+        .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+        .calc-field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--text)}
+        .calc-field input{width:100%;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:18px;font-family:inherit;outline:none}
+        .calc-field input:focus{border-color:var(--accent)}
+        .calc-field .input-hint{font-size:12px;color:var(--text-muted);margin-top:4px}
+        .calc-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:8px;transition:background .2s}
+        .calc-btn:hover{background:#d63851}
+        .calc-result{text-align:center;padding:24px;margin-top:20px;border-radius:16px;display:none}
+        .calc-result.show{display:block}
+        .calc-result .big-number{font-size:56px;font-weight:900;letter-spacing:-2px}
+        .calc-result .big-number.good{color:var(--success)}
+        .calc-result .big-number.ok{color:#ffc107}
+        .calc-result .big-number.low{color:var(--accent)}
+        .calc-result .verdict{font-size:18px;font-weight:600;margin-top:8px}
+        .calc-result .breakdown{text-align:left;background:rgba(0,0,0,.2);border-radius:12px;padding:16px;margin-top:16px;font-size:14px;color:var(--text-muted)}
+        .calc-result .breakdown div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        table{width:100%;border-collapse:collapse;margin:24px 0}th{text-align:left;padding:12px 16px;background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:700}td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;color:var(--text-muted)}
+        .highlight-box{background:var(--card-bg);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}
+        .cta-inline{background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(22,33,62,.8));border:1px solid rgba(233,69,96,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}.cta-inline h3{margin-top:0;color:var(--text)}.email-form{display:flex;gap:12px;max-width:420px;margin:16px auto 0}.email-form input{flex:1;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:15px;font-family:inherit;outline:none}.email-form input:focus{border-color:var(--accent)}.email-form input::placeholder{color:var(--text-muted)}.btn-primary{padding:14px 24px;background:var(--accent);color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}.form-success{display:none;color:#00d26a;font-weight:600;font-size:16px;padding:16px}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,.05)}
+        @media(max-width:600px){nav{padding:20px}.calc-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.calc-result .big-number{font-size:42px}}
+    </style>
+</head>
+<body>
+    <nav><a href="/" class="logo">Property<span>CEO</span></a><a href="/blog" class="back-link">← Blog</a></nav>
+    <article>
+        <h1>Cap Rate Calculator</h1>
+        <div class="article-meta">Free tool · Updated March 2026 · By PropertyCEO</div>
+
+        <p><span class="data-badge">📊 12,100 monthly searches for "cap rate calculator" — $1.83 CPC</span></p>
+
+        <div class="calc-container">
+            <h2>🏠 Calculate Your Cap Rate</h2>
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label>Property Value ($)</label>
+                    <input type="number" id="propertyValue" placeholder="250000" value="">
+                    <div class="input-hint">Purchase price or current market value</div>
+                </div>
+                <div class="calc-field">
+                    <label>Annual Gross Rent ($)</label>
+                    <input type="number" id="grossRent" placeholder="24000" value="">
+                    <div class="input-hint">Monthly rent × 12</div>
+                </div>
+                <div class="calc-field">
+                    <label>Annual Operating Expenses ($)</label>
+                    <input type="number" id="expenses" placeholder="8000" value="">
+                    <div class="input-hint">Taxes, insurance, maintenance, vacancy, management</div>
+                </div>
+                <div class="calc-field">
+                    <label>Annual Vacancy Loss ($)</label>
+                    <input type="number" id="vacancy" placeholder="1200" value="">
+                    <div class="input-hint">Typically 5-8% of gross rent</div>
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calculateCapRate()">Calculate Cap Rate</button>
+            <div class="calc-result" id="calcResult">
+                <div class="big-number" id="capRateResult">—</div>
+                <div class="verdict" id="capVerdict"></div>
+                <div class="breakdown" id="capBreakdown"></div>
+            </div>
+        </div>
+
+        <h2>What Is Cap Rate?</h2>
+        <p><strong>Capitalization rate (cap rate)</strong> is the ratio of a property's net operating income (NOI) to its market value. It's the most commonly used metric in real estate investing to compare properties and evaluate potential returns.</p>
+
+        <div class="highlight-box">
+            <p>📐 Cap Rate = Net Operating Income (NOI) ÷ Property Value × 100</p>
+        </div>
+
+        <p>A higher cap rate means higher potential returns but typically higher risk. A lower cap rate means lower returns but often in more stable, appreciating markets.</p>
+
+        <h2>What's a Good Cap Rate? (2026 Market Data)</h2>
+
+        <p><span class="data-badge">📊 DataForSEO SERP analysis: top results dominated by Investopedia, calculators</span></p>
+
+        <table>
+            <tr><th>Market Type</th><th>Typical Cap Rate</th><th>Example Cities</th></tr>
+            <tr><td>Class A / Gateway</td><td>3.5-5.0%</td><td>NYC, SF, LA, Boston</td></tr>
+            <tr><td>Class A / Secondary</td><td>4.5-6.0%</td><td>Austin, Nashville, Denver, Raleigh</td></tr>
+            <tr><td>Class B / Secondary</td><td>5.5-7.5%</td><td>Tampa, Phoenix, Charlotte, Columbus</td></tr>
+            <tr><td>Class C / Tertiary</td><td>7.0-10.0%</td><td>Cleveland, Memphis, Birmingham, Tulsa</td></tr>
+            <tr><td>Rural / Small Market</td><td>8.0-12.0%</td><td>Small towns, rural areas</td></tr>
+        </table>
+
+        <h2>Cap Rate Benchmarks by Property Type</h2>
+
+        <table>
+            <tr><th>Property Type</th><th>2026 Avg Cap Rate</th><th>Trend</th></tr>
+            <tr><td>Single-Family Rental</td><td>5.0-7.5%</td><td>↗️ Rising slightly</td></tr>
+            <tr><td>Small Multifamily (2-4 units)</td><td>5.5-8.0%</td><td>↗️ Rising</td></tr>
+            <tr><td>Apartment Complex (5+)</td><td>4.5-6.5%</td><td>→ Stable</td></tr>
+            <tr><td>Commercial/Retail</td><td>5.5-8.0%</td><td>↗️ Rising</td></tr>
+            <tr><td>Industrial/Warehouse</td><td>5.0-7.0%</td><td>↘️ Compressing</td></tr>
+            <tr><td>Short-Term Rental/Airbnb</td><td>6.0-10.0%</td><td>↗️ Rising (regulations)</td></tr>
+        </table>
+
+        <h2>Cap Rate vs. Other Metrics</h2>
+
+        <p>Cap rate is useful but has limitations. Here's when to use it — and when not to:</p>
+
+        <ul>
+            <li><strong>Use cap rate for:</strong> Comparing similar properties in the same market, quick property screening, estimating market value from NOI</li>
+            <li><strong>Don't rely on cap rate alone for:</strong> Properties with significant value-add potential, short-term rentals with variable income, properties you plan to heavily finance</li>
+            <li><strong>Also calculate:</strong> Cash-on-cash return (accounts for financing), DSCR (debt service coverage), and total ROI (includes appreciation)</li>
+        </ul>
+
+        <h2>Common Cap Rate Mistakes</h2>
+
+        <ol>
+            <li><strong>Using gross income instead of NOI:</strong> Always subtract operating expenses. A property with $30K gross rent and $12K expenses has an NOI of $18K, not $30K.</li>
+            <li><strong>Forgetting vacancy:</strong> No property is 100% occupied 100% of the time. Use 5-8% vacancy allowance.</li>
+            <li><strong>Ignoring CapEx reserves:</strong> Roofs, HVAC, appliances need replacement. Budget 5-10% of rent for capital expenditure reserves.</li>
+            <li><strong>Comparing different markets:</strong> A 4% cap rate in San Francisco isn't "worse" than an 8% in Memphis. The markets have different risk profiles and appreciation potential.</li>
+            <li><strong>Not accounting for management:</strong> If you self-manage, include an 8-10% management fee anyway. Your time has value, and you might hire a PM later.</li>
+        </ol>
+
+        <div class="cta-inline">
+            <h3>Want to learn how to evaluate deals like a pro?</h3>
+            <p>Our PM Financial Playbook course covers unit economics, profit margins, and investment analysis. Join the waitlist.</p>
+            <form class="email-form" id="blog-cta-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+            <div class="form-success" id="blog-cta-success">✅ You're on the list!</div>
+        </div>
+
+        <h2>Related Calculators</h2>
+        <ul>
+            <li><a href="/blog/cash-on-cash-return-calculator" style="color:var(--accent)">Cash on Cash Return Calculator</a></li>
+            <li><a href="/blog/rental-property-roi-calculator" style="color:var(--accent)">Rental Property ROI Calculator</a></li>
+        </ul>
+    </article>
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers and investors who want to build real businesses.</p></footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+    function calculateCapRate(){
+        const pv=parseFloat(document.getElementById('propertyValue').value)||0;
+        const gr=parseFloat(document.getElementById('grossRent').value)||0;
+        const ex=parseFloat(document.getElementById('expenses').value)||0;
+        const vc=parseFloat(document.getElementById('vacancy').value)||0;
+        if(pv<=0||gr<=0){alert('Please enter property value and gross rent');return}
+        const noi=gr-ex-vc;
+        const capRate=(noi/pv)*100;
+        const el=document.getElementById('calcResult');
+        const numEl=document.getElementById('capRateResult');
+        const verdictEl=document.getElementById('capVerdict');
+        const breakdownEl=document.getElementById('capBreakdown');
+        numEl.textContent=capRate.toFixed(2)+'%';
+        numEl.className='big-number '+(capRate>=7?'good':capRate>=5?'ok':'low');
+        let verdict='';
+        if(capRate>=8)verdict='🟢 Strong cap rate — high cash flow potential, but evaluate the risk profile';
+        else if(capRate>=6)verdict='🟡 Solid cap rate — good balance of cash flow and stability';
+        else if(capRate>=4)verdict='🟠 Moderate — typical for stable/appreciating markets';
+        else verdict='🔴 Low cap rate — make sure appreciation potential justifies the price';
+        verdictEl.textContent=verdict;
+        breakdownEl.innerHTML=`
+            <div><span>Gross Annual Rent</span><span>$${gr.toLocaleString()}</span></div>
+            <div><span>Operating Expenses</span><span>-$${ex.toLocaleString()}</span></div>
+            <div><span>Vacancy Loss</span><span>-$${vc.toLocaleString()}</span></div>
+            <div><span><strong>Net Operating Income (NOI)</strong></span><span><strong>$${noi.toLocaleString()}</strong></span></div>
+            <div><span>Property Value</span><span>$${pv.toLocaleString()}</span></div>
+            <div><span><strong>Cap Rate</strong></span><span><strong>${capRate.toFixed(2)}%</strong></span></div>
+            <div><span>Gross Rent Multiplier</span><span>${(pv/gr).toFixed(1)}x</span></div>
+        `;
+        el.classList.add('show');
+    }
+    document.getElementById('blog-cta-form').addEventListener('submit',function(e){e.preventDefault();const email=this.querySelector('input').value;fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,timestamp:new Date().toISOString(),source:'calc-caprate'})}).catch(()=>{});this.style.display='none';document.getElementById('blog-cta-success').style.display='block';});
+    </script>
+</body>
+</html>

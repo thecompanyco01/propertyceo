@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management Growth by City — PropertyCEO</title>
+    <meta name="description" content="City-specific property management growth guides. Find strategies for scaling your PM company in your local market.">
+    <link rel="canonical" href="https://propertyceo.vercel.app/cities">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary:#1a1a2e;--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto}
+        .logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}
+        .back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}
+        .header{max-width:1000px;margin:0 auto;padding:60px 40px 40px}
+        .header h1{font-size:42px;font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
+        .header p{color:var(--text-muted);font-size:18px}
+        .grid{max-width:1000px;margin:0 auto;padding:0 40px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+        .city-card{background:var(--card-bg);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;transition:transform 0.2s,border-color 0.2s}
+        .city-card:hover{transform:translateY(-3px);border-color:rgba(233,69,96,0.3)}
+        .city-card a{text-decoration:none;color:inherit}
+        .city-card h3{font-size:17px;font-weight:700;margin-bottom:4px}
+        .city-card .state{color:var(--accent);font-size:13px;font-weight:600}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.05)}
+        @media(max-width:600px){nav,.header,.grid{padding-left:20px;padding-right:20px}.header h1{font-size:32px}}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog" class="back-link">Blog →</a>
+    </nav>
+    <div class="header">
+        <h1>Growth Guides by City</h1>
+        <p>Property management growth strategies tailored to your local market.</p>
+    </div>
+    <div class="grid">
+        <div class="city-card"><a href="/cities/houston"><h3>Houston</h3><div class="state">TX</div></a></div>
+        <div class="city-card"><a href="/cities/phoenix"><h3>Phoenix</h3><div class="state">AZ</div></a></div>
+        <div class="city-card"><a href="/cities/san-antonio"><h3>San Antonio</h3><div class="state">TX</div></a></div>
+        <div class="city-card"><a href="/cities/dallas"><h3>Dallas</h3><div class="state">TX</div></a></div>
+        <div class="city-card"><a href="/cities/austin"><h3>Austin</h3><div class="state">TX</div></a></div>
+        <div class="city-card"><a href="/cities/jacksonville"><h3>Jacksonville</h3><div class="state">FL</div></a></div>
+        <div class="city-card"><a href="/cities/charlotte"><h3>Charlotte</h3><div class="state">NC</div></a></div>
+        <div class="city-card"><a href="/cities/indianapolis"><h3>Indianapolis</h3><div class="state">IN</div></a></div>
+        <div class="city-card"><a href="/cities/columbus"><h3>Columbus</h3><div class="state">OH</div></a></div>
+        <div class="city-card"><a href="/cities/denver"><h3>Denver</h3><div class="state">CO</div></a></div>
+        <div class="city-card"><a href="/cities/nashville"><h3>Nashville</h3><div class="state">TN</div></a></div>
+        <div class="city-card"><a href="/cities/atlanta"><h3>Atlanta</h3><div class="state">GA</div></a></div>
+        <div class="city-card"><a href="/cities/tampa"><h3>Tampa</h3><div class="state">FL</div></a></div>
+        <div class="city-card"><a href="/cities/orlando"><h3>Orlando</h3><div class="state">FL</div></a></div>
+        <div class="city-card"><a href="/cities/raleigh"><h3>Raleigh</h3><div class="state">NC</div></a></div>
+        <div class="city-card"><a href="/cities/las-vegas"><h3>Las Vegas</h3><div class="state">NV</div></a></div>
+        <div class="city-card"><a href="/cities/memphis"><h3>Memphis</h3><div class="state">TN</div></a></div>
+        <div class="city-card"><a href="/cities/kansas-city"><h3>Kansas City</h3><div class="state">MO</div></a></div>
+        <div class="city-card"><a href="/cities/cleveland"><h3>Cleveland</h3><div class="state">OH</div></a></div>
+        <div class="city-card"><a href="/cities/milwaukee"><h3>Milwaukee</h3><div class="state">WI</div></a></div>
+        <div class="city-card"><a href="/cities/sacramento"><h3>Sacramento</h3><div class="state">CA</div></a></div>
+        <div class="city-card"><a href="/cities/portland"><h3>Portland</h3><div class="state">OR</div></a></div>
+        <div class="city-card"><a href="/cities/minneapolis"><h3>Minneapolis</h3><div class="state">MN</div></a></div>
+        <div class="city-card"><a href="/cities/tucson"><h3>Tucson</h3><div class="state">AZ</div></a></div>
+        <div class="city-card"><a href="/cities/birmingham"><h3>Birmingham</h3><div class="state">AL</div></a></div>
+        <div class="city-card"><a href="/cities/richmond"><h3>Richmond</h3><div class="state">VA</div></a></div>
+        <div class="city-card"><a href="/cities/boise"><h3>Boise</h3><div class="state">ID</div></a></div>
+        <div class="city-card"><a href="/cities/charleston"><h3>Charleston</h3><div class="state">SC</div></a></div>
+        <div class="city-card"><a href="/cities/savannah"><h3>Savannah</h3><div class="state">GA</div></a></div>
+        <div class="city-card"><a href="/cities/spokane"><h3>Spokane</h3><div class="state">WA</div></a></div>
+    </div>
+    <footer>
+        <p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p>
+        <p style="margin-top:8px"><a href="/" style="color:var(--accent);text-decoration:none">Home</a> · <a href="/blog" style="color:var(--accent);text-decoration:none">Blog</a> · <a href="/courses" style="color:var(--accent);text-decoration:none">Courses</a></p>
+    </footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
