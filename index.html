@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyCEO — Scale Your Property Management Business</title>
+    <meta name="description" content="Stop managing. Start scaling. Business growth courses built for property managers who want to go from 50 to 500+ doors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --accent-hover: #d63851;
+            --bg: #0f0f1a;
+            --card-bg: #16213e;
+            --text: #eaeaea;
+            --text-muted: #a0a0b0;
+            --success: #00d26a;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Nav */
+        nav {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span { color: var(--accent); }
+        
+        .nav-tag {
+            font-size: 13px;
+            color: var(--text-muted);
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            padding: 6px 14px;
+            border-radius: 100px;
+        }
+        
+        /* Hero */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.15);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            border: 1px solid rgba(233, 69, 96, 0.25);
+        }
+        
+        h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+        
+        h1 .highlight {
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-sub {
+            font-size: clamp(18px, 2.5vw, 22px);
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto 48px;
+            line-height: 1.6;
+        }
+        
+        /* Email Form */
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto 16px;
+            justify-content: center;
+        }
+        
+        .email-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .email-form input:focus {
+            border-color: var(--accent);
+        }
+        
+        .email-form input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .btn-primary {
+            padding: 16px 32px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        
+        .form-note {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        .form-success {
+            display: none;
+            color: var(--success);
+            font-weight: 600;
+            font-size: 18px;
+            padding: 20px;
+        }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 60px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--accent);
+            letter-spacing: -1px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* Pain Section */
+        .pain-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 40px;
+        }
+        
+        .pain-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 48px;
+            letter-spacing: -1px;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        
+        .pain-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 28px;
+        }
+        
+        .pain-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        
+        .pain-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .pain-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        /* What You Get */
+        .courses-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+        
+        .courses-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .courses-sub {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            font-size: 18px;
+        }
+        
+        .course-list {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .course-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .course-num {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--accent);
+            background: rgba(233, 69, 96, 0.15);
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .course-info h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .course-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* CTA Bottom */
+        .cta-section {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 60px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(22, 33, 62, 0.8));
+            border: 1px solid rgba(233, 69, 96, 0.15);
+            border-radius: 24px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .cta-section p {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 17px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .stats {
+                gap: 30px;
+            }
+            
+            nav { padding: 20px; }
+            .hero { padding: 40px 20px 40px; }
+            .pain-section, .courses-section { padding: 0 20px; }
+            .cta-section { margin-left: 20px; margin-right: 20px; padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Property<span>CEO</span></div>
+        <div class="nav-tag">🏢 Coming Soon</div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-badge">For property managers stuck below 200 doors</div>
+        <h1>Stop Managing.<br>Start <span class="highlight">Scaling.</span></h1>
+        <p class="hero-sub">
+            Business growth courses built for property managers who are done with 
+            60-hour weeks and ready to build a company that grows without them.
+        </p>
+        
+        <form class="email-form" id="waitlist-form">
+            <input type="email" placeholder="Enter your email" required id="email-input">
+            <button type="submit" class="btn-primary">Join the Waitlist</button>
+        </form>
+        <p class="form-note">Free. No spam. Just a heads-up when we launch.</p>
+        <div class="form-success" id="form-success">
+            ✅ You're on the list. We'll be in touch.
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-number">326K+</div>
+            <div class="stat-label">Property Managers in the US</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">73%</div>
+            <div class="stat-label">Stuck under 200 doors</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">$5K+</div>
+            <div class="stat-label">What coaching programs charge</div>
+        </div>
+    </section>
+    
+    <section class="pain-section">
+        <h2>Sound familiar?</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">🔥</div>
+                <h3>Drowning in Operations</h3>
+                <p>Maintenance calls at midnight. Tenant complaints at 6am. You're the bottleneck in your own business.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">📉</div>
+                <h3>Can't Get More Doors</h3>
+                <p>You know you need more owners, but you're too busy putting out fires to actually market your business.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">💸</div>
+                <h3>Undercharging</h3>
+                <p>Your fees haven't changed in years. You're afraid raising prices will lose clients. Meanwhile, margins shrink.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">🧑‍💼</div>
+                <h3>Hiring Nightmares</h3>
+                <p>You need help but can't afford it. Or you hire someone and they're gone in 3 months. You're stuck doing everything.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">📚</div>
+                <h3>Courses That Waste Time</h3>
+                <p>NARPM classes teach you what you already know. Coaching masterminds cost $5K+ and half the advice is "just network more."</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">😴</div>
+                <h3>No Work-Life Balance</h3>
+                <p>You started this business for freedom. Instead you work more hours than when you had a job.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="courses-section">
+        <h2>What's Coming</h2>
+        <p class="courses-sub">Actionable courses. Real frameworks. None of the fluff.</p>
+        <div class="course-list">
+            <div class="course-item">
+                <div class="course-num">01</div>
+                <div class="course-info">
+                    <h4>Owner Acquisition Machine</h4>
+                    <p>The exact marketing playbook to add 10+ doors per month without cold calling or buying leads.</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-num">02</div>
+                <div class="course-info">
+                    <h4>Price Like a CEO</h4>
+                    <p>Stop competing on price. Learn the pricing frameworks that let you charge 20-40% more — and keep clients longer.</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-num">03</div>
+                <div class="course-info">
+                    <h4>Systems That Scale</h4>
+                    <p>SOPs, automation, and workflows that let you manage 500 doors with the same stress level as 50.</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-num">04</div>
+                <div class="course-info">
+                    <h4>Hire Right, Grow Fast</h4>
+                    <p>When to hire, who to hire, how to train them, and how to stop being the person who does everything.</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-num">05</div>
+                <div class="course-info">
+                    <h4>The PM Financial Playbook</h4>
+                    <p>Unit economics, profit margins, cash flow forecasting — the numbers that separate growing PMs from struggling ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>Be first in line.</h2>
+        <p>We're building the courses we wish existed when we were grinding at 80 doors. Join the waitlist — launching soon.</p>
+        <form class="email-form" id="waitlist-form-2">
+            <input type="email" placeholder="Enter your email" required id="email-input-2">
+            <button type="submit" class="btn-primary">Join the Waitlist</button>
+        </form>
+        <div class="form-success" id="form-success-2">
+            ✅ You're on the list. We'll be in touch.
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 PropertyCEO. Built for property managers, by someone who gets it.</p>
+    </footer>
+    
+    <script>
+        function handleSubmit(formId, successId) {
+            const form = document.getElementById(formId);
+            const success = document.getElementById(successId);
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = form.querySelector('input[type="email"]').value;
+                
+                // Store in localStorage as basic persistence
+                const waitlist = JSON.parse(localStorage.getItem('propertyceo_waitlist') || '[]');
+                if (!waitlist.includes(email)) {
+                    waitlist.push(email);
+                    localStorage.setItem('propertyceo_waitlist', JSON.stringify(waitlist));
+                }
+                
+                // Send to our API endpoint (will be set up later)
+                fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, timestamp: new Date().toISOString() })
+                }).catch(() => {}); // Fail silently for now
+                
+                form.style.display = 'none';
+                success.style.display = 'block';
+                
+                // Hide the form note
+                const note = form.nextElementSibling;
+                if (note && note.classList.contains('form-note')) {
+                    note.style.display = 'none';
+                }
+            });
+        }
+        
+        handleSubmit('waitlist-form', 'form-success');
+        handleSubmit('waitlist-form-2', 'form-success-2');
+    </script>
+</body>
+</html>
