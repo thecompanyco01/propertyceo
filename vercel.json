@@ -4,6 +4,7 @@
     { "source": "/cities/:slug", "destination": "/cities/:slug.html" },
     { "source": "/services/:slug", "destination": "/services/:slug.html" },
     { "source": "/states/:slug", "destination": "/states/:slug.html" },
+    { "source": "/compare/:slug", "destination": "/compare/:slug.html" },
     { "source": "/api/waitlist", "destination": "/api/waitlist.js" }
   ],
   "headers": [
