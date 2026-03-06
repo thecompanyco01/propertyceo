@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Management Growth by City — PropertyCEO</title>
-    <meta name="description" content="City-specific property management growth guides. Find strategies for scaling your PM company in your local market.">
+    <meta name="description" content="City-specific property management growth strategies for 99 US cities. Find your market and learn how to scale.">
     <link rel="canonical" href="https://propertyceo.vercel.app/cities">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary:#1a1a2e;--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0}
-        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        :root{--primary:#1a1a2e;--accent:#e94560;--accent-hover:#d63851;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
         nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto}
-        .logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}
+        .logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}
+        .logo span{color:var(--accent)}
         .back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}
-        .header{max-width:1000px;margin:0 auto;padding:60px 40px 40px}
-        .header h1{font-size:42px;font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
-        .header p{color:var(--text-muted);font-size:18px}
-        .grid{max-width:1000px;margin:0 auto;padding:0 40px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-        .city-card{background:var(--card-bg);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;transition:transform 0.2s,border-color 0.2s}
-        .city-card:hover{transform:translateY(-3px);border-color:rgba(233,69,96,0.3)}
-        .city-card a{text-decoration:none;color:inherit}
-        .city-card h3{font-size:17px;font-weight:700;margin-bottom:4px}
-        .city-card .state{color:var(--accent);font-size:13px;font-weight:600}
+        main{max-width:1000px;margin:0 auto;padding:40px 40px 80px}
+        h1{font-size:36px;font-weight:900;letter-spacing:-1.5px;margin-bottom:8px}
+        .subtitle{color:var(--text-muted);font-size:18px;margin-bottom:40px}
+        h3{color:var(--accent)}
+        .city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+        .city-link{color:var(--text-muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:all 0.2s;font-size:15px}
+        .city-link:hover{background:var(--card-bg);color:var(--text)}
         footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.05)}
-        @media(max-width:600px){nav,.header,.grid{padding-left:20px;padding-right:20px}.header h1{font-size:32px}}
+        @media(max-width:600px){nav,main{padding-left:20px;padding-right:20px}h1{font-size:28px}.city-grid{grid-template-columns:1fr 1fr}}
     </style>
 </head>
 <body>
@@ -32,42 +31,221 @@
         <a href="/" class="logo">Property<span>CEO</span></a>
         <a href="/blog" class="back-link">Blog →</a>
     </nav>
-    <div class="header">
-        <h1>Growth Guides by City</h1>
-        <p>Property management growth strategies tailored to your local market.</p>
-    </div>
-    <div class="grid">
-        <div class="city-card"><a href="/cities/houston"><h3>Houston</h3><div class="state">TX</div></a></div>
-        <div class="city-card"><a href="/cities/phoenix"><h3>Phoenix</h3><div class="state">AZ</div></a></div>
-        <div class="city-card"><a href="/cities/san-antonio"><h3>San Antonio</h3><div class="state">TX</div></a></div>
-        <div class="city-card"><a href="/cities/dallas"><h3>Dallas</h3><div class="state">TX</div></a></div>
-        <div class="city-card"><a href="/cities/austin"><h3>Austin</h3><div class="state">TX</div></a></div>
-        <div class="city-card"><a href="/cities/jacksonville"><h3>Jacksonville</h3><div class="state">FL</div></a></div>
-        <div class="city-card"><a href="/cities/charlotte"><h3>Charlotte</h3><div class="state">NC</div></a></div>
-        <div class="city-card"><a href="/cities/indianapolis"><h3>Indianapolis</h3><div class="state">IN</div></a></div>
-        <div class="city-card"><a href="/cities/columbus"><h3>Columbus</h3><div class="state">OH</div></a></div>
-        <div class="city-card"><a href="/cities/denver"><h3>Denver</h3><div class="state">CO</div></a></div>
-        <div class="city-card"><a href="/cities/nashville"><h3>Nashville</h3><div class="state">TN</div></a></div>
-        <div class="city-card"><a href="/cities/atlanta"><h3>Atlanta</h3><div class="state">GA</div></a></div>
-        <div class="city-card"><a href="/cities/tampa"><h3>Tampa</h3><div class="state">FL</div></a></div>
-        <div class="city-card"><a href="/cities/orlando"><h3>Orlando</h3><div class="state">FL</div></a></div>
-        <div class="city-card"><a href="/cities/raleigh"><h3>Raleigh</h3><div class="state">NC</div></a></div>
-        <div class="city-card"><a href="/cities/las-vegas"><h3>Las Vegas</h3><div class="state">NV</div></a></div>
-        <div class="city-card"><a href="/cities/memphis"><h3>Memphis</h3><div class="state">TN</div></a></div>
-        <div class="city-card"><a href="/cities/kansas-city"><h3>Kansas City</h3><div class="state">MO</div></a></div>
-        <div class="city-card"><a href="/cities/cleveland"><h3>Cleveland</h3><div class="state">OH</div></a></div>
-        <div class="city-card"><a href="/cities/milwaukee"><h3>Milwaukee</h3><div class="state">WI</div></a></div>
-        <div class="city-card"><a href="/cities/sacramento"><h3>Sacramento</h3><div class="state">CA</div></a></div>
-        <div class="city-card"><a href="/cities/portland"><h3>Portland</h3><div class="state">OR</div></a></div>
-        <div class="city-card"><a href="/cities/minneapolis"><h3>Minneapolis</h3><div class="state">MN</div></a></div>
-        <div class="city-card"><a href="/cities/tucson"><h3>Tucson</h3><div class="state">AZ</div></a></div>
-        <div class="city-card"><a href="/cities/birmingham"><h3>Birmingham</h3><div class="state">AL</div></a></div>
-        <div class="city-card"><a href="/cities/richmond"><h3>Richmond</h3><div class="state">VA</div></a></div>
-        <div class="city-card"><a href="/cities/boise"><h3>Boise</h3><div class="state">ID</div></a></div>
-        <div class="city-card"><a href="/cities/charleston"><h3>Charleston</h3><div class="state">SC</div></a></div>
-        <div class="city-card"><a href="/cities/savannah"><h3>Savannah</h3><div class="state">GA</div></a></div>
-        <div class="city-card"><a href="/cities/spokane"><h3>Spokane</h3><div class="state">WA</div></a></div>
-    </div>
+    <main>
+        <h1>Property Management Growth by City</h1>
+        <p class="subtitle">City-specific strategies for 99 markets across the US</p>
+        <h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">AK</h3>
+<div class="city-grid">
+    <a href="/cities/anchorage" class="city-link">Anchorage</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">AL</h3>
+<div class="city-grid">
+    <a href="/cities/birmingham" class="city-link">Birmingham</a>
+    <a href="/cities/huntsville" class="city-link">Huntsville</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">AR</h3>
+<div class="city-grid">
+    <a href="/cities/fayetteville" class="city-link">Fayetteville</a>
+    <a href="/cities/little-rock" class="city-link">Little Rock</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">AZ</h3>
+<div class="city-grid">
+    <a href="/cities/chandler" class="city-link">Chandler</a>
+    <a href="/cities/gilbert" class="city-link">Gilbert</a>
+    <a href="/cities/glendale" class="city-link">Glendale</a>
+    <a href="/cities/mesa" class="city-link">Mesa</a>
+    <a href="/cities/phoenix" class="city-link">Phoenix</a>
+    <a href="/cities/scottsdale" class="city-link">Scottsdale</a>
+    <a href="/cities/tucson" class="city-link">Tucson</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">CA</h3>
+<div class="city-grid">
+    <a href="/cities/bakersfield" class="city-link">Bakersfield</a>
+    <a href="/cities/fresno" class="city-link">Fresno</a>
+    <a href="/cities/irvine" class="city-link">Irvine</a>
+    <a href="/cities/long-beach" class="city-link">Long Beach</a>
+    <a href="/cities/los-angeles" class="city-link">Los Angeles</a>
+    <a href="/cities/oakland" class="city-link">Oakland</a>
+    <a href="/cities/riverside" class="city-link">Riverside</a>
+    <a href="/cities/sacramento" class="city-link">Sacramento</a>
+    <a href="/cities/san-diego" class="city-link">San Diego</a>
+    <a href="/cities/san-jose" class="city-link">San Jose</a>
+    <a href="/cities/santa-ana" class="city-link">Santa Ana</a>
+    <a href="/cities/stockton" class="city-link">Stockton</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">CO</h3>
+<div class="city-grid">
+    <a href="/cities/aurora" class="city-link">Aurora</a>
+    <a href="/cities/colorado-springs" class="city-link">Colorado Springs</a>
+    <a href="/cities/denver" class="city-link">Denver</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">FL</h3>
+<div class="city-grid">
+    <a href="/cities/cape-coral" class="city-link">Cape Coral</a>
+    <a href="/cities/jacksonville" class="city-link">Jacksonville</a>
+    <a href="/cities/miami" class="city-link">Miami</a>
+    <a href="/cities/orlando" class="city-link">Orlando</a>
+    <a href="/cities/pensacola" class="city-link">Pensacola</a>
+    <a href="/cities/st-petersburg" class="city-link">St. Petersburg</a>
+    <a href="/cities/tallahassee" class="city-link">Tallahassee</a>
+    <a href="/cities/tampa" class="city-link">Tampa</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">GA</h3>
+<div class="city-grid">
+    <a href="/cities/atlanta" class="city-link">Atlanta</a>
+    <a href="/cities/savannah" class="city-link">Savannah</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">IA</h3>
+<div class="city-grid">
+    <a href="/cities/des-moines" class="city-link">Des Moines</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">ID</h3>
+<div class="city-grid">
+    <a href="/cities/boise" class="city-link">Boise</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">IL</h3>
+<div class="city-grid">
+    <a href="/cities/chicago" class="city-link">Chicago</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">IN</h3>
+<div class="city-grid">
+    <a href="/cities/indianapolis" class="city-link">Indianapolis</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">KS</h3>
+<div class="city-grid">
+    <a href="/cities/wichita" class="city-link">Wichita</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">KY</h3>
+<div class="city-grid">
+    <a href="/cities/lexington" class="city-link">Lexington</a>
+    <a href="/cities/louisville" class="city-link">Louisville</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">LA</h3>
+<div class="city-grid">
+    <a href="/cities/baton-rouge" class="city-link">Baton Rouge</a>
+    <a href="/cities/new-orleans" class="city-link">New Orleans</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">MA</h3>
+<div class="city-grid">
+    <a href="/cities/boston" class="city-link">Boston</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">MD</h3>
+<div class="city-grid">
+    <a href="/cities/baltimore" class="city-link">Baltimore</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">MI</h3>
+<div class="city-grid">
+    <a href="/cities/detroit" class="city-link">Detroit</a>
+    <a href="/cities/grand-rapids" class="city-link">Grand Rapids</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">MN</h3>
+<div class="city-grid">
+    <a href="/cities/minneapolis" class="city-link">Minneapolis</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">MO</h3>
+<div class="city-grid">
+    <a href="/cities/kansas-city" class="city-link">Kansas City</a>
+    <a href="/cities/st-louis" class="city-link">St. Louis</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NC</h3>
+<div class="city-grid">
+    <a href="/cities/charlotte" class="city-link">Charlotte</a>
+    <a href="/cities/durham" class="city-link">Durham</a>
+    <a href="/cities/greensboro" class="city-link">Greensboro</a>
+    <a href="/cities/raleigh" class="city-link">Raleigh</a>
+    <a href="/cities/winston-salem" class="city-link">Winston-Salem</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NE</h3>
+<div class="city-grid">
+    <a href="/cities/lincoln" class="city-link">Lincoln</a>
+    <a href="/cities/omaha" class="city-link">Omaha</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NJ</h3>
+<div class="city-grid">
+    <a href="/cities/jersey-city" class="city-link">Jersey City</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NM</h3>
+<div class="city-grid">
+    <a href="/cities/albuquerque" class="city-link">Albuquerque</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NV</h3>
+<div class="city-grid">
+    <a href="/cities/henderson" class="city-link">Henderson</a>
+    <a href="/cities/las-vegas" class="city-link">Las Vegas</a>
+    <a href="/cities/north-las-vegas" class="city-link">North Las Vegas</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">NY</h3>
+<div class="city-grid">
+    <a href="/cities/buffalo" class="city-link">Buffalo</a>
+    <a href="/cities/new-york" class="city-link">New York</a>
+    <a href="/cities/rochester" class="city-link">Rochester</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">OH</h3>
+<div class="city-grid">
+    <a href="/cities/cincinnati" class="city-link">Cincinnati</a>
+    <a href="/cities/cleveland" class="city-link">Cleveland</a>
+    <a href="/cities/columbus" class="city-link">Columbus</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">OK</h3>
+<div class="city-grid">
+    <a href="/cities/oklahoma-city" class="city-link">Oklahoma City</a>
+    <a href="/cities/tulsa" class="city-link">Tulsa</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">OR</h3>
+<div class="city-grid">
+    <a href="/cities/portland" class="city-link">Portland</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">PA</h3>
+<div class="city-grid">
+    <a href="/cities/pittsburgh" class="city-link">Pittsburgh</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">SC</h3>
+<div class="city-grid">
+    <a href="/cities/charleston" class="city-link">Charleston</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">TN</h3>
+<div class="city-grid">
+    <a href="/cities/chattanooga" class="city-link">Chattanooga</a>
+    <a href="/cities/knoxville" class="city-link">Knoxville</a>
+    <a href="/cities/memphis" class="city-link">Memphis</a>
+    <a href="/cities/nashville" class="city-link">Nashville</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">TX</h3>
+<div class="city-grid">
+    <a href="/cities/arlington" class="city-link">Arlington</a>
+    <a href="/cities/austin" class="city-link">Austin</a>
+    <a href="/cities/corpus-christi" class="city-link">Corpus Christi</a>
+    <a href="/cities/dallas" class="city-link">Dallas</a>
+    <a href="/cities/el-paso" class="city-link">El Paso</a>
+    <a href="/cities/fort-worth" class="city-link">Fort Worth</a>
+    <a href="/cities/houston" class="city-link">Houston</a>
+    <a href="/cities/lubbock" class="city-link">Lubbock</a>
+    <a href="/cities/plano" class="city-link">Plano</a>
+    <a href="/cities/san-antonio" class="city-link">San Antonio</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">UT</h3>
+<div class="city-grid">
+    <a href="/cities/provo" class="city-link">Provo</a>
+    <a href="/cities/salt-lake-city" class="city-link">Salt Lake City</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">VA</h3>
+<div class="city-grid">
+    <a href="/cities/norfolk" class="city-link">Norfolk</a>
+    <a href="/cities/richmond" class="city-link">Richmond</a>
+    <a href="/cities/virginia-beach" class="city-link">Virginia Beach</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">WA</h3>
+<div class="city-grid">
+    <a href="/cities/seattle" class="city-link">Seattle</a>
+    <a href="/cities/spokane" class="city-link">Spokane</a>
+</div>
+<h3 style="margin:28px 0 12px;font-size:18px;font-weight:700">WI</h3>
+<div class="city-grid">
+    <a href="/cities/madison" class="city-link">Madison</a>
+    <a href="/cities/milwaukee" class="city-link">Milwaukee</a>
+</div>
+
+    </main>
     <footer>
         <p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p>
         <p style="margin-top:8px"><a href="/" style="color:var(--accent);text-decoration:none">Home</a> · <a href="/blog" style="color:var(--accent);text-decoration:none">Blog</a> · <a href="/courses" style="color:var(--accent);text-decoration:none">Courses</a></p>
