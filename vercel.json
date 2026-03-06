@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/blog/:slug", "destination": "/blog/:slug.html" },
     { "source": "/cities/:slug", "destination": "/cities/:slug.html" },
+    { "source": "/services/:slug", "destination": "/services/:slug.html" },
     { "source": "/api/waitlist", "destination": "/api/waitlist.js" }
   ],
   "headers": [
