@@ -147,4 +147,8 @@
   <url><loc>https://propertyceo.vercel.app/services/single-family</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://propertyceo.vercel.app/services/student-housing</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://propertyceo.vercel.app/services/vacation-rental</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://propertyceo.vercel.app/blog/property-management-reputation-management</loc><priority>0.7</priority></url>
+  <url><loc>https://propertyceo.vercel.app/blog/property-management-vendor-management</loc><priority>0.7</priority></url>
+  <url><loc>https://propertyceo.vercel.app/blog/property-management-tenant-communication</loc><priority>0.7</priority></url>
+  <url><loc>https://propertyceo.vercel.app/blog/property-management-rent-collection</loc><priority>0.7</priority></url>
 </urlset>
