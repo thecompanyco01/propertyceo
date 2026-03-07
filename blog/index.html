@@ -1,574 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropertyCEO Blog — Growth Guides for Property Managers</title>
-    <meta name="description" content="Free guides and frameworks for property managers who want to scale their business. Marketing, pricing, operations, hiring, and growth strategies that actually work.">
-    <link rel="canonical" href="https://propertyceo.vercel.app/blog">
-    <meta property="og:title" content="PropertyCEO Blog — Growth Guides for Property Managers">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; }
-        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 16px; align-items: center; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 600; }
-        .nav-cta { background: var(--accent); color: white !important; padding: 8px 16px; border-radius: 8px; }
-        .blog-header { max-width: 1000px; margin: 0 auto; padding: 60px 40px 40px; }
-        .blog-header h1 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 12px; }
-        .blog-header p { color: var(--text-muted); font-size: 18px; }
-        .blog-grid { max-width: 1000px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .blog-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; transition: transform 0.2s, border-color 0.2s; }
-        .blog-card:hover { transform: translateY(-4px); border-color: rgba(233,69,96,0.3); }
-        .blog-card a { text-decoration: none; color: inherit; }
-        .card-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
-        .blog-card h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; letter-spacing: -0.5px; }
-        .blog-card p { color: var(--text-muted); font-size: 15px; line-height: 1.5; margin-bottom: 12px; }
-        .card-meta { font-size: 13px; color: var(--text-muted); opacity: 0.7; }
-        .section-label { max-width: 1000px; margin: 0 auto; padding: 40px 40px 16px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
-        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
-        footer a { color: var(--accent); text-decoration: none; }
-        @media (max-width: 600px) { nav, .blog-header, .blog-grid, .section-label { padding-left: 20px; padding-right: 20px; } .blog-header h1 { font-size: 32px; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Management Blog — 64+ Expert Articles | PropertyCEO</title>
+<meta name="description" content="Expert property management articles covering growth strategies, marketing, operations, software reviews, and more. 64+ guides for property managers.">
+<link rel="canonical" href="https://propertyceo.vercel.app/blog/">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #f8fafc; }
+.header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1rem 2rem; }
+.header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+.nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 2rem; }
+.page-header { background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%); padding: 4rem 2rem; text-align: center; }
+.page-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 0.5rem; }
+.page-header p { color: #64748b; font-size: 1.1rem; }
+.grid { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+.article-card { background: white; border-radius: 12px; padding: 1.5rem; text-decoration: none; color: inherit; border: 1px solid #e2e8f0; transition: all 0.2s; display: block; }
+.article-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-color: #2d5a87; }
+.article-card h3 { color: #1e3a5f; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.article-card p { color: #64748b; font-size: 0.9rem; }
+.footer { background: #1e293b; color: #94a3b8; padding: 3rem 2rem; text-align: center; margin-top: 4rem; }
+.footer a { color: #60a5fa; text-decoration: none; }
+@media (max-width: 768px) { .page-header h1 { font-size: 1.75rem; } .grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">Property<span>CEO</span></a>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/cities">By City</a>
-            <a href="/courses" class="nav-cta">Get the Playbook →</a>
-        </div>
-    </nav>
-
-    <div class="blog-header">
-        <h1>The PropertyCEO Blog</h1>
-        <p>Free guides and frameworks for property managers who want to stop managing and start scaling.</p>
-    </div>
-
-    <div class="section-label">📈 Growth & Scaling</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/first-100-doors">
-                <div class="card-badge">Growth</div>
-                <h2>How to Get Your First 100 Doors in Property Management</h2>
-                <p>The step-by-step playbook for going from zero to 100 doors. Owner acquisition, pricing, and building your foundation.</p>
-                <div class="card-meta">15 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/scale-100-to-500-doors">
-                <div class="card-badge">Scaling</div>
-                <h2>How to Scale from 100 to 500 Doors</h2>
-                <p>The playbook for breaking through the 100-door ceiling. Systems, hiring, and growth strategies for the next level.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/how-to-grow-property-management-business">
-                <div class="card-badge">Growth Strategy</div>
-                <h2>How to Grow Your Property Management Business in 2026</h2>
-                <p>The real playbook for going from 50 to 500+ doors. Numbers, systems, hiring, and marketing — no fluff.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-business-plan">
-                <div class="card-badge">Planning</div>
-                <h2>Property Management Business Plan Template [2026]</h2>
-                <p>A complete, fill-in-the-blank business plan template built specifically for property management companies.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/start-property-management-company-cost">
-                <div class="card-badge">Starting Up</div>
-                <h2>How Much Does It Cost to Start a PM Company?</h2>
-                <p>Real numbers on startup costs, licensing, insurance, software, and marketing to launch your PM company.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">🎯 Marketing & Lead Generation</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-lead-generation">
-                <div class="card-badge">Lead Gen</div>
-                <h2>Property Management Lead Generation: 15 Proven Strategies</h2>
-                <p>15 battle-tested ways to get new property owners knocking on your door. Ranked by ROI and effort.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/owner-acquisition-scripts">
-                <div class="card-badge">Sales</div>
-                <h2>Owner Acquisition Scripts That Actually Work</h2>
-                <p>Cold call scripts, email templates, and follow-up sequences that convert property owners into clients.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-marketing-ideas">
-                <div class="card-badge">Marketing</div>
-                <h2>12 Marketing Ideas That Actually Get New Owners</h2>
-                <p>12 strategies ranked by ROI — from Google Ads to agent partnerships. Skip the generic advice.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-seo">
-                <div class="card-badge">SEO</div>
-                <h2>Property Management SEO: Get Found by Property Owners</h2>
-                <p>The complete SEO guide for PM companies. Local SEO, content strategy, and how to rank #1 in your market.</p>
-                <div class="card-meta">15 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">💰 Revenue & Pricing</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-pricing-strategy">
-                <div class="card-badge">Revenue</div>
-                <h2>Property Management Pricing Strategy: How to Charge More</h2>
-                <p>Most PMs undercharge by 20-30%. Here's the framework that lets you raise fees and keep clients.</p>
-                <div class="card-meta">11 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-fees-guide">
-                <div class="card-badge">Fees</div>
-                <h2>The Complete Guide to Property Management Fees</h2>
-                <p>Every fee you should be charging, what's reasonable, and how to structure your fee schedule.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-profit-margins">
-                <div class="card-badge">Financials</div>
-                <h2>Property Management Profit Margins: What to Expect</h2>
-                <p>Real profit margin benchmarks by portfolio size. Know your numbers and optimize your bottom line.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">⚙️ Operations & Team</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-automation">
-                <div class="card-badge">Systems</div>
-                <h2>20 Tasks You Should Stop Doing Manually</h2>
-                <p>You're spending 15+ hours/week on automatable tasks. Here's what to automate and what tools to use.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-kpis">
-                <div class="card-badge">Operations</div>
-                <h2>15 Property Management KPIs That Actually Matter</h2>
-                <p>Stop tracking vanity metrics. These 15 KPIs separate growing PM companies from ones that plateau.</p>
-                <div class="card-meta">10 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/hire-first-property-manager">
-                <div class="card-badge">Hiring</div>
-                <h2>How to Hire Your First Property Manager Employee</h2>
-                <p>When to hire, who to hire, compensation, training — everything for making your first PM hire.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/best-crm-property-management">
-                <div class="card-badge">Tools</div>
-                <h2>Best CRM for Property Management Companies in 2026</h2>
-                <p>Side-by-side comparison of CRMs for PM companies. Features, pricing, and which one fits your size.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">🏠 Property Management Essentials</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-tenant-screening-guide">
-                <div class="card-badge">Screening</div>
-                <h2>The Complete Tenant Screening Guide for Property Managers</h2>
-                <p>How to screen tenants thoroughly, legally, and efficiently. Criteria, tools, red flags, and best practices.</p>
-                <div class="card-meta">15 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-maintenance-systems">
-                <div class="card-badge">Maintenance</div>
-                <h2>Building a Maintenance System That Scales</h2>
-                <p>Stop being the maintenance middleman. Build vendor networks, triage systems, and workflows that run without you.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-owner-retention">
-                <div class="card-badge">Retention</div>
-                <h2>Owner Retention: How to Keep Clients for 10+ Years</h2>
-                <p>Acquiring owners is expensive. Keeping them is profitable. The retention playbook for PM companies.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-bookkeeping">
-                <div class="card-badge">Finance</div>
-                <h2>Property Management Bookkeeping: The Complete Guide</h2>
-                <p>Trust accounting, owner disbursements, chart of accounts, and the bookkeeping systems that scale.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-insurance-guide">
-                <div class="card-badge">Risk</div>
-                <h2>Property Management Insurance: What You Actually Need</h2>
-                <p>E&O, general liability, cyber, workers comp — the insurance policies every PM company needs (and what to skip).</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-eviction-process">
-                <div class="card-badge">Legal</div>
-                <h2>The Property Management Eviction Process Guide</h2>
-                <p>Step-by-step eviction guide for property managers. Timelines, notices, court procedures, and how to protect your owners.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">🤝 Client & Vendor Management</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-vendor-management">
-                <div class="card-badge">Vendors</div>
-                <h2>Building a Reliable Vendor Network for Your PM Company</h2>
-                <p>How to find, vet, and manage contractors. Build the vendor network that lets you scale without headaches.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-tenant-communication">
-                <div class="card-badge">Communication</div>
-                <h2>Tenant Communication Best Practices for PMs</h2>
-                <p>Templates, tools, and strategies for professional tenant communication that reduces complaints and turnover.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-rent-collection">
-                <div class="card-badge">Collections</div>
-                <h2>Optimizing Rent Collection: The PM's Guide</h2>
-                <p>Get to 99%+ collection rates. Online payments, late fee policies, and the systems that make rent collection effortless.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-reputation-management">
-                <div class="card-badge">Reputation</div>
-                <h2>Online Reputation Management for Property Managers</h2>
-                <p>How to get 5-star reviews, handle negative feedback, and build the online reputation that wins new owners.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">📋 Specialized Guides</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-virtual-assistants">
-                <div class="card-badge">VAs</div>
-                <h2>How to Hire and Manage VAs for Property Management</h2>
-                <p>Virtual assistants can cut your workload by 50%. Here's how to hire, train, and manage VAs for PM tasks.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-exit-strategy">
-                <div class="card-badge">Exit</div>
-                <h2>How to Sell Your Property Management Company</h2>
-                <p>Valuation, buyer types, deal structure, and what to prepare. The exit strategy guide for PM owners.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/section-8-property-management">
-                <div class="card-badge">Section 8</div>
-                <h2>The Complete Guide to Section 8 Property Management</h2>
-                <p>HCV inspections, payment timelines, pros and cons, and how to build a profitable Section 8 portfolio.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">📑 Templates, Contracts & Compliance</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-agreement-template">
-                <div class="card-badge">Template</div>
-                <h2>Property Management Agreement Template Guide</h2>
-                <p>What to include in your management agreement, common mistakes, and how to protect yourself and your clients.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-contract-guide">
-                <div class="card-badge">Contracts</div>
-                <h2>Property Management Contracts: The Complete Guide</h2>
-                <p>Everything you need to know about PM contracts — clauses, termination, renewals, and negotiation tactics.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-certification">
-                <div class="card-badge">Credentials</div>
-                <h2>Property Management Certifications Worth Getting</h2>
-                <p>CPM, RMP, MPM — which certifications actually help your business grow? A honest breakdown.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">💼 Running Your PM Business</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-accounting-guide">
-                <div class="card-badge">Accounting</div>
-                <h2>Property Management Accounting: The Essential Guide</h2>
-                <p>Trust accounts, chart of accounts, reconciliation, and the accounting fundamentals every PM needs.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-fees-average">
-                <div class="card-badge">Fees</div>
-                <h2>Average Property Management Fees by State and City</h2>
-                <p>What PMs actually charge across the US. Benchmark your fees against real market data.</p>
-                <div class="card-meta">11 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-interview-questions">
-                <div class="card-badge">Hiring</div>
-                <h2>Property Management Interview Questions to Ask</h2>
-                <p>30+ interview questions for hiring property managers, leasing agents, and maintenance coordinators.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-checklist">
-                <div class="card-badge">Operations</div>
-                <h2>The Ultimate Property Management Checklist</h2>
-                <p>Move-in, move-out, inspections, onboarding — every checklist your PM company needs in one place.</p>
-                <div class="card-meta">12 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">🚀 Starting & Growing a PM Company</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/how-to-start-property-management-company">
-                <div class="card-badge">Startup</div>
-                <h2>How to Start a Property Management Company in 2026</h2>
-                <p>Step-by-step guide from zero to first door. Licensing, entity setup, software, first clients — everything.</p>
-                <div class="card-meta">15 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-license-requirements">
-                <div class="card-badge">Licensing</div>
-                <h2>Property Management License Requirements by State</h2>
-                <p>Do you need a license? State-by-state breakdown of PM licensing requirements, costs, and timelines.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-franchise-guide">
-                <div class="card-badge">Franchise</div>
-                <h2>Property Management Franchise Guide: Worth It?</h2>
-                <p>Franchise vs independent PM company. Costs, pros/cons, and which franchises are actually worth considering.</p>
-                <div class="card-meta">13 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/how-much-do-property-managers-charge">
-                <div class="card-badge">Pricing</div>
-                <h2>How Much Do Property Managers Charge? [2026 Guide]</h2>
-                <p>Complete breakdown of PM fees: management %, leasing fees, maintenance markups, and what owners should expect.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-salary-guide">
-                <div class="card-badge">Careers</div>
-                <h2>Property Management Salary Guide: What PMs Earn in 2026</h2>
-                <p>Salary data by role, experience, and market. What to pay your team and how to structure compensation.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/airbnb-property-management-guide">
-                <div class="card-badge">Short-Term</div>
-                <h2>Airbnb Property Management: The Complete Guide</h2>
-                <p>How to add short-term rental management to your business. Pricing, operations, tools, and profitability.</p>
-                <div class="card-meta">14 min read · Mar 6, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">📄 Agreements, Checklists & Operations</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/property-management-agreement-guide">
-                <div class="card-badge">Agreements · 1,600/mo searches</div>
-                <h2>Property Management Agreement: Complete Guide & Template</h2>
-                <p>Everything you need to know about PM agreements. What to include, common mistakes, and downloadable template.</p>
-                <div class="card-meta">14 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-checklist-guide">
-                <div class="card-badge">Operations · 170/mo searches</div>
-                <h2>Property Management Checklist: Daily, Weekly & Monthly</h2>
-                <p>Complete checklists for every PM task — onboarding, inspections, move-in/move-out, and routine operations.</p>
-                <div class="card-meta">13 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-reporting">
-                <div class="card-badge">Reporting · 140/mo searches</div>
-                <h2>Property Management Reporting: Owner Reports & KPI Dashboards</h2>
-                <p>What owners want to see in their reports. Templates, KPI dashboards, and reporting best practices.</p>
-                <div class="card-meta">12 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/property-management-crm-guide">
-                <div class="card-badge">Tools · 720/mo searches</div>
-                <h2>Best Property Management CRM Software in 2026</h2>
-                <p>Side-by-side comparison of CRMs for PM companies. Features, pricing, and which one fits your portfolio size.</p>
-                <div class="card-meta">14 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/rental-property-bookkeeping">
-                <div class="card-badge">Finance · 170/mo searches</div>
-                <h2>Rental Property Bookkeeping: The Complete Guide</h2>
-                <p>Trust accounting, owner disbursements, software picks, and bookkeeping systems that actually scale.</p>
-                <div class="card-meta">13 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/best-rent-collection-app">
-                <div class="card-badge">Tools · 90/mo searches</div>
-                <h2>Best Rent Collection Apps for Property Managers</h2>
-                <p>Top rent collection tools compared. ACH fees, tenant portals, autopay, and integration with PM software.</p>
-                <div class="card-meta">12 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/manage-rental-property-remotely">
-                <div class="card-badge">Remote PM</div>
-                <h2>How to Manage Rental Properties Remotely</h2>
-                <p>The complete guide to remote property management. Tools, systems, and strategies for managing from anywhere.</p>
-                <div class="card-meta">12 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/find-rental-property-owners">
-                <div class="card-badge">Lead Gen</div>
-                <h2>How to Find Rental Property Owners for Your PM Business</h2>
-                <p>Proven tactics to find and contact property owners who need management. Skip tracing, public records, and more.</p>
-                <div class="card-meta">13 min read · Mar 7, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-label">🧮 Calculators & Tools</div>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <a href="/blog/cap-rate-calculator">
-                <div class="card-badge">Calculator</div>
-                <h2>Cap Rate Calculator</h2>
-                <p>Free interactive cap rate calculator. Plug in your numbers and get instant results.</p>
-                <div class="card-meta">Interactive Tool · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/cash-on-cash-return-calculator">
-                <div class="card-badge">Calculator</div>
-                <h2>Cash-on-Cash Return Calculator</h2>
-                <p>Calculate your real return on investment with our free cash-on-cash return calculator.</p>
-                <div class="card-meta">Interactive Tool · Mar 6, 2026</div>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="/blog/rental-property-roi-calculator">
-                <div class="card-badge">Calculator · 1,600/mo searches</div>
-                <h2>Rental Property ROI Calculator</h2>
-                <p>Calculate total ROI including cash flow, appreciation, equity buildup, and tax benefits. The most complete free ROI tool.</p>
-                <div class="card-meta">Interactive Tool · Mar 7, 2026</div>
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p>
-        <p style="margin-top:8px"><a href="/">Home</a> · <a href="/courses">Get the Playbook</a> · <a href="/cities">By City</a></p>
-    </footer>
-<script defer src="/_vercel/insights/script.js"></script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
+<header class="header"><div class="header-inner"><a href="/" class="logo">PropertyCEO</a><nav class="nav"><a href="/courses.html">Courses</a><a href="/blog/">Blog</a><a href="/compare/">Reviews</a></nav></div></header>
+<div class="page-header">
+<h1>Property Management Blog</h1>
+<p>64 expert articles to help you grow your property management business</p>
+</div>
+<div class="grid">
+<a href="/blog/1031-exchange-rules-property-managers.html" class="article-card">
+<h3>1031 Exchange Rules: The Complete Guide for Property Managers & Investors</h3>
+<p>Master 1031 exchange rules for rental property. Learn timelines, requirements, eligible properties, common mistakes, and how property managers help in</p>
+</a><a href="/blog/airbnb-property-management-guide.html" class="article-card">
+<h3>Airbnb Property Management Guide</h3>
+<p>How to add Airbnb property management to your business. Pricing, operations, technology, and the real economics of managing short-term rentals as a pr</p>
+</a><a href="/blog/best-crm-property-management.html" class="article-card">
+<h3>Best CRM for Property Management Companies in 2026</h3>
+<p>Compare the best CRM systems for property management companies in 2026. LeadSimple, HubSpot, Follow Up Boss, and more — features, pricing, and honest </p>
+</a><a href="/blog/best-rent-collection-app.html" class="article-card">
+<h3>Best Rent Collection App for Property Managers in 2026 (Compared)</h3>
+<p>Compare the best rent collection apps for property managers — features, fees, ACH vs. card payments, and which tool fits your portfolio size.</p>
+</a><a href="/blog/cap-rate-calculator.html" class="article-card">
+<h3>Cap Rate Calculator</h3>
+<p>Free cap rate calculator for rental property investors. Calculate capitalization rate instantly. Includes what's a good cap rate by market, and how to</p>
+</a><a href="/blog/cash-on-cash-return-calculator.html" class="article-card">
+<h3>Cash On Cash Return Calculator</h3>
+<p>Calculate cash on cash return on your rental property investment. Accounts for financing, operating expenses, and vacancy. Includes benchmarks by mark</p>
+</a><a href="/blog/find-rental-property-owners.html" class="article-card">
+<h3>How to Find Rental Property Owners: 10 Proven Strategies for PMs (2026)</h3>
+<p>10 proven strategies to find rental property owners and win new management clients. Outreach techniques, lead sources, and conversion tactics for prop</p>
+</a><a href="/blog/first-100-doors.html" class="article-card">
+<h3>How to Get Your First 100 Doors in Property Management</h3>
+<p>A step-by-step guide to landing your first 100 doors as a property manager. Real strategies for owner acquisition, pricing, and building a portfolio f</p>
+</a><a href="/blog/hire-first-property-manager.html" class="article-card">
+<h3>How to Hire Your First Property Manager Employee</h3>
+<p>When to hire, who to hire, how much to pay, and how to train your first property management employee. A practical guide for PM companies making their </p>
+</a><a href="/blog/how-much-do-property-managers-charge.html" class="article-card">
+<h3>How Much Do Property Managers Charge</h3>
+<p>How much do property managers charge in 2026? Complete breakdown of management fees, leasing fees, maintenance markups, and hidden costs. Real numbers</p>
+</a><a href="/blog/how-to-grow-property-management-business.html" class="article-card">
+<h3>How To Grow Property Management Business</h3>
+<p>Skip the generic advice. Here's the exact playbook property managers use to go from 50 to 500+ doors — marketing, pricing, hiring, and systems that ac</p>
+</a><a href="/blog/how-to-screen-tenants.html" class="article-card">
+<h3>How To Screen Tenants</h3>
+<p>The complete tenant screening process in 10 steps. Credit checks, background checks, income verification, references, red flags, and Fair Housing comp</p>
+</a><a href="/blog/how-to-start-property-management-company.html" class="article-card">
+<h3>How To Start Property Management Company</h3>
+<p>How to start a property management company from scratch. Step-by-step guide covering licensing, legal setup, pricing, first clients, and scaling. Real</p>
+</a><a href="/blog/landlord-insurance-guide.html" class="article-card">
+<h3>Landlord Insurance Guide</h3>
+<p>Everything landlords need to know about landlord insurance in 2026. What's covered, average costs by state, top providers compared, and tips to reduce</p>
+</a><a href="/blog/manage-rental-property-remotely.html" class="article-card">
+<h3>How to Manage Rental Property Remotely: The Complete Guide (2026)</h3>
+<p>Learn how to manage rental property remotely — tools, systems, team structure, and strategies for running your PM business from anywhere.</p>
+</a><a href="/blog/owner-acquisition-scripts.html" class="article-card">
+<h3>Property Management Owner Acquisition Scripts That Work</h3>
+<p>Word-for-word cold calling scripts, email templates, and pitch frameworks for acquiring property management clients. Tested scripts that actually get </p>
+</a><a href="/blog/property-management-accounting-guide.html" class="article-card">
+<h3>Property Management Accounting: The Complete Guide</h3>
+<p>Complete guide to property management accounting: chart of accounts, trust accounting, bank reconciliation, and the best software for property manager</p>
+</a><a href="/blog/property-management-agreement-guide.html" class="article-card">
+<h3>Property Management Agreement: The Complete Guide (2026)</h3>
+<p>Everything you need to know about property management agreements — key clauses, fee structures, termination terms, and a section-by-section breakdown </p>
+</a><a href="/blog/property-management-agreement-template.html" class="article-card">
+<h3>Property Management Agreement Template: Complete Guide</h3>
+<p>Free property management agreement template with key clauses, common mistakes to avoid, and a downloadable checklist. Complete guide for property mana</p>
+</a><a href="/blog/property-management-automation.html" class="article-card">
+<h3>Property Management Automation</h3>
+<p>You're spending 15+ hours a week on tasks that should be automated. Here are 20 property management workflows to automate today, with tools and setup </p>
+</a><a href="/blog/property-management-bookkeeping.html" class="article-card">
+<h3>Property Management Bookkeeping: The Complete Guide [2026]</h3>
+<p>Master property management bookkeeping. Trust accounting, chart of accounts, owner statements, tax prep, and the best bookkeeping software for PMs.</p>
+</a><a href="/blog/property-management-business-plan.html" class="article-card">
+<h3>Property Management Business Plan Template [2026]</h3>
+<p>Free property management business plan template for 2026. Includes financial projections, marketing strategy, operations plan, and growth milestones. </p>
+</a><a href="/blog/property-management-certification.html" class="article-card">
+<h3>Property Management Certification: Which One Is Right for You?</h3>
+<p>Compare property management certifications: CPM, RMP, MPM, ARM. Costs, requirements, ROI, and study tips for each certification in 2026.</p>
+</a><a href="/blog/property-management-checklist-guide.html" class="article-card">
+<h3>Property Management Checklist: Daily, Weekly & Monthly Tasks (2026)</h3>
+<p>The complete property management checklist — daily, weekly, monthly, and annual tasks that keep your portfolio running smoothly and your owners happy.</p>
+</a><a href="/blog/property-management-checklist.html" class="article-card">
+<h3>The Ultimate Property Management Checklist for 2026</h3>
+<p>The ultimate property management checklist for 2026: move-in/move-out, monthly, quarterly, and annual tasks every property manager needs.</p>
+</a><a href="/blog/property-management-contract-guide.html" class="article-card">
+<h3>Property Management Contract: Everything You Need to Know</h3>
+<p>Everything you need to know about property management contracts: types, negotiation tips, red flags, and renewal strategies for 2026.</p>
+</a><a href="/blog/property-management-crm-guide.html" class="article-card">
+<h3>Best Property Management CRM Software in 2026 (Compared)</h3>
+<p>The best property management CRM tools compared — features, pricing, and which CRM fits your portfolio size. Stop losing leads and start closing more </p>
+</a><a href="/blog/property-management-eviction-process.html" class="article-card">
+<h3>The Eviction Process: A Property Manager's Step-by-Step Guide [2026]</h3>
+<p>Navigate the eviction process as a property manager. Legal notices, court filings, tenant rights, timelines, costs, and how to protect your owners and</p>
+</a><a href="/blog/property-management-exit-strategy.html" class="article-card">
+<h3>Property Management Exit Strategy</h3>
+<p>Planning to sell your property management business? Learn how PM companies are valued, what buyers look for, how to maximize your sale price, and the </p>
+</a><a href="/blog/property-management-fees-average.html" class="article-card">
+<h3>Property Management Fees: Average Costs in 2026</h3>
+<p>What are average property management fees in 2026? Complete breakdown of fee structures, industry benchmarks, pricing strategies, and hidden fees to w</p>
+</a><a href="/blog/property-management-fees-guide.html" class="article-card">
+<h3>Property Management Fees Guide</h3>
+<p>What do property managers actually charge? We analyzed real fee structures across the US. Here's what every fee type costs, what's negotiable, and wha</p>
+</a><a href="/blog/property-management-franchise-guide.html" class="article-card">
+<h3>Property Management Franchise Guide</h3>
+<p>Should you buy a property management franchise? Compare the top PM franchises, startup costs, royalty fees, and real ROI data. Plus: franchise vs. ind</p>
+</a><a href="/blog/property-management-inspection-checklist.html" class="article-card">
+<h3>Property Management Inspection Checklist: Move-In, Move-Out & Annual (2026)</h3>
+<p>Complete property management inspection checklists for move-in, move-out, and annual inspections. Room-by-room guides with documentation tips to prote</p>
+</a><a href="/blog/property-management-insurance-guide.html" class="article-card">
+<h3>Insurance Every Property Manager Needs: Complete Coverage Guide [2026]</h3>
+<p>Essential insurance for property management companies. E&O, general liability, workers comp, cyber liability, and what to require from owners and vend</p>
+</a><a href="/blog/property-management-interview-questions.html" class="article-card">
+<h3>Top Property Management Interview Questions (Hiring Guide)</h3>
+<p>Top property management interview questions for hiring managers. Includes questions to ask, red flags, skills to test, and 2026 salary benchmarks.</p>
+</a><a href="/blog/property-management-kpis.html" class="article-card">
+<h3>Property Management Kpis</h3>
+<p>Stop tracking vanity metrics. These 15 KPIs are what separates growing property management companies from ones that plateau. Includes benchmarks and f</p>
+</a><a href="/blog/property-management-lead-generation.html" class="article-card">
+<h3>Property Management Lead Generation: 15 Proven Strategies [2026]</h3>
+<p>15 proven lead generation strategies for property management companies. From cold calling scripts to SEO tactics — real methods that deliver owner lea</p>
+</a><a href="/blog/property-management-license-requirements.html" class="article-card">
+<h3>Property Management License Requirements</h3>
+<p>Do you need a property management license? State-by-state guide to licensing requirements, costs, exams, and how to get licensed as a property manager</p>
+</a><a href="/blog/property-management-maintenance-systems.html" class="article-card">
+<h3>Building a Maintenance System That Scales: PM Operations Guide [2026]</h3>
+<p>Build a property management maintenance system that handles 500+ doors without breaking. Work order workflows, vendor management, preventive maintenan</p>
+</a><a href="/blog/property-management-marketing-ideas.html" class="article-card">
+<h3>Property Management Marketing Ideas</h3>
+<p>Forget generic marketing advice. These 12 property management marketing strategies have been proven to bring in new landlord clients — ranked by ROI.</p>
+</a><a href="/blog/property-management-owner-retention.html" class="article-card">
+<h3>How to Keep Property Owners from Leaving: Owner Retention Guide [2026]</h3>
+<p>Stop losing property management clients. Learn the top reasons owners leave, how to build retention systems, and strategies to keep owners for life.</p>
+</a><a href="/blog/property-management-pricing-strategy.html" class="article-card">
+<h3>Property Management Pricing Strategy</h3>
+<p>Most property managers undercharge by 20-30%. Here's the pricing framework that lets you raise fees, add revenue streams, and actually keep clients lo</p>
+</a><a href="/blog/property-management-profit-margins.html" class="article-card">
+<h3>Property Management Profit Margins: What to Expect [2026]</h3>
+<p>Real profit margin data for property management companies. Revenue per door, operating costs, net margins by company size — with actual numbers, not g</p>
+</a><a href="/blog/property-management-proposal-template.html" class="article-card">
+<h3>Property Management Proposal Template</h3>
+<p>Free property management proposal template with step-by-step guide. What to include, how to price your services, and tips for winning management contr</p>
+</a><a href="/blog/property-management-rent-collection.html" class="article-card">
+<h3>Property Management Rent Collection</h3>
+<p>How to optimize rent collection for property management. Online payment systems, late fee strategies, delinquency workflows, and how to achieve 98%+ o</p>
+</a><a href="/blog/property-management-reporting.html" class="article-card">
+<h3>Property Management Reporting: Owner Reports, KPIs & Templates (2026)</h3>
+<p>Build property management reports that keep owners happy and your business growing. Owner statements, KPI dashboards, and reporting templates included</p>
+</a><a href="/blog/property-management-reputation-management.html" class="article-card">
+<h3>Property Management Reputation Management</h3>
+<p>How to manage your property management company's online reputation. Get more 5-star reviews, handle negative reviews, and build a brand that attracts </p>
+</a><a href="/blog/property-management-salary-guide.html" class="article-card">
+<h3>Property Management Salary Guide</h3>
+<p>Complete property management salary data for 2026. Salaries by role, experience, market, and property type. Plus how to increase your earning potentia</p>
+</a><a href="/blog/property-management-seo.html" class="article-card">
+<h3>Property Management SEO: Get Found by Property Owners [2026 Guide]</h3>
+<p>Complete SEO guide for property management companies. Keyword strategy, local SEO, content marketing, and technical optimization to rank #1 and attrac</p>
+</a><a href="/blog/property-management-tenant-communication.html" class="article-card">
+<h3>Property Management Tenant Communication</h3>
+<p>Master tenant communication for property management. Templates, systems, and strategies for keeping tenants happy while reducing your workload. Email,</p>
+</a><a href="/blog/property-management-tenant-screening-guide.html" class="article-card">
+<h3>How to Screen Tenants Like a Pro: Property Manager's Complete Guide [2026]</h3>
+<p>Master tenant screening with this step-by-step guide for property managers. Credit checks, background checks, income verification, red flags, and Fair</p>
+</a><a href="/blog/property-management-vendor-management.html" class="article-card">
+<h3>Property Management Vendor Management</h3>
+<p>How to build, manage, and optimize your vendor network for property management. Finding reliable contractors, negotiating rates, and creating vendor m</p>
+</a><a href="/blog/property-management-virtual-assistant-guide.html" class="article-card">
+<h3>Property Management Virtual Assistant: The Complete Hiring Guide (2026)</h3>
+<p>How to hire and use a property management virtual assistant — tasks to delegate, where to find VAs, costs, training, and management tips for PMs.</p>
+</a><a href="/blog/property-management-virtual-assistants.html" class="article-card">
+<h3>Property Management Virtual Assistants</h3>
+<p>The complete guide to hiring virtual assistants for property management. Where to find VAs, what to delegate, how to train them, and the real costs in</p>
+</a><a href="/blog/rental-application-process.html" class="article-card">
+<h3>Rental Application Process</h3>
+<p>The complete rental application process from both landlord and tenant perspectives. Timeline, required documents, screening criteria, and tips for a s</p>
+</a><a href="/blog/rental-property-bookkeeping.html" class="article-card">
+<h3>Rental Property Bookkeeping: The Complete Guide for Property Managers (2026)</h3>
+<p>Master rental property bookkeeping — chart of accounts, trust accounting, owner statements, tax prep, and the tools that make it easy. Built for prope</p>
+</a><a href="/blog/rental-property-depreciation-guide.html" class="article-card">
+<h3>Rental Property Depreciation: Complete Guide for Investors & Property Managers</h3>
+<p>Learn rental property depreciation rules, MACRS 27.5-year schedule, cost segregation, bonus depreciation, and recapture. Essential guide for property </p>
+</a><a href="/blog/rental-property-insurance-guide.html" class="article-card">
+<h3>Rental Property Insurance: The Complete Guide for Landlords & Property Managers (2026)</h3>
+<p>Complete guide to rental property insurance. Learn about DP-1 vs DP-3 policies, coverage options, costs, and tips for property managers in 2026.</p>
+</a><a href="/blog/rental-property-roi-calculator.html" class="article-card">
+<h3>Rental Property Roi Calculator</h3>
+<p>Free rental property ROI calculator. Calculate total return on investment including cash flow, appreciation, equity buildup, and tax benefits. Compare</p>
+</a><a href="/blog/rental-property-tax-deductions.html" class="article-card">
+<h3>Rental Property Tax Deductions</h3>
+<p>Every rental property tax deduction you can claim in 2026. Mortgage interest, depreciation, repairs, insurance, travel, home office — with estimated s</p>
+</a><a href="/blog/scale-100-to-500-doors.html" class="article-card">
+<h3>How to Scale from 100 to 500 Doors in Property Management</h3>
+<p>The playbook for scaling a property management company from 100 to 500 doors. Hiring, systems, acquisitions, and the leadership shift required to grow</p>
+</a><a href="/blog/section-8-property-management.html" class="article-card">
+<h3>Section 8 Property Management</h3>
+<p>Everything property managers need to know about Section 8 housing. HCV program basics, HUD inspections, payment processes, pros and cons, and how to b</p>
+</a><a href="/blog/security-deposit-laws-guide.html" class="article-card">
+<h3>Security Deposit Laws by State: Complete Guide for Property Managers (2026)</h3>
+<p>State-by-state guide to security deposit laws. Learn deposit limits, return timelines, deductions, and compliance tips for property managers.</p>
+</a><a href="/blog/start-property-management-company-cost.html" class="article-card">
+<h3>How Much Does It Cost to Start a Property Management Company? [2026]</h3>
+<p>Complete cost breakdown for starting a property management company in 2026. Licensing, insurance, software, marketing — every expense itemized with re</p>
+</a>
+</div>
+<footer class="footer"><div>&copy; 2026 PropertyCEO. All rights reserved.</div><div style="margin-top:1rem"><a href="/blog/">Blog</a> · <a href="/courses.html">Courses</a> · <a href="/compare/">Reviews</a></div></footer>
 </body>
 </html>
