@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property ROI Calculator — Free Investment Return Calculator (2026)</title>
+    <meta name="description" content="Free rental property ROI calculator. Calculate total return on investment including cash flow, appreciation, equity buildup, and tax benefits. Compare properties instantly.">
+    <meta name="keywords" content="rental property roi calculator, rental property return on investment, real estate roi calculator, investment property calculator">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/rental-property-roi-calculator">
+    <meta property="og:title" content="Rental Property ROI Calculator — Free Investment Return Calculator (2026)">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Rental Property ROI Calculator","description":"Free rental property ROI calculator including cash flow, appreciation, and equity buildup","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0;--success:#00d26a}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}.logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}.back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}article{max-width:720px;margin:0 auto;padding:40px 24px 80px}h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-1.5px}.article-meta{color:var(--text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}h2{font-size:26px;font-weight:800;margin:48px 0 16px;letter-spacing:-.5px}h3{font-size:20px;font-weight:700;margin:32px 0 12px}p{margin-bottom:20px;color:var(--text-muted);font-size:17px}strong{color:var(--text)}ul,ol{margin:0 0 24px 24px;color:var(--text-muted)}li{margin-bottom:8px;font-size:17px}.data-badge{display:inline-block;background:rgba(0,180,255,.12);color:#00b4ff;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:700;margin-bottom:8px}
+        .calc-container{background:var(--card-bg);border:2px solid rgba(233,69,96,.2);border-radius:20px;padding:36px;margin:32px 0}
+        .calc-container h2{margin-top:0;text-align:center;font-size:24px}
+        .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+        .calc-section{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+        .calc-section h3{margin:0 0 16px;font-size:16px;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+        .calc-field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--text)}
+        .calc-field input{width:100%;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:18px;font-family:inherit;outline:none}
+        .calc-field input:focus{border-color:var(--accent)}
+        .calc-field .input-hint{font-size:12px;color:var(--text-muted);margin-top:4px}
+        .calc-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:8px;transition:background .2s}
+        .calc-btn:hover{background:#d63851}
+        .calc-result{padding:24px;margin-top:20px;border-radius:16px;display:none}
+        .calc-result.show{display:block}
+        .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+        .result-card{background:rgba(0,0,0,.3);border-radius:12px;padding:20px;text-align:center}
+        .result-card .label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+        .result-card .value{font-size:32px;font-weight:900;letter-spacing:-1px}
+        .result-card .value.good{color:var(--success)}
+        .result-card .value.ok{color:#ffc107}
+        .result-card .value.low{color:var(--accent)}
+        .result-card .subtitle{font-size:13px;color:var(--text-muted);margin-top:4px}
+        .breakdown{text-align:left;background:rgba(0,0,0,.2);border-radius:12px;padding:16px;margin-top:16px;font-size:14px;color:var(--text-muted)}
+        .breakdown div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        .breakdown .section-header{color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;padding-top:12px;border-bottom:none}
+        table{width:100%;border-collapse:collapse;margin:24px 0}th{text-align:left;padding:12px 16px;background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:700}td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;color:var(--text-muted)}
+        .highlight-box{background:var(--card-bg);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}
+        .cta-inline{background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(22,33,62,.8));border:1px solid rgba(233,69,96,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}.cta-inline h3{margin-top:0;color:var(--text)}.email-form{display:flex;gap:12px;max-width:420px;margin:16px auto 0}.email-form input{flex:1;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:15px;font-family:inherit;outline:none}.email-form input:focus{border-color:var(--accent)}.email-form input::placeholder{color:var(--text-muted)}.btn-primary{padding:14px 24px;background:var(--accent);color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}.form-success{display:none;color:#00d26a;font-weight:600;font-size:16px;padding:16px}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,.05)}
+        @media(max-width:600px){nav{padding:20px}.calc-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}.email-form{flex-direction:column}}
+    </style>
+</head>
+<body>
+    <nav><a href="/" class="logo">Property<span>CEO</span></a><a href="/blog" class="back-link">← Blog</a></nav>
+    <article>
+        <h1>Rental Property ROI Calculator</h1>
+        <div class="article-meta">Free tool · Updated March 2026 · By PropertyCEO</div>
+
+        <p><span class="data-badge">📊 1,600 monthly searches · KD 14 — High-value tool for investors</span></p>
+
+        <p>Calculate the <strong>true return on investment</strong> for any rental property. Unlike simple cap rate calculators, this ROI calculator accounts for <strong>cash flow, mortgage paydown, appreciation, and tax benefits</strong> — giving you the full picture of your investment returns.</p>
+
+        <div class="calc-container">
+            <h2>🏠 Calculate Your Rental Property ROI</h2>
+
+            <div class="calc-section">
+                <h3>Purchase Details</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Purchase Price ($)</label>
+                        <input type="number" id="purchasePrice" placeholder="250000">
+                        <div class="input-hint">Total purchase price of the property</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Down Payment (%)</label>
+                        <input type="number" id="downPaymentPct" placeholder="20" value="20">
+                        <div class="input-hint">Percentage down (typically 20-25% for investment)</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Closing Costs ($)</label>
+                        <input type="number" id="closingCosts" placeholder="7500">
+                        <div class="input-hint">Loan fees, title, inspections (~3% of price)</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Rehab/Repair Costs ($)</label>
+                        <input type="number" id="rehabCosts" placeholder="0" value="0">
+                        <div class="input-hint">Any upfront renovation costs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>Financing</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="interestRate" placeholder="7.0" value="7.0" step="0.1">
+                        <div class="input-hint">Annual mortgage interest rate</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Loan Term (years)</label>
+                        <input type="number" id="loanTerm" placeholder="30" value="30">
+                        <div class="input-hint">Typically 15 or 30 years</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>Income & Expenses (Annual)</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Monthly Rent ($)</label>
+                        <input type="number" id="monthlyRent" placeholder="2000">
+                        <div class="input-hint">Current or expected monthly rent</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Vacancy Rate (%)</label>
+                        <input type="number" id="vacancyRate" placeholder="5" value="5">
+                        <div class="input-hint">Expected vacancy (5-8% typical)</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Property Taxes ($/year)</label>
+                        <input type="number" id="propertyTaxes" placeholder="3000">
+                        <div class="input-hint">Annual property tax bill</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Insurance ($/year)</label>
+                        <input type="number" id="insurance" placeholder="1500">
+                        <div class="input-hint">Annual landlord insurance premium</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Property Management (%)</label>
+                        <input type="number" id="mgmtPct" placeholder="10" value="10">
+                        <div class="input-hint">PM fee as % of collected rent (8-12%)</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Maintenance ($/year)</label>
+                        <input type="number" id="maintenance" placeholder="2500">
+                        <div class="input-hint">Repairs + CapEx reserves (~1% of value/year)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>Growth Assumptions</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Annual Appreciation (%)</label>
+                        <input type="number" id="appreciation" placeholder="3" value="3" step="0.5">
+                        <div class="input-hint">Expected annual property value increase</div>
+                    </div>
+                    <div class="calc-field">
+                        <label>Annual Rent Increase (%)</label>
+                        <input type="number" id="rentIncrease" placeholder="3" value="3" step="0.5">
+                        <div class="input-hint">Expected annual rent growth</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateROI()">Calculate Total ROI</button>
+
+            <div class="calc-result" id="calcResult">
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="label">Total ROI (Year 1)</div>
+                        <div class="value" id="totalROI">—</div>
+                        <div class="subtitle">All returns combined</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">Cash-on-Cash Return</div>
+                        <div class="value" id="cocReturn">—</div>
+                        <div class="subtitle">Cash flow ÷ cash invested</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">Monthly Cash Flow</div>
+                        <div class="value" id="monthlyCF">—</div>
+                        <div class="subtitle">After all expenses + mortgage</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">5-Year Total Return</div>
+                        <div class="value" id="fiveYearReturn">—</div>
+                        <div class="subtitle">Including appreciation + equity</div>
+                    </div>
+                </div>
+                <div class="breakdown" id="roiBreakdown"></div>
+            </div>
+        </div>
+
+        <h2>Understanding Rental Property ROI</h2>
+
+        <p><strong>Return on investment (ROI)</strong> for rental property has four components — and most investors only look at one or two. Here's the full picture:</p>
+
+        <div class="highlight-box">
+            <p>📐 Total ROI = Cash Flow Return + Appreciation + Equity Buildup + Tax Benefits</p>
+        </div>
+
+        <h3>1. Cash Flow Return</h3>
+        <p>This is the most obvious component — it's the money left over after you collect rent and pay all expenses including the mortgage. A positive cash flow means the property pays for itself and puts money in your pocket every month.</p>
+
+        <h3>2. Appreciation</h3>
+        <p>US real estate has historically appreciated 3-4% per year on average. While you shouldn't bank on appreciation alone, it's a significant part of your total return over time. A $250,000 property appreciating at 3%/year gains $7,500 in value in year one.</p>
+
+        <h3>3. Equity Buildup (Mortgage Paydown)</h3>
+        <p>Every mortgage payment includes principal reduction. Your tenant is essentially paying off your loan for you. In year 1, this might be small, but it grows every year as more of your payment goes to principal.</p>
+
+        <h3>4. Tax Benefits</h3>
+        <p>Rental properties offer depreciation deductions, mortgage interest deductions, and other tax advantages that can significantly boost your after-tax returns. Residential properties can be depreciated over 27.5 years.</p>
+
+        <h2>What's a Good ROI on Rental Property?</h2>
+
+        <table>
+            <tr><th>Metric</th><th>Poor</th><th>Average</th><th>Good</th><th>Excellent</th></tr>
+            <tr><td>Cash-on-Cash</td><td>&lt;4%</td><td>4-6%</td><td>6-10%</td><td>10%+</td></tr>
+            <tr><td>Cap Rate</td><td>&lt;4%</td><td>4-6%</td><td>6-8%</td><td>8%+</td></tr>
+            <tr><td>Total ROI</td><td>&lt;8%</td><td>8-12%</td><td>12-18%</td><td>18%+</td></tr>
+            <tr><td>Monthly Cash Flow</td><td>&lt;$100</td><td>$100-200</td><td>$200-400</td><td>$400+</td></tr>
+        </table>
+
+        <h2>The 1% Rule — Quick Screening Tool</h2>
+
+        <div class="highlight-box">
+            <p>🎯 If monthly rent ≥ 1% of purchase price, the property likely cash flows positively. Example: A $200,000 property should rent for at least $2,000/month.</p>
+        </div>
+
+        <p>The 1% rule is a quick screening tool, not a guarantee. Always run the full ROI calculation before making investment decisions. In high-cost markets (SF, NYC, LA), very few properties meet the 1% rule — but appreciation may compensate.</p>
+
+        <h2>ROI by Investment Strategy</h2>
+
+        <table>
+            <tr><th>Strategy</th><th>Typical Cash-on-Cash</th><th>Risk Level</th><th>Time Commitment</th></tr>
+            <tr><td>Buy & Hold (turnkey)</td><td>5-8%</td><td>Low</td><td>Low (with PM)</td></tr>
+            <tr><td>BRRRR</td><td>15-25%+</td><td>Medium-High</td><td>High initially</td></tr>
+            <tr><td>House Hacking</td><td>20-50%+</td><td>Low</td><td>Medium</td></tr>
+            <tr><td>Short-Term Rental</td><td>10-20%</td><td>Medium</td><td>High</td></tr>
+            <tr><td>Value-Add Multifamily</td><td>12-20%</td><td>Medium</td><td>High initially</td></tr>
+            <tr><td>Syndication (Passive)</td><td>6-10%</td><td>Medium</td><td>None</td></tr>
+        </table>
+
+        <h2>Common ROI Calculation Mistakes</h2>
+
+        <ol>
+            <li><strong>Ignoring vacancy:</strong> Budget 5-8% minimum. Even in hot markets, you'll have turnover.</li>
+            <li><strong>Forgetting CapEx:</strong> Roofs, HVAC, water heaters don't last forever. Budget 5-10% of rent.</li>
+            <li><strong>Not including management:</strong> Even if you self-manage now, include 8-10% PM fee. Your time has value.</li>
+            <li><strong>Underestimating maintenance:</strong> Budget at least 1% of property value per year for repairs.</li>
+            <li><strong>Counting on appreciation:</strong> Cash flow is guaranteed monthly; appreciation is a hope. Invest for cash flow first.</li>
+            <li><strong>Ignoring closing costs:</strong> These are part of your cash invested and reduce your ROI.</li>
+        </ol>
+
+        <h2>How Property Managers Increase ROI</h2>
+
+        <p>A <strong>good property management company</strong> can actually increase your ROI despite their fee. Here's how:</p>
+
+        <ul>
+            <li><strong>Lower vacancy:</strong> Professional marketing fills units faster (saving 1-2% vacancy)</li>
+            <li><strong>Better tenant screening:</strong> Reduces evictions and bad debt (saving $3K-10K per bad tenant)</li>
+            <li><strong>Maintenance efficiency:</strong> Vendor relationships mean lower repair costs (10-20% savings)</li>
+            <li><strong>Market-rate rents:</strong> PMs know the market and won't undercharge (adding 5-15% to rent)</li>
+            <li><strong>Legal compliance:</strong> Avoid fair housing lawsuits and improper evictions (saving $10K-50K+)</li>
+        </ul>
+
+        <div class="cta-inline">
+            <h3>Master the Numbers Behind Property Management</h3>
+            <p>Our Growth Playbook teaches you exactly how to price, analyze, and scale a property management business. Join the waitlist.</p>
+            <form class="email-form" id="blog-cta-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+            <div class="form-success" id="blog-cta-success">✅ You're on the list!</div>
+        </div>
+
+        <h2>Related Calculators & Guides</h2>
+        <ul>
+            <li><a href="/blog/cap-rate-calculator" style="color:var(--accent)">Cap Rate Calculator</a></li>
+            <li><a href="/blog/cash-on-cash-return-calculator" style="color:var(--accent)">Cash on Cash Return Calculator</a></li>
+            <li><a href="/blog/property-management-fees-guide" style="color:var(--accent)">Property Management Fees Guide</a></li>
+            <li><a href="/blog/property-management-profit-margins" style="color:var(--accent)">Property Management Profit Margins</a></li>
+        </ul>
+    </article>
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers and investors who want to build real businesses.</p></footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+    function calculateROI(){
+        const pp=parseFloat(document.getElementById('purchasePrice').value)||0;
+        const dpPct=parseFloat(document.getElementById('downPaymentPct').value)||20;
+        const cc=parseFloat(document.getElementById('closingCosts').value)||0;
+        const rehab=parseFloat(document.getElementById('rehabCosts').value)||0;
+        const rate=parseFloat(document.getElementById('interestRate').value)||7;
+        const term=parseFloat(document.getElementById('loanTerm').value)||30;
+        const rent=parseFloat(document.getElementById('monthlyRent').value)||0;
+        const vacPct=parseFloat(document.getElementById('vacancyRate').value)||5;
+        const taxes=parseFloat(document.getElementById('propertyTaxes').value)||0;
+        const ins=parseFloat(document.getElementById('insurance').value)||0;
+        const mgmtPct=parseFloat(document.getElementById('mgmtPct').value)||10;
+        const maint=parseFloat(document.getElementById('maintenance').value)||0;
+        const apprPct=parseFloat(document.getElementById('appreciation').value)||3;
+        const rentIncPct=parseFloat(document.getElementById('rentIncrease').value)||3;
+
+        if(pp<=0||rent<=0){alert('Please enter purchase price and monthly rent');return}
+
+        // Calculate mortgage
+        const dp=pp*(dpPct/100);
+        const loanAmt=pp-dp;
+        const monthlyRate=rate/100/12;
+        const numPayments=term*12;
+        const monthlyMortgage=loanAmt>0?loanAmt*(monthlyRate*Math.pow(1+monthlyRate,numPayments))/(Math.pow(1+monthlyRate,numPayments)-1):0;
+
+        // Year 1 income
+        const grossAnnualRent=rent*12;
+        const vacancyLoss=grossAnnualRent*(vacPct/100);
+        const effectiveRent=grossAnnualRent-vacancyLoss;
+        const mgmtFee=effectiveRent*(mgmtPct/100);
+        const totalExpenses=taxes+ins+mgmtFee+maint;
+        const noi=effectiveRent-totalExpenses;
+        const annualMortgage=monthlyMortgage*12;
+        const annualCashFlow=noi-annualMortgage;
+        const monthlyCashFlow=annualCashFlow/12;
+
+        // Total cash invested
+        const totalCashInvested=dp+cc+rehab;
+
+        // Cash on cash return
+        const cocReturn=totalCashInvested>0?(annualCashFlow/totalCashInvested)*100:0;
+
+        // Appreciation (year 1)
+        const appreciationGain=pp*(apprPct/100);
+
+        // Equity buildup (year 1) - calculate principal paid in first year
+        let principalPaid=0;
+        let balance=loanAmt;
+        for(let i=0;i<12;i++){
+            const interestPayment=balance*monthlyRate;
+            const principalPayment=monthlyMortgage-interestPayment;
+            principalPaid+=principalPayment;
+            balance-=principalPayment;
+        }
+
+        // Tax benefit estimate (depreciation)
+        const annualDepreciation=pp*0.8/27.5; // 80% of value (excl land) over 27.5 years
+        const taxBenefit=annualDepreciation*0.25; // Assume 25% marginal rate
+
+        // Total ROI
+        const totalReturn=annualCashFlow+appreciationGain+principalPaid+taxBenefit;
+        const totalROI=totalCashInvested>0?(totalReturn/totalCashInvested)*100:0;
+
+        // 5-year calculation
+        let fiveYearCashFlow=0;
+        let fiveYearAppreciation=0;
+        let fiveYearEquity=0;
+        let fiveYearTax=taxBenefit*5;
+        let currentRent=rent;
+        let currentValue=pp;
+        let bal5=loanAmt;
+        for(let y=0;y<5;y++){
+            const annRent=currentRent*12;
+            const effRent=annRent*(1-vacPct/100);
+            const mgmt=effRent*(mgmtPct/100);
+            const exp=taxes+ins+mgmt+maint;
+            const cf=effRent-exp-annualMortgage;
+            fiveYearCashFlow+=cf;
+            const appr=currentValue*(apprPct/100);
+            fiveYearAppreciation+=appr;
+            currentValue+=appr;
+            for(let m=0;m<12;m++){
+                const intPmt=bal5*monthlyRate;
+                const prinPmt=monthlyMortgage-intPmt;
+                fiveYearEquity+=prinPmt;
+                bal5-=prinPmt;
+            }
+            currentRent*=(1+rentIncPct/100);
+        }
+        const fiveYearTotal=fiveYearCashFlow+fiveYearAppreciation+fiveYearEquity+fiveYearTax;
+        const fiveYearROI=totalCashInvested>0?(fiveYearTotal/totalCashInvested)*100:0;
+
+        // Display results
+        const el=document.getElementById('calcResult');
+        document.getElementById('totalROI').textContent=totalROI.toFixed(1)+'%';
+        document.getElementById('totalROI').className='value '+(totalROI>=15?'good':totalROI>=8?'ok':'low');
+        document.getElementById('cocReturn').textContent=cocReturn.toFixed(1)+'%';
+        document.getElementById('cocReturn').className='value '+(cocReturn>=8?'good':cocReturn>=4?'ok':'low');
+        document.getElementById('monthlyCF').textContent=(monthlyCashFlow>=0?'+':'')+' $'+Math.abs(Math.round(monthlyCashFlow)).toLocaleString();
+        document.getElementById('monthlyCF').className='value '+(monthlyCashFlow>=200?'good':monthlyCashFlow>=0?'ok':'low');
+        document.getElementById('fiveYearReturn').textContent='$'+Math.round(fiveYearTotal).toLocaleString();
+        document.getElementById('fiveYearReturn').className='value '+(fiveYearROI>=50?'good':fiveYearROI>=25?'ok':'low');
+
+        document.getElementById('roiBreakdown').innerHTML=`
+            <div class="section-header">💰 Cash Invested</div>
+            <div><span>Down Payment (${dpPct}%)</span><span>$${Math.round(dp).toLocaleString()}</span></div>
+            <div><span>Closing Costs</span><span>$${Math.round(cc).toLocaleString()}</span></div>
+            <div><span>Rehab Costs</span><span>$${Math.round(rehab).toLocaleString()}</span></div>
+            <div><span><strong>Total Cash Invested</strong></span><span><strong>$${Math.round(totalCashInvested).toLocaleString()}</strong></span></div>
+
+            <div class="section-header">📊 Year 1 Income</div>
+            <div><span>Gross Annual Rent</span><span>$${Math.round(grossAnnualRent).toLocaleString()}</span></div>
+            <div><span>Vacancy Loss (${vacPct}%)</span><span>-$${Math.round(vacancyLoss).toLocaleString()}</span></div>
+            <div><span>Effective Gross Income</span><span>$${Math.round(effectiveRent).toLocaleString()}</span></div>
+
+            <div class="section-header">💸 Year 1 Expenses</div>
+            <div><span>Property Taxes</span><span>-$${Math.round(taxes).toLocaleString()}</span></div>
+            <div><span>Insurance</span><span>-$${Math.round(ins).toLocaleString()}</span></div>
+            <div><span>Management (${mgmtPct}%)</span><span>-$${Math.round(mgmtFee).toLocaleString()}</span></div>
+            <div><span>Maintenance</span><span>-$${Math.round(maint).toLocaleString()}</span></div>
+            <div><span><strong>NOI</strong></span><span><strong>$${Math.round(noi).toLocaleString()}</strong></span></div>
+            <div><span>Annual Mortgage Payment</span><span>-$${Math.round(annualMortgage).toLocaleString()}</span></div>
+            <div><span><strong>Annual Cash Flow</strong></span><span><strong>${annualCashFlow>=0?'':'-'}$${Math.abs(Math.round(annualCashFlow)).toLocaleString()}</strong></span></div>
+
+            <div class="section-header">📈 Total Year 1 Returns</div>
+            <div><span>Cash Flow</span><span>${annualCashFlow>=0?'+':'-'}$${Math.abs(Math.round(annualCashFlow)).toLocaleString()}</span></div>
+            <div><span>Appreciation (${apprPct}%)</span><span>+$${Math.round(appreciationGain).toLocaleString()}</span></div>
+            <div><span>Equity Buildup</span><span>+$${Math.round(principalPaid).toLocaleString()}</span></div>
+            <div><span>Tax Benefits (est.)</span><span>+$${Math.round(taxBenefit).toLocaleString()}</span></div>
+            <div><span><strong>Total Return</strong></span><span><strong>+$${Math.round(totalReturn).toLocaleString()}</strong></span></div>
+            <div><span><strong>Total ROI</strong></span><span><strong>${totalROI.toFixed(1)}%</strong></span></div>
+
+            <div class="section-header">🔮 5-Year Projection</div>
+            <div><span>Cumulative Cash Flow</span><span>$${Math.round(fiveYearCashFlow).toLocaleString()}</span></div>
+            <div><span>Total Appreciation</span><span>$${Math.round(fiveYearAppreciation).toLocaleString()}</span></div>
+            <div><span>Total Equity Buildup</span><span>$${Math.round(fiveYearEquity).toLocaleString()}</span></div>
+            <div><span>Total Tax Benefits (est.)</span><span>$${Math.round(fiveYearTax).toLocaleString()}</span></div>
+            <div><span><strong>5-Year Total Return</strong></span><span><strong>$${Math.round(fiveYearTotal).toLocaleString()}</strong></span></div>
+            <div><span><strong>5-Year ROI on Cash Invested</strong></span><span><strong>${fiveYearROI.toFixed(1)}%</strong></span></div>
+        `;
+        el.classList.add('show');
+    }
+    document.getElementById('blog-cta-form').addEventListener('submit',function(e){e.preventDefault();const email=this.querySelector('input').value;fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,timestamp:new Date().toISOString(),source:'calc-roi'})}).catch(()=>{});this.style.display='none';document.getElementById('blog-cta-success').style.display='block';});
+    </script>
+</body>
+</html>
