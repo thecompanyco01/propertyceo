@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Find Real Estate Comps: The Complete Guide for Property Managers</title>
+    <meta name="description" content="Learn how to find real estate comps to price rentals accurately and evaluate properties. Step-by-step guide covering MLS, Zillow, Redfin, county records, and CMA basics.">
+    <meta name="keywords" content="real estate comps, comparable sales, how to find comps, CMA, comparative market analysis, rental pricing comps">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/real-estate-comps-guide">
+    <meta property="og:title" content="How to Find Real Estate Comps: The Complete Guide for Property Managers">
+    <meta property="og:description" content="Step-by-step guide to finding real estate comps for property valuation, rental pricing, and investment analysis.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Find Real Estate Comps: The Complete Guide for Property Managers",
+        "description": "Step-by-step guide to finding real estate comps for property valuation, rental pricing, and investment analysis.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Property Valuation</div>
+        <h1>How to Find Real Estate Comps: The Complete Guide for Property Managers</h1>
+        <div class="article-meta">March 8, 2026 · 15 min read · By PropertyCEO</div>
+
+        <p>Whether you're pricing a rental, evaluating an acquisition, or advising a property owner on listing price, <strong>real estate comps</strong> are the foundation of every smart decision. Get comps wrong and you'll overpay for properties, underprice rentals, or lose deals to competitors who do better analysis.</p>
+
+        <p>This guide walks you through exactly how to find, evaluate, and adjust comparable sales and rental comps — the same process that appraisers, agents, and experienced property managers use every day.</p>
+
+        <h2>What Are Real Estate Comps?</h2>
+
+        <p>Real estate comps (short for "comparables") are recently sold or rented properties that are similar to a subject property you're trying to value. They're the single most reliable way to determine what a property is worth — or what rent it should command.</p>
+
+        <p>There are two types of comps you'll use:</p>
+
+        <ul>
+            <li><strong>Sales comps:</strong> Recently sold properties used to estimate market value. Critical when buying, selling, or refinancing.</li>
+            <li><strong>Rental comps:</strong> Similar properties currently listed or recently rented, used to set competitive rental rates. Essential for <a href="/blog/fair-market-rent-guide" style="color: var(--accent);">determining fair market rent</a>.</li>
+        </ul>
+
+        <p>The concept is straightforward: if three similar houses on the same street sold for $320K, $330K, and $325K in the last 90 days, your house is probably worth around $325K. The same logic applies to rental pricing.</p>
+
+        <div class="highlight-box">
+            <p>💡 Appraisers, lenders, and insurance companies all use comps to make decisions. If you can run comps as well as a licensed appraiser, you'll make better investment decisions than 90% of landlords.</p>
+        </div>
+
+        <h2>The 5 Criteria for Selecting Good Comps</h2>
+
+        <p>Not all "similar" properties make good comps. Professional appraisers follow strict criteria, and you should too:</p>
+
+        <h3>1. Location (Most Important)</h3>
+        <p>The closer the comp is to your subject property, the better. Ideally, comps should be:</p>
+        <ul>
+            <li><strong>Same neighborhood</strong> — within 0.5 miles in urban areas, 1-3 miles in suburban areas</li>
+            <li><strong>Same school district</strong> — school quality heavily influences value</li>
+            <li><strong>Similar street type</strong> — busy road vs. quiet cul-de-sac matters</li>
+            <li><strong>Same side of major boundaries</strong> — highways, rivers, or railroad tracks can create price differentials</li>
+        </ul>
+
+        <h3>2. Recency</h3>
+        <p>Comps should be as recent as possible:</p>
+        <ul>
+            <li><strong>Ideal:</strong> Sold within the last 90 days</li>
+            <li><strong>Acceptable:</strong> Sold within the last 6 months</li>
+            <li><strong>Last resort:</strong> Sold within the last 12 months (adjust for market appreciation or depreciation)</li>
+        </ul>
+
+        <h3>3. Size and Layout</h3>
+        <p>Look for properties within 10-20% of your subject's square footage. A 1,500 sq ft home isn't a good comp for a 2,800 sq ft home, even if they're on the same street. Match bedroom and bathroom counts as closely as possible.</p>
+
+        <h3>4. Property Type and Style</h3>
+        <p>Compare apples to apples. A ranch-style single-family home should be compared to other ranch homes, not townhouses or colonial two-stories. Key matching factors:</p>
+        <ul>
+            <li>Single-family vs. condo vs. townhouse vs. multi-family</li>
+            <li>Year built (within 10-15 years)</li>
+            <li>Construction quality and materials</li>
+            <li>Number of stories</li>
+        </ul>
+
+        <h3>5. Condition and Features</h3>
+        <p>A fully renovated home isn't comparable to a fixer-upper. Look for similar:</p>
+        <ul>
+            <li>Overall condition (updated vs. original)</li>
+            <li>Garage (attached 2-car vs. no garage is a big adjustment)</li>
+            <li>Lot size</li>
+            <li>Basement (finished vs. unfinished vs. none)</li>
+            <li>Special features (pool, waterfront, etc.)</li>
+        </ul>
+
+        <h2>Where to Find Real Estate Comps</h2>
+
+        <p>Here are the best sources for finding comps, ranked by data quality:</p>
+
+        <h3>1. MLS (Multiple Listing Service) — The Gold Standard</h3>
+        <p>The MLS is the most comprehensive and accurate source of sales and listing data. It includes sold prices, days on market, listing history, and detailed property features.</p>
+
+        <p><strong>How to access:</strong> You need a real estate license or a relationship with a licensed agent. Many property managers have their own license — if you don't, partner with an agent who can pull comps for you.</p>
+
+        <p><strong>Why it's the best:</strong> MLS data includes off-market sales, expired listings, withdrawn listings, and price change history. You see the full picture — not just what sold, but what didn't sell and why.</p>
+
+        <h3>2. Zillow and Zestimate</h3>
+        <p>Zillow is the most accessible source for the general public. Their "recently sold" feature shows sales with photos, price history, and basic property details.</p>
+
+        <p><strong>Strengths:</strong> Free, easy to use, good photo archives, large database.</p>
+        <p><strong>Weaknesses:</strong> Zestimates can be off by 5-15% or more. Data may lag behind MLS by days or weeks. Limited filter options compared to MLS.</p>
+
+        <p><strong>Best practice:</strong> Use Zillow for initial research, but verify with MLS or county records before making decisions.</p>
+
+        <h3>3. Redfin</h3>
+        <p>Redfin often has more accurate data than Zillow because it pulls directly from local MLS feeds. Their "Redfin Estimate" tends to be slightly more accurate than Zillow's Zestimate in most markets.</p>
+
+        <p><strong>Best feature:</strong> Redfin shows whether a home sold above or below list price, and by how much — great for understanding market competition.</p>
+
+        <h3>4. County Assessor and Recorder Records</h3>
+        <p>Every property sale is recorded at the county level. County assessor websites provide:</p>
+        <ul>
+            <li>Actual sale prices (deed transfers)</li>
+            <li>Property tax assessments</li>
+            <li>Square footage, lot size, year built</li>
+            <li>Ownership history</li>
+        </ul>
+
+        <p><strong>Why use county records:</strong> They capture ALL sales, including FSBO (for sale by owner) and off-market transactions that don't appear on Zillow or Redfin. They're also the source of truth for legal disputes.</p>
+
+        <h3>5. Rentometer and Zillow Rental Manager (For Rental Comps)</h3>
+        <p>For rental pricing, these tools aggregate current and recent listing data:</p>
+        <ul>
+            <li><strong>Rentometer:</strong> Shows median rent and rent range for a given address. Quick and useful for ballpark estimates.</li>
+            <li><strong>Zillow Rental Manager:</strong> Shows current rental listings nearby. Great for seeing what competitors are charging right now.</li>
+            <li><strong>Apartments.com / Rent.com:</strong> Additional data points, especially for multi-family properties.</li>
+        </ul>
+
+        <table>
+            <tr><th>Source</th><th>Best For</th><th>Accuracy</th><th>Cost</th></tr>
+            <tr><td>MLS</td><td>Sales comps, full data</td><td>Excellent</td><td>License required</td></tr>
+            <tr><td>Zillow</td><td>Quick research</td><td>Good</td><td>Free</td></tr>
+            <tr><td>Redfin</td><td>Market competition</td><td>Very Good</td><td>Free</td></tr>
+            <tr><td>County Records</td><td>Off-market sales</td><td>Excellent</td><td>Free</td></tr>
+            <tr><td>Rentometer</td><td>Rental comps</td><td>Good</td><td>Free/Paid</td></tr>
+        </table>
+
+        <h2>How to Adjust Comps Like a Pro</h2>
+
+        <p>No two properties are identical. That's why adjustments exist — they account for differences between your subject property and each comp. Here's how to make them:</p>
+
+        <h3>The Adjustment Process</h3>
+        <p>The rule is simple: <strong>adjust the comp, not the subject.</strong> If a comp has a feature your subject doesn't, subtract value. If the comp is missing a feature your subject has, add value.</p>
+
+        <table>
+            <tr><th>Feature Difference</th><th>Typical Adjustment</th></tr>
+            <tr><td>Extra bedroom</td><td>+$5,000 to $15,000</td></tr>
+            <tr><td>Extra bathroom</td><td>+$5,000 to $10,000</td></tr>
+            <tr><td>Garage (2-car vs. none)</td><td>+$15,000 to $30,000</td></tr>
+            <tr><td>Updated kitchen</td><td>+$10,000 to $25,000</td></tr>
+            <tr><td>Finished basement</td><td>+$10,000 to $20,000</td></tr>
+            <tr><td>Pool</td><td>+$5,000 to $15,000</td></tr>
+            <tr><td>Superior location</td><td>+/- 5-15%</td></tr>
+            <tr><td>Square footage (per sq ft)</td><td>Varies by market ($50-$200/sqft)</td></tr>
+        </table>
+
+        <div class="highlight-box">
+            <p>🔑 A good rule of thumb: if your total adjustments exceed 25% of the comp's sale price, that comp probably isn't similar enough. Find a better one.</p>
+        </div>
+
+        <h3>Example Adjustment Walkthrough</h3>
+        <p>Subject property: 3 bed/2 bath, 1,600 sq ft, no garage, updated kitchen.</p>
+        <p>Comp: Sold for $310,000 — 3 bed/2 bath, 1,500 sq ft, 2-car garage, original kitchen.</p>
+
+        <ul>
+            <li>Square footage: comp is 100 sqft smaller → +$10,000</li>
+            <li>Garage: comp has 2-car garage, subject doesn't → -$22,000</li>
+            <li>Kitchen: comp has original kitchen, subject has updated → +$15,000</li>
+        </ul>
+
+        <p><strong>Adjusted comp value: $310,000 + $10,000 - $22,000 + $15,000 = $313,000</strong></p>
+
+        <p>Repeat this with 3-5 comps to get a reliable value range.</p>
+
+        <h2>Using Comps for Rental Pricing</h2>
+
+        <p>Rental comps work similarly to sales comps, but with some important differences. The goal is to find the sweet spot: <strong>high enough to maximize revenue, low enough to minimize vacancy.</strong></p>
+
+        <h3>Step-by-Step Rental Comp Analysis</h3>
+
+        <ol>
+            <li><strong>Search for active listings</strong> within 1 mile of your property on Zillow, Apartments.com, and Craigslist.</li>
+            <li><strong>Filter for matches:</strong> same bedroom/bathroom count, similar square footage, similar condition.</li>
+            <li><strong>Record 5-10 comps</strong> with their asking rent, square footage, amenities, and days on market.</li>
+            <li><strong>Adjust for differences:</strong> In-unit laundry adds $50-100/mo. Assigned parking adds $50-150/mo. Pet-friendly adds $25-50/mo. Updated finishes add $50-150/mo.</li>
+            <li><strong>Find the sweet spot:</strong> Price at or slightly below the median if you want fast leasing. Price above if your property is superior and you can tolerate longer vacancy.</li>
+        </ol>
+
+        <p>For a deeper dive on setting the right rent, check our guide on <a href="/blog/rental-property-cash-flow" style="color: var(--accent);">maximizing rental property cash flow</a>.</p>
+
+        <h3>Rental Comp Red Flags</h3>
+        <ul>
+            <li><strong>Listings sitting for 30+ days:</strong> They're probably overpriced. Don't use their asking rent as your target.</li>
+            <li><strong>Comps from different neighborhoods:</strong> Rent can vary 20-30% between neighborhoods that are only a mile apart.</li>
+            <li><strong>Corporate-managed vs. individual landlord:</strong> Large complexes may offer concessions (free month, reduced deposit) that aren't reflected in listed rent.</li>
+        </ul>
+
+        <h2>Comparative Market Analysis (CMA) Basics</h2>
+
+        <p>A Comparative Market Analysis (CMA) is a formal report that uses comps to estimate a property's value. Real estate agents prepare CMAs for sellers, but property managers should know how to create them too — especially when advising owners on acquisitions or dispositions.</p>
+
+        <h3>What a CMA Includes</h3>
+        <ol>
+            <li><strong>Subject property details:</strong> Address, size, bedrooms/baths, year built, condition, features.</li>
+            <li><strong>3-6 comparable sales:</strong> With adjusted values (as we covered above).</li>
+            <li><strong>Active listings:</strong> Shows current competition (the "ceiling" of value).</li>
+            <li><strong>Expired listings:</strong> Shows what the market rejected (the "ceiling" of overpricing).</li>
+            <li><strong>Estimated value range:</strong> Based on adjusted comp analysis.</li>
+            <li><strong>Market trends:</strong> Average days on market, list-to-sale price ratio, inventory levels.</li>
+        </ol>
+
+        <p>When you can provide a professional-quality CMA to a property owner, you demonstrate expertise that sets you apart from competitors. It's one of the most valuable skills in <a href="/blog/how-to-grow-property-management-business" style="color: var(--accent);">growing a property management business</a>.</p>
+
+        <h2>Common Comp Mistakes to Avoid</h2>
+
+        <ol>
+            <li><strong>Cherry-picking comps that support your bias:</strong> If you want to buy a property, you'll subconsciously find low comps. If you're selling, you'll find high ones. Be disciplined — use ALL relevant comps, not just the ones you like.</li>
+            <li><strong>Ignoring market conditions:</strong> In a rapidly appreciating market, a 6-month-old comp may already be stale. In a declining market, recent comps may still overstate value.</li>
+            <li><strong>Using foreclosures or distressed sales as comps:</strong> Bank-owned properties, short sales, and auction sales typically sell 10-20% below market. Only use them as comps for similar distressed properties.</li>
+            <li><strong>Not verifying data:</strong> Online sources can have errors in square footage, bedroom count, or sale price. Cross-reference with at least two sources.</li>
+            <li><strong>Over-adjusting:</strong> If you're making more than 5-6 adjustments to a single comp, it's not a good comp. Find a better one.</li>
+        </ol>
+
+        <h2>Comps for Investment Property Analysis</h2>
+
+        <p>As a property manager or investor, you use comps differently than a homebuyer. Here's how comps fit into your <a href="/blog/real-estate-due-diligence-checklist" style="color: var(--accent);">due diligence process</a>:</p>
+
+        <h3>For Acquisitions</h3>
+        <ul>
+            <li><strong>Sales comps</strong> determine your maximum purchase price.</li>
+            <li><strong>Rental comps</strong> determine your income potential.</li>
+            <li>Together, they let you calculate <a href="/blog/cap-rate-real-estate-guide" style="color: var(--accent);">cap rate</a>, <a href="/blog/cash-on-cash-return-calculator" style="color: var(--accent);">cash-on-cash return</a>, and <a href="/blog/rental-property-roi-calculator" style="color: var(--accent);">total ROI</a>.</li>
+        </ul>
+
+        <h3>For Refinancing</h3>
+        <p>Lenders will order an appraisal based on comps. If you've improved the property, gather your own comps showing the value increase. Present these to the appraiser — they're required to consider them.</p>
+
+        <h3>For Owner Reporting</h3>
+        <p>Providing quarterly comp updates to property owners builds trust and demonstrates value. Show them what similar properties are selling and renting for — it justifies your management fees and rental pricing decisions.</p>
+
+        <h2>Tools and Technology for Running Comps</h2>
+
+        <p>Modern property managers don't have to do everything manually. These tools streamline the comp process:</p>
+
+        <ul>
+            <li><strong>PropStream:</strong> Pulls MLS data, county records, and rental data in one platform. Best for investors and PMs who run comps regularly.</li>
+            <li><strong>Mashvisor:</strong> Specifically designed for rental property analysis. Includes short-term and long-term rental comp data.</li>
+            <li><strong>DealMachine:</strong> Good for driving for dollars — snap a photo of a property and pull comp data on the spot.</li>
+            <li><strong>Zillow/Redfin (free):</strong> Solid starting point for basic comp research.</li>
+            <li><strong>RPR (Realtors Property Resource):</strong> Free for NAR members. Excellent comp reports with adjustments built in.</li>
+        </ul>
+
+        <h2>Real Estate Comps: Your Competitive Edge</h2>
+
+        <p>Mastering real estate comps isn't glamorous, but it's one of the most profitable skills a property manager can develop. Every time you price a rental correctly, you avoid weeks of vacancy. Every time you evaluate an acquisition accurately, you avoid overpaying by thousands.</p>
+
+        <p>Start with free tools like Zillow and Redfin, learn the adjustment process, and practice on properties in your market. Within a few weeks, you'll be running comps faster and more accurately than most agents.</p>
+
+        <p>For a complete framework on evaluating investment properties, read our guide on <a href="/blog/how-to-buy-rental-property" style="color: var(--accent);">how to buy rental property</a>.</p>
+
+        <div class="cta-inline">
+            <h3>Ready to Scale Your Property Portfolio?</h3>
+            <p>Get the PropertyCEO Growth Playbook — the exact strategies property managers use to go from 50 to 500+ doors.</p>
+            <a href="/courses/" class="btn-primary">Get the Playbook →</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: var(--accent);">Blog</a> | <a href="/courses/" style="color: var(--accent);">Courses</a></p>
+    </footer>
+</body>
+</html>

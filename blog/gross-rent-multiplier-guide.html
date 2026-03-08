@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gross Rent Multiplier (GRM): What It Is & How to Calculate It</title>
+    <meta name="description" content="Learn how to calculate and use the Gross Rent Multiplier (GRM) to evaluate rental properties. GRM formula, benchmarks, GRM vs cap rate, and real examples for investors.">
+    <meta name="keywords" content="gross rent multiplier, GRM, gross rent multiplier formula, GRM calculator, GRM vs cap rate, rental property evaluation">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/gross-rent-multiplier-guide">
+    <meta property="og:title" content="Gross Rent Multiplier (GRM): What It Is & How to Calculate It">
+    <meta property="og:description" content="Master the Gross Rent Multiplier — formula, benchmarks, and how to use GRM to quickly evaluate rental property investments.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Gross Rent Multiplier (GRM): What It Is & How to Calculate It",
+        "description": "Master the Gross Rent Multiplier — formula, benchmarks, and how to use GRM to quickly evaluate rental property investments.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Investment Analysis</div>
+        <h1>Gross Rent Multiplier (GRM): What It Is & How to Calculate It</h1>
+        <div class="article-meta">March 8, 2026 · 12 min read · By PropertyCEO</div>
+
+        <p>The <strong>Gross Rent Multiplier (GRM)</strong> is one of the quickest ways to evaluate whether a rental property is worth a deeper look. While it's not the only metric you should use, it's the fastest way to screen dozens of properties and identify the deals worth analyzing further.</p>
+
+        <p>In this guide, we'll cover exactly what the GRM is, how to calculate it, what makes a "good" GRM, how it compares to cap rate, and when you should (and shouldn't) rely on it.</p>
+
+        <h2>What Is the Gross Rent Multiplier?</h2>
+
+        <p>The Gross Rent Multiplier is a ratio that shows <strong>how many years of gross rent it would take to pay for a property's purchase price.</strong> Think of it as a rough measure of how expensive a property is relative to its rental income.</p>
+
+        <p>A lower GRM means you're paying less per dollar of rental income — generally a better deal. A higher GRM means you're paying a premium.</p>
+
+        <div class="highlight-box">
+            <p>💡 GRM is a screening tool, not a decision-making tool. It tells you which properties to analyze further — not which ones to buy.</p>
+        </div>
+
+        <h2>The Gross Rent Multiplier Formula</h2>
+
+        <p>The formula is straightforward:</p>
+
+        <div class="highlight-box">
+            <p><strong>GRM = Property Price ÷ Annual Gross Rental Income</strong></p>
+        </div>
+
+        <p>Alternatively, if you're working with monthly rent:</p>
+
+        <p><strong>GRM = Property Price ÷ (Monthly Rent × 12)</strong></p>
+
+        <h3>GRM Calculation Example</h3>
+
+        <p>Let's say you're evaluating a duplex:</p>
+        <ul>
+            <li><strong>Purchase price:</strong> $320,000</li>
+            <li><strong>Monthly rent (both units):</strong> $2,800</li>
+            <li><strong>Annual gross rent:</strong> $2,800 × 12 = $33,600</li>
+        </ul>
+
+        <p><strong>GRM = $320,000 ÷ $33,600 = 9.52</strong></p>
+
+        <p>This means it would take roughly 9.5 years of gross rent to equal the purchase price. Whether that's a good deal depends on your market — which we'll cover next.</p>
+
+        <h3>Using GRM in Reverse: Estimating Property Value</h3>
+
+        <p>You can also flip the formula to estimate what a property <em>should</em> be worth based on market GRM:</p>
+
+        <p><strong>Estimated Value = Annual Gross Rent × Market GRM</strong></p>
+
+        <p>If the average GRM in your market is 10, and a property generates $36,000 in annual rent, its estimated value is $360,000. If it's listed at $420,000, it's overpriced relative to the market.</p>
+
+        <h2>What's a Good Gross Rent Multiplier?</h2>
+
+        <p>GRM varies dramatically by market, property type, and property class. Here are general benchmarks:</p>
+
+        <table>
+            <tr><th>GRM Range</th><th>What It Means</th><th>Typical Markets</th></tr>
+            <tr><td>4-7</td><td>Strong cash flow, higher risk areas</td><td>Midwest, South (Cleveland, Memphis, Birmingham)</td></tr>
+            <tr><td>8-12</td><td>Balanced — decent cash flow + appreciation</td><td>Mid-tier cities (Charlotte, Tampa, Phoenix)</td></tr>
+            <tr><td>13-20</td><td>Appreciation play, lower cash flow</td><td>Coastal cities (Denver, Austin, Nashville)</td></tr>
+            <tr><td>20+</td><td>Primarily appreciation, minimal cash flow</td><td>San Francisco, NYC, LA, Seattle</td></tr>
+        </table>
+
+        <p><strong>The key insight:</strong> A "good" GRM is relative to your market. A GRM of 12 in Memphis is terrible, but a GRM of 12 in San Francisco is a unicorn. Always compare against local market averages, not national benchmarks.</p>
+
+        <h3>GRM by Property Type</h3>
+
+        <table>
+            <tr><th>Property Type</th><th>Typical GRM Range</th></tr>
+            <tr><td>Single-family rentals</td><td>10-18</td></tr>
+            <tr><td>Small multifamily (2-4 units)</td><td>8-14</td></tr>
+            <tr><td>Apartment buildings (5+ units)</td><td>7-12</td></tr>
+            <tr><td>Commercial/Mixed-use</td><td>6-10</td></tr>
+        </table>
+
+        <p>Multi-family properties tend to have lower GRMs because they produce more income relative to price. This is one reason experienced investors gravitate toward multi-family — the economics simply work better. If you're looking at multi-family, read our guide on <a href="/blog/multi-family-property-management-guide" style="color: var(--accent);">multifamily property management</a>.</p>
+
+        <h2>GRM vs. Cap Rate: What's the Difference?</h2>
+
+        <p>GRM and cap rate are both used to evaluate rental properties, but they measure different things:</p>
+
+        <table>
+            <tr><th>Metric</th><th>Formula</th><th>What It Measures</th><th>Accounts for Expenses?</th></tr>
+            <tr><td>GRM</td><td>Price ÷ Gross Rent</td><td>Price relative to gross income</td><td>No</td></tr>
+            <tr><td>Cap Rate</td><td>NOI ÷ Price × 100</td><td>Return on property value</td><td>Yes (uses NOI)</td></tr>
+        </table>
+
+        <p>The critical difference: <strong>GRM ignores operating expenses entirely.</strong> Cap rate uses Net Operating Income (NOI), which subtracts property taxes, insurance, maintenance, vacancy, and management fees from gross rent.</p>
+
+        <h3>Why This Matters</h3>
+        <p>Two properties can have the same GRM but wildly different cap rates:</p>
+
+        <ul>
+            <li><strong>Property A:</strong> $300K price, $30K gross rent (GRM = 10). But property taxes are $8K/year and it needs a new roof. NOI = $15K. Cap rate = 5%.</li>
+            <li><strong>Property B:</strong> $300K price, $30K gross rent (GRM = 10). Low taxes ($3K), great condition. NOI = $22K. Cap rate = 7.3%.</li>
+        </ul>
+
+        <p>Same GRM, but Property B is a significantly better investment. This is why GRM is a <em>screening</em> tool — you must dig into expenses before buying.</p>
+
+        <p>For a deeper understanding of cap rates, read our <a href="/blog/cap-rate-real-estate-guide" style="color: var(--accent);">complete guide to cap rates in real estate</a>.</p>
+
+        <h2>How to Use GRM to Evaluate Properties</h2>
+
+        <h3>Step 1: Determine Your Market's Average GRM</h3>
+        <p>Pull 10-20 recent sales of similar properties in your target area. Calculate the GRM for each. The average is your benchmark.</p>
+
+        <h3>Step 2: Screen Properties Quickly</h3>
+        <p>When scrolling through listings, mentally calculate GRM for each one. Properties with GRMs significantly below the market average deserve a closer look. Properties significantly above are probably overpriced.</p>
+
+        <h3>Step 3: Compare Apples to Apples</h3>
+        <p>Only compare GRMs within the same:</p>
+        <ul>
+            <li>Market/submarket</li>
+            <li>Property type (SFR vs. multi-family)</li>
+            <li>Property class (A, B, C)</li>
+            <li>Condition (renovated vs. value-add)</li>
+        </ul>
+
+        <h3>Step 4: Dig Deeper on Promising Deals</h3>
+        <p>Once GRM flags a property as potentially attractive, run a full analysis: calculate the <a href="/blog/cash-on-cash-return-calculator" style="color: var(--accent);">cash-on-cash return</a>, <a href="/blog/rental-property-roi-calculator" style="color: var(--accent);">total ROI</a>, and cap rate. GRM got you to the door — these metrics tell you whether to walk through it.</p>
+
+        <h2>The 1% Rule and Its Relationship to GRM</h2>
+
+        <p>You may have heard of the <strong>1% Rule</strong>: a rental property should generate monthly rent equal to at least 1% of the purchase price. This is actually just a GRM expressed differently:</p>
+
+        <ul>
+            <li><strong>1% Rule</strong> = Monthly rent ≥ 1% of price → Annual rent ≥ 12% of price → <strong>GRM ≤ 8.33</strong></li>
+            <li><strong>2% Rule</strong> = Monthly rent ≥ 2% of price → Annual rent ≥ 24% of price → <strong>GRM ≤ 4.17</strong></li>
+        </ul>
+
+        <p>The 1% rule is nearly impossible to achieve in high-cost markets today. In 2026, a more realistic threshold for most investors is <strong>0.6-0.8%</strong> (GRM of 10-14). This is why knowing your market's average GRM matters more than arbitrary national rules.</p>
+
+        <h2>Limitations of the Gross Rent Multiplier</h2>
+
+        <p>GRM is useful, but it has real blind spots:</p>
+
+        <ol>
+            <li><strong>Ignores operating expenses:</strong> A property with a GRM of 8 and $15K/year in deferred maintenance is a worse deal than a GRM of 10 with no issues. Always look at expenses.</li>
+            <li><strong>Doesn't account for financing:</strong> GRM is an all-cash metric. It doesn't consider down payment, interest rates, or leverage — all of which dramatically affect your actual return.</li>
+            <li><strong>Doesn't reflect vacancy:</strong> GRM assumes full occupancy. If a property has chronic vacancy problems, the gross rent is misleading.</li>
+            <li><strong>Doesn't distinguish income sources:</strong> Laundry income, parking fees, and pet rent all boost gross income but may not be as reliable as base rent.</li>
+            <li><strong>Snapshot in time:</strong> GRM uses current rent, which may be below market. A value-add property with below-market rents will have a misleadingly high GRM that improves significantly after renovation and rent increases.</li>
+        </ol>
+
+        <h2>GRM for Value-Add Properties</h2>
+
+        <p>One of the most powerful applications of GRM is identifying value-add opportunities. Here's the strategy:</p>
+
+        <ol>
+            <li>Find a property with a GRM higher than the market average (seemingly overpriced based on current rents).</li>
+            <li>Determine if the rents are below market — are neighboring comparable properties renting for more?</li>
+            <li>If rents are below market, calculate the GRM using <em>potential</em> market-rate rents instead of current rents.</li>
+            <li>If the "pro forma" GRM is attractive, you've found a value-add deal.</li>
+        </ol>
+
+        <p>This is exactly the approach used in the <a href="/blog/brrrr-method-guide" style="color: var(--accent);">BRRRR method</a> — buy below value, rehab, rent at market rates, and refinance at the new (lower) GRM-implied value.</p>
+
+        <h2>Putting It All Together: Your GRM Workflow</h2>
+
+        <p>Here's how experienced investors use GRM in practice:</p>
+
+        <ol>
+            <li><strong>Market research:</strong> Calculate average GRM for your target market and property type.</li>
+            <li><strong>Quick screen:</strong> Filter listings by GRM. Flag anything below market average.</li>
+            <li><strong>Deep analysis:</strong> For promising properties, calculate cap rate, cash-on-cash return, and DSCR.</li>
+            <li><strong>Make offers:</strong> Use GRM to back into your offer price. If market GRM is 10 and gross rent is $24K, your max price should be around $240K.</li>
+            <li><strong>Track over time:</strong> Monitor GRM trends in your market. Rising GRMs = prices outpacing rents (possible bubble). Falling GRMs = improving investment opportunity.</li>
+        </ol>
+
+        <p>The Gross Rent Multiplier won't make you rich on its own. But it will save you hours of analysis by helping you quickly separate the deals worth pursuing from the ones that aren't even close. Master it, combine it with deeper metrics, and you'll evaluate properties faster and more accurately than most investors.</p>
+
+        <p>Ready to run the full numbers? Use our <a href="/blog/rental-property-investment-calculator" style="color: var(--accent);">rental property investment calculator</a> to analyze any deal in minutes.</p>
+
+        <div class="cta-inline">
+            <h3>Ready to Scale Your Property Portfolio?</h3>
+            <p>Get the PropertyCEO Growth Playbook — the exact strategies property managers use to go from 50 to 500+ doors.</p>
+            <a href="/courses/" class="btn-primary">Get the Playbook →</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: var(--accent);">Blog</a> | <a href="/courses/" style="color: var(--accent);">Courses</a></p>
+    </footer>
+</body>
+</html>
