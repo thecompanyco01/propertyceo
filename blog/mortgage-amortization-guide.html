@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Amortization: How It Works, Schedules & Calculator Guide (2026)</title>
+    <meta name="description" content="Complete mortgage amortization guide — how amortization schedules work, how to calculate payments, extra payment strategies, 15 vs 30 year comparison, and impact on rental property investing.">
+    <meta name="keywords" content="mortgage amortization, amortization schedule, amortization calculator, mortgage amortization schedule, extra mortgage payments, 15 vs 30 year mortgage, amortization vs depreciation">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/mortgage-amortization-guide">
+    <meta property="og:title" content="Mortgage Amortization: How It Works, Schedules & Calculator Guide">
+    <meta property="og:description" content="Everything about mortgage amortization — schedules, calculations, extra payments, and how amortization affects rental property investing.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Mortgage Amortization: How It Works, Schedules & Calculator Guide",
+        "description": "Complete guide to mortgage amortization — schedules, calculations, extra payments, 15 vs 30 year comparison, and impact on rental property investing.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is mortgage amortization?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mortgage amortization is the process of paying off a home loan through regular monthly payments over a set period. Each payment is split between interest and principal. In early years, most of the payment goes toward interest. Over time, more goes toward principal, gradually reducing the loan balance to zero."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does an amortization schedule work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An amortization schedule is a table showing every payment over the life of the loan, breaking each payment into its principal and interest components. It also shows the remaining loan balance after each payment. The monthly payment stays the same, but the proportion going to principal increases over time while the interest portion decreases."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it better to get a 15-year or 30-year mortgage for rental property?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most rental property investors, a 30-year mortgage is preferred because the lower monthly payment maximizes cash flow, which can be reinvested into more properties. However, a 15-year mortgage builds equity faster and saves significantly on interest. The best choice depends on your investment strategy — cash flow focused investors prefer 30-year, while equity builders may prefer 15-year."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much can extra payments save on a mortgage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Extra payments can save tens of thousands in interest and cut years off your loan. For example, on a $250,000 30-year mortgage at 7%, paying an extra $200/month saves approximately $102,000 in interest and pays off the loan about 8 years early. Even one extra payment per year can save thousands."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between amortization and depreciation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Amortization is the process of paying down a loan balance through regular payments. Depreciation is a tax deduction that accounts for the wear and tear on a physical asset (like a rental property building) over time. For rental property investors, both are important: amortization builds equity through loan paydown, while depreciation reduces taxable income."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my mortgage amortization?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The monthly payment formula is: M = P × [r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12), and n is the total number of payments. For example, a $300,000 loan at 7% for 30 years: r = 0.00583, n = 360, monthly payment = $1,995.91."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does most of my mortgage payment go to interest at first?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Interest is calculated on the outstanding loan balance. In the early years, the balance is at its highest, so the interest portion is largest. As you make payments and reduce the principal balance, less interest accrues each month, and more of your fixed payment goes toward principal. This is the fundamental nature of amortization."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Real Estate Finance</div>
+        <h1>Mortgage Amortization: How It Works, Schedules & Complete Guide</h1>
+        <div class="article-meta">March 8, 2026 · 18 min read · By PropertyCEO</div>
+
+        <p><strong>Mortgage amortization</strong> is one of the most fundamental concepts in real estate finance — and one of the least understood by new investors. Understanding how amortization works isn't just academic; it directly affects your cash flow, equity building, tax strategy, and investment returns.</p>
+
+        <p>Every monthly mortgage payment you make is split between two components: interest (the cost of borrowing) and principal (reducing the loan balance). How that split changes over time is the essence of amortization, and it has profound implications for rental property investors.</p>
+
+        <p>This guide breaks down everything: how amortization schedules work, how to calculate payments, the power of extra payments, 15 vs. 30 year comparisons, and how amortization fits into your investment strategy.</p>
+
+        <h2>What Is Mortgage Amortization?</h2>
+
+        <p><strong>Amortization</strong> is the process of paying off a debt through regular, scheduled payments over a fixed period. For a mortgage, each payment covers the interest owed for that month plus a portion of the original loan balance (principal). Over the life of the loan, the balance gradually decreases until it reaches zero.</p>
+
+        <p>The key characteristic of a standard amortized mortgage is that your <strong>monthly payment stays the same</strong> for the entire loan term, but the proportion going to interest vs. principal changes dramatically over time:</p>
+
+        <ul>
+            <li><strong>Early years:</strong> Most of your payment goes toward interest because the outstanding balance is high.</li>
+            <li><strong>Later years:</strong> Most of your payment goes toward principal because the balance has been reduced significantly.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>💡 Real example: On a $300,000 loan at 7% for 30 years, your first payment of $1,996 breaks down as $1,750 interest and only $246 principal. By year 20, the same $1,996 payment is approximately $900 interest and $1,096 principal. Same payment, completely different allocation.</p>
+        </div>
+
+        <h2>How an Amortization Schedule Works</h2>
+
+        <p>An <strong>amortization schedule</strong> is a complete table showing every payment over the life of your loan. For a 30-year mortgage, that's 360 rows — one for each monthly payment. Each row shows:</p>
+
+        <ul>
+            <li><strong>Payment number</strong> (month 1 through month 360)</li>
+            <li><strong>Total payment amount</strong> (stays the same)</li>
+            <li><strong>Interest portion</strong> (decreases over time)</li>
+            <li><strong>Principal portion</strong> (increases over time)</li>
+            <li><strong>Remaining balance</strong> (decreases to zero)</li>
+        </ul>
+
+        <h3>Sample Amortization Schedule: $300,000 at 7%, 30 Years</h3>
+
+        <table>
+            <tr><th>Payment #</th><th>Payment</th><th>Interest</th><th>Principal</th><th>Balance</th></tr>
+            <tr><td>1</td><td>$1,995.91</td><td>$1,750.00</td><td>$245.91</td><td>$299,754.09</td></tr>
+            <tr><td>2</td><td>$1,995.91</td><td>$1,748.57</td><td>$247.34</td><td>$299,506.74</td></tr>
+            <tr><td>12</td><td>$1,995.91</td><td>$1,731.30</td><td>$264.61</td><td>$296,929.42</td></tr>
+            <tr><td>60 (Year 5)</td><td>$1,995.91</td><td>$1,637.45</td><td>$358.46</td><td>$280,355.41</td></tr>
+            <tr><td>120 (Year 10)</td><td>$1,995.91</td><td>$1,479.71</td><td>$516.20</td><td>$252,680.88</td></tr>
+            <tr><td>180 (Year 15)</td><td>$1,995.91</td><td>$1,259.80</td><td>$736.11</td><td>$214,855.42</td></tr>
+            <tr><td>240 (Year 20)</td><td>$1,995.91</td><td>$949.04</td><td>$1,046.87</td><td>$161,744.60</td></tr>
+            <tr><td>300 (Year 25)</td><td>$1,995.91</td><td>$505.89</td><td>$1,490.02</td><td>$85,217.18</td></tr>
+            <tr><td>360 (Year 30)</td><td>$1,995.91</td><td>$11.55</td><td>$1,984.36</td><td>$0.00</td></tr>
+        </table>
+
+        <p>Notice the dramatic shift: in month 1, only 12% of your payment goes to principal. By month 300, 75% goes to principal. This is why equity builds slowly at first and accelerates over time.</p>
+
+        <h3>Total Cost Over the Life of the Loan</h3>
+
+        <p>For this $300,000 loan at 7% over 30 years:</p>
+
+        <ul>
+            <li><strong>Total payments:</strong> $1,995.91 × 360 = $718,527</li>
+            <li><strong>Total interest paid:</strong> $418,527</li>
+            <li><strong>Interest as percentage of original loan:</strong> 139%</li>
+        </ul>
+
+        <p>You pay <strong>$418,527 in interest</strong> on a $300,000 loan. This is why understanding amortization matters — and why strategies to reduce interest (extra payments, shorter terms, lower rates) are so powerful.</p>
+
+        <h2>How to Calculate Mortgage Amortization</h2>
+
+        <p>The standard amortization formula for calculating monthly payments is:</p>
+
+        <div class="highlight-box">
+            <p><strong>M = P × [r(1+r)^n] / [(1+r)^n – 1]</strong></p>
+        </div>
+
+        <p>Where:</p>
+        <ul>
+            <li><strong>M</strong> = monthly payment</li>
+            <li><strong>P</strong> = principal (loan amount)</li>
+            <li><strong>r</strong> = monthly interest rate (annual rate ÷ 12)</li>
+            <li><strong>n</strong> = total number of payments (years × 12)</li>
+        </ul>
+
+        <h3>Calculation Example</h3>
+
+        <p>Let's calculate the monthly payment for a $250,000 loan at 6.5% for 30 years:</p>
+
+        <ol>
+            <li><strong>P</strong> = $250,000</li>
+            <li><strong>r</strong> = 6.5% ÷ 12 = 0.005417</li>
+            <li><strong>n</strong> = 30 × 12 = 360</li>
+            <li><strong>M</strong> = $250,000 × [0.005417(1.005417)^360] / [(1.005417)^360 – 1]</li>
+            <li><strong>M</strong> = $250,000 × [0.005417 × 6.9918] / [6.9918 – 1]</li>
+            <li><strong>M</strong> = $250,000 × 0.03787 / 5.9918</li>
+            <li><strong>M</strong> = <strong>$1,580.17 per month</strong></li>
+        </ol>
+
+        <h3>Calculating Each Payment's Interest/Principal Split</h3>
+
+        <p>Once you have the monthly payment, breaking it down is straightforward:</p>
+
+        <ol>
+            <li><strong>Interest for month 1:</strong> $250,000 × (6.5% ÷ 12) = $1,354.17</li>
+            <li><strong>Principal for month 1:</strong> $1,580.17 – $1,354.17 = $226.00</li>
+            <li><strong>New balance:</strong> $250,000 – $226.00 = $249,774.00</li>
+            <li><strong>Interest for month 2:</strong> $249,774 × (6.5% ÷ 12) = $1,352.95</li>
+            <li>Continue this process for all 360 payments</li>
+        </ol>
+
+        <h2>Amortization and Rental Property Investing</h2>
+
+        <p>For rental property investors, amortization isn't just a concept — it's one of four wealth-building mechanisms working simultaneously. Understanding how it interacts with your investment returns is critical.</p>
+
+        <h3>The Four Pillars of Rental Property Returns</h3>
+
+        <ol>
+            <li><strong>Cash flow:</strong> Monthly rental income minus all expenses (mortgage, taxes, insurance, maintenance, vacancy)</li>
+            <li><strong>Appreciation:</strong> The property's value increasing over time</li>
+            <li><strong>Amortization (equity paydown):</strong> Your tenants' rent pays down your mortgage, building equity you own</li>
+            <li><strong>Tax benefits:</strong> Depreciation, mortgage interest deduction, and other write-offs. See our <a href="/blog/cost-segregation-study-guide" style="color: var(--accent);">cost segregation guide</a> for advanced tax strategies.</li>
+        </ol>
+
+        <p>Amortization is often called the "silent wealth builder" because it happens automatically with every payment. Your tenants are effectively paying down your loan for you, increasing your equity each month.</p>
+
+        <h3>How to Calculate Your Equity Paydown Return</h3>
+
+        <p>Here's a practical example. You own a rental property with a $250,000 mortgage at 7%, 30-year term. In year one:</p>
+
+        <ul>
+            <li><strong>Total payments:</strong> $1,663.26 × 12 = $19,959</li>
+            <li><strong>Total interest in year 1:</strong> approximately $17,370</li>
+            <li><strong>Total principal paydown in year 1:</strong> approximately $2,589</li>
+            <li><strong>Your down payment (25%):</strong> $83,333</li>
+            <li><strong>Equity paydown return:</strong> $2,589 ÷ $83,333 = <strong>3.1%</strong></li>
+        </ul>
+
+        <p>That's 3.1% return on your investment from amortization alone — on top of cash flow, appreciation, and tax benefits. And this return accelerates every year as more of each payment goes to principal. By year 10, the equity paydown return on the same investment is significantly higher.</p>
+
+        <p>For a deeper dive into analyzing rental returns, see our <a href="/blog/cash-on-cash-return-calculator" style="color: var(--accent);">cash-on-cash return calculator</a> and <a href="/blog/cap-rate-formula-guide" style="color: var(--accent);">cap rate formula guide</a>.</p>
+
+        <h2>Extra Mortgage Payments: The Power of Paying More</h2>
+
+        <p>Making extra payments toward your mortgage principal is one of the most effective ways to build equity faster and save on interest. Because extra payments go directly to principal, they reduce the balance on which future interest is calculated — creating a compounding savings effect.</p>
+
+        <h3>Extra Payment Strategies</h3>
+
+        <table>
+            <tr><th>Strategy</th><th>How It Works</th><th>Impact on $300K Loan at 7%</th></tr>
+            <tr><td>Extra $100/month</td><td>Add $100 to principal each month</td><td>Save $86K interest, pay off 5.5 years early</td></tr>
+            <tr><td>Extra $200/month</td><td>Add $200 to principal each month</td><td>Save $136K interest, pay off 8.5 years early</td></tr>
+            <tr><td>Extra $500/month</td><td>Add $500 to principal each month</td><td>Save $218K interest, pay off 14 years early</td></tr>
+            <tr><td>One extra payment/year</td><td>Make 13 payments instead of 12</td><td>Save $92K interest, pay off 5 years early</td></tr>
+            <tr><td>Biweekly payments</td><td>Pay half the monthly payment every 2 weeks (26 half-payments = 13 payments)</td><td>Save $90K interest, pay off 5 years early</td></tr>
+        </table>
+
+        <div class="highlight-box">
+            <p>🔑 Investor consideration: For rental properties, extra payments reduce interest costs but also reduce your cash-on-cash return and available capital for new acquisitions. Many investors prefer to keep mortgage terms long, invest the extra cash into more properties, and let tenants handle the amortization. The right strategy depends on your risk tolerance and growth goals.</p>
+        </div>
+
+        <h3>When Extra Payments Make Sense</h3>
+
+        <ul>
+            <li><strong>High interest rate:</strong> The higher your rate, the more you save by paying extra.</li>
+            <li><strong>Strong cash position:</strong> If you have excess cash after maximizing your investment portfolio, paying down mortgage debt is a guaranteed return.</li>
+            <li><strong>Approaching retirement:</strong> Investors nearing retirement may want debt-free properties for maximum cash flow.</li>
+            <li><strong>Risk reduction:</strong> Lower loan balances reduce your exposure if property values decline.</li>
+        </ul>
+
+        <h3>When Extra Payments Don't Make Sense</h3>
+
+        <ul>
+            <li><strong>Low interest rate:</strong> If your mortgage rate is low (below 5%), your money likely earns more invested elsewhere.</li>
+            <li><strong>Growth phase:</strong> When actively acquiring properties, extra capital should go toward new down payments, not paying down existing loans. The <a href="/blog/brrrr-method-guide" style="color: var(--accent);">BRRRR strategy</a> specifically relies on long-term mortgages to recycle capital.</li>
+            <li><strong>Tax benefits:</strong> Mortgage interest is deductible on investment properties, reducing the effective cost of carrying the loan.</li>
+        </ul>
+
+        <h2>15-Year vs. 30-Year Mortgage: Which Is Better for Investors?</h2>
+
+        <p>This is one of the most debated questions in rental property investing. Both have significant advantages depending on your strategy.</p>
+
+        <h3>Side-by-Side Comparison: $250,000 Loan at Current Rates</h3>
+
+        <table>
+            <tr><th>Feature</th><th>15-Year at 6.0%</th><th>30-Year at 7.0%</th></tr>
+            <tr><td>Monthly payment (P&I)</td><td>$2,109</td><td>$1,663</td></tr>
+            <tr><td>Total interest paid</td><td>$129,693</td><td>$348,772</td></tr>
+            <tr><td>Interest savings</td><td>$219,079 less</td><td>—</td></tr>
+            <tr><td>Equity at year 5</td><td>$86,472</td><td>$19,644</td></tr>
+            <tr><td>Equity at year 10</td><td>$195,613</td><td>$47,319</td></tr>
+            <tr><td>Cash flow impact (after P&I)</td><td>$446/mo less cash flow</td><td>$446/mo more cash flow</td></tr>
+        </table>
+
+        <h3>Case for 30-Year Mortgage (Most Investors)</h3>
+
+        <ul>
+            <li><strong>Maximizes cash flow:</strong> Lower monthly payment means more money in your pocket each month — important for covering vacancies and unexpected repairs.</li>
+            <li><strong>Capital efficiency:</strong> The extra cash flow can fund the down payment on the next property, accelerating portfolio growth.</li>
+            <li><strong>Flexibility:</strong> You can always pay extra to amortize faster, but you can't lower a 15-year payment when cash gets tight.</li>
+            <li><strong>Leverage advantage:</strong> In appreciating markets, keeping more leverage means your equity grows faster as a percentage of your investment.</li>
+        </ul>
+
+        <h3>Case for 15-Year Mortgage</h3>
+
+        <ul>
+            <li><strong>Lower interest rate:</strong> 15-year mortgages typically carry rates 0.5–1.0% lower than 30-year loans.</li>
+            <li><strong>Massive interest savings:</strong> Over $200K less in interest on a $250K loan — that's real money.</li>
+            <li><strong>Faster equity building:</strong> Own properties free and clear in half the time.</li>
+            <li><strong>Lower risk:</strong> Less total debt exposure, faster path to zero-debt cash flow.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>💡 The smart hybrid approach: Take a 30-year mortgage for flexibility and cash flow, but make extra payments when you can. You get the safety net of a lower required payment with the option to accelerate when the numbers make sense.</p>
+        </div>
+
+        <h2>Amortization vs. Depreciation: Two Different Concepts</h2>
+
+        <p>New investors frequently confuse amortization and depreciation. They're completely different concepts that both matter for rental property owners.</p>
+
+        <table>
+            <tr><th>Feature</th><th>Amortization</th><th>Depreciation</th></tr>
+            <tr><td>What it is</td><td>Paying down a loan balance</td><td>Tax deduction for property wear and tear</td></tr>
+            <tr><td>Where it appears</td><td>Loan statements, balance sheet</td><td>Tax return (Schedule E)</td></tr>
+            <tr><td>Cash impact</td><td>Cash leaves your account (loan payments)</td><td>No cash impact — it's a paper deduction</td></tr>
+            <tr><td>Tax impact</td><td>Interest portion is tax deductible</td><td>Reduces taxable rental income</td></tr>
+            <tr><td>Timeline</td><td>Loan term (15 or 30 years)</td><td>27.5 years for residential property</td></tr>
+            <tr><td>Benefits</td><td>Builds equity, reduces debt</td><td>Reduces taxes owed</td></tr>
+        </table>
+
+        <h3>How They Work Together</h3>
+
+        <p>For rental property investors, amortization and depreciation create a powerful combination:</p>
+
+        <ul>
+            <li><strong>Amortization</strong> builds real equity by reducing your loan balance each month. This equity can be accessed through refinancing or realized at sale.</li>
+            <li><strong>Depreciation</strong> reduces your taxable income on paper, even though no cash is spent. On a $300,000 property (building value $240,000), you can deduct approximately $8,727 per year for 27.5 years.</li>
+        </ul>
+
+        <p>The result: you may show a "loss" on your tax return (because depreciation is subtracted from income) while actually building equity through amortization. This is one of the most powerful tax advantages of real estate investing. Learn more about advanced depreciation strategies in our <a href="/blog/cost-segregation-study-guide" style="color: var(--accent);">cost segregation study guide</a>.</p>
+
+        <h2>Amortization Strategies for Different Investment Goals</h2>
+
+        <h3>Maximum Cash Flow Strategy</h3>
+        <p>Use 30-year amortization on every property. Let tenants pay the minimum, maximize cash flow, and reinvest into new acquisitions. This is the standard approach for investors in growth phase. Check our <a href="/blog/rental-property-down-payment-guide" style="color: var(--accent);">down payment guide</a> for financing strategies.</p>
+
+        <h3>Accelerated Equity Strategy</h3>
+        <p>Use 15-year mortgages or aggressively pay extra on 30-year loans. Goal: own properties free and clear as fast as possible. Best for investors nearing retirement or in high-appreciation markets where cash flow is tight anyway.</p>
+
+        <h3>Debt Stacking Strategy</h3>
+        <p>Focus extra payments on one property at a time until it's paid off, then redirect all cash flow from that property to the next one. Like a debt snowball but for your property portfolio. Each payoff accelerates the next.</p>
+
+        <h3>Refinance Optimization Strategy</h3>
+        <p>Use 30-year amortization, but refinance strategically when rates drop or equity builds. Access equity through cash-out refinances to fund new acquisitions while resetting the amortization clock. This is core to the <a href="/blog/brrrr-method-guide" style="color: var(--accent);">BRRRR method</a>. Note: when refinancing, understand the <a href="/blog/deed-of-trust-guide" style="color: var(--accent);">deed of trust</a> or mortgage implications in your state.</p>
+
+        <div class="cta-inline">
+            <h3>Build Your Property Investment Plan</h3>
+            <p>Understanding amortization is key to building wealth through real estate. Our Growth Playbook shows you how to analyze deals, optimize financing, and grow a profitable rental portfolio.</p>
+            <a href="/courses/growth-playbook.html" class="btn-primary">Get the Growth Playbook →</a>
+        </div>
+
+        <h2>Common Amortization Mistakes Investors Make</h2>
+
+        <ul>
+            <li><strong>Ignoring amortization in return calculations:</strong> Many investors calculate ROI based only on cash flow and appreciation. Equity paydown from amortization is a real, guaranteed return that should be included in your total return analysis.</li>
+            <li><strong>Choosing 15-year to "save money" without considering opportunity cost:</strong> The interest savings are real, but the opportunity cost of higher monthly payments — money that could fund the next property — is often greater.</li>
+            <li><strong>Not verifying extra payments are applied to principal:</strong> When making extra payments, always confirm with your lender that they're applied to the principal balance, not held for the next payment.</li>
+            <li><strong>Resetting amortization through serial refinancing:</strong> Every time you refinance to a new 30-year term, you restart the amortization clock. This can significantly increase total interest paid over your ownership period.</li>
+            <li><strong>Confusing amortization with depreciation:</strong> They're different. Amortization affects your balance sheet and equity. Depreciation affects your tax return. Both matter, but they're separate calculations.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What is mortgage amortization?</h3>
+        <p>Mortgage amortization is the process of paying off a home loan through regular monthly payments over a set period. Each payment is split between interest and principal. In early years, most goes toward interest. Over time, more goes toward principal, gradually reducing the balance to zero.</p>
+
+        <h3>How does an amortization schedule work?</h3>
+        <p>An amortization schedule is a table showing every payment over the life of the loan, breaking each into its principal and interest components. It also shows the remaining balance after each payment. The monthly payment stays the same, but the proportion going to principal increases over time.</p>
+
+        <h3>Is it better to get a 15-year or 30-year mortgage for rental property?</h3>
+        <p>For most rental property investors, a 30-year mortgage is preferred because the lower monthly payment maximizes cash flow, which can be reinvested into more properties. However, a 15-year mortgage builds equity faster and saves significantly on interest. The best choice depends on your strategy.</p>
+
+        <h3>How much can extra payments save on a mortgage?</h3>
+        <p>Extra payments can save tens of thousands in interest. On a $250,000 30-year mortgage at 7%, paying an extra $200/month saves approximately $102,000 in interest and pays off the loan about 8 years early.</p>
+
+        <h3>What is the difference between amortization and depreciation?</h3>
+        <p>Amortization is paying down a loan balance through regular payments. Depreciation is a tax deduction for wear and tear on a rental property building over 27.5 years. Amortization builds equity; depreciation reduces taxable income. Both are important for investors.</p>
+
+        <h3>How do I calculate my mortgage amortization?</h3>
+        <p>Use the formula: M = P × [r(1+r)^n] / [(1+r)^n – 1], where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12), and n is the total number of payments (years × 12).</p>
+
+        <h3>Why does most of my mortgage payment go to interest at first?</h3>
+        <p>Interest is calculated on the outstanding balance. In early years, the balance is highest, so interest is largest. As you pay down the principal, less interest accrues, and more of your fixed payment goes to principal. This is the fundamental nature of amortization.</p>
+
+    </article>
+
+    <footer>
+        <p>© 2026 PropertyCEO. Expert property management resources.</p>
+        <p style="margin-top: 8px;"><a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> · <a href="/blog/" style="color: #60a5fa; text-decoration: none;">Blog</a> · <a href="/courses.html" style="color: #60a5fa; text-decoration: none;">Courses</a></p>
+    </footer>
+</body>
+</html>
