@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Market Analysis (CMA): Complete Guide for Property Managers</title>
+    <meta name="description" content="Learn how to do a comparative market analysis (CMA) for rental properties. Step-by-step guide covering what a CMA includes, CMA vs appraisal, and using CMAs for rental pricing.">
+    <meta name="keywords" content="comparative market analysis, CMA real estate, how to do a CMA, comparative market analysis example, CMA vs appraisal, rental market analysis">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/comparative-market-analysis">
+    <meta property="og:title" content="Comparative Market Analysis (CMA): Complete Guide for Property Managers">
+    <meta property="og:description" content="Step-by-step guide to performing a comparative market analysis — how to select comps, make adjustments, and use CMAs for both sales pricing and rental rate optimization.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Comparative Market Analysis (CMA): Complete Guide for Property Managers",
+        "description": "Step-by-step guide to performing a comparative market analysis — how to select comps, make adjustments, and use CMAs for both sales pricing and rental rate optimization.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a comparative market analysis (CMA)?", "acceptedAnswer": {"@type": "Answer", "text": "A comparative market analysis (CMA) is an evaluation of a property's value based on recently sold, pending, and active comparable properties (comps) in the same area. CMAs analyze similar properties by size, condition, features, and location to estimate what a subject property is worth in the current market. CMAs are commonly prepared by real estate agents and property managers."}},
+            {"@type": "Question", "name": "What is the difference between a CMA and an appraisal?", "acceptedAnswer": {"@type": "Answer", "text": "A CMA is an informal market analysis typically prepared by a real estate agent or property manager using MLS data. An appraisal is a formal, legally binding property valuation performed by a licensed appraiser. Appraisals are required by lenders for mortgage transactions, while CMAs are used for listing decisions, pricing strategy, and market research. Appraisals typically cost $300-600, while CMAs are often provided free by agents."}},
+            {"@type": "Question", "name": "How many comparable properties should a CMA include?", "acceptedAnswer": {"@type": "Answer", "text": "A strong CMA typically includes 3-6 comparable properties. Ideally, you want at least 3 recently sold comps (within the last 3-6 months), plus a few active listings and pending sales for current market context. Using too few comps risks skewing the analysis, while too many can dilute the relevance if less similar properties are included."}},
+            {"@type": "Question", "name": "Can I do a CMA for rental pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A rental CMA (sometimes called a rental market analysis or rent comp analysis) uses comparable rental listings and recently rented properties instead of sales data. You compare similar properties by bedrooms, bathrooms, square footage, condition, amenities, and location to determine the optimal rental rate for your property."}},
+            {"@type": "Question", "name": "How often should property managers update their CMA?", "acceptedAnswer": {"@type": "Answer", "text": "Property managers should update their CMA at least annually, and ideally every 6 months or whenever market conditions shift significantly. For rental properties, update your rental CMA before each lease renewal to ensure you're charging market rate. In rapidly changing markets, quarterly updates may be warranted."}},
+            {"@type": "Question", "name": "What adjustments should be made in a CMA?", "acceptedAnswer": {"@type": "Answer", "text": "Common CMA adjustments include: square footage differences ($20-50 per sq ft depending on market), bedroom/bathroom count, lot size, garage (add $5,000-15,000), pool (add $10,000-30,000), age and condition differences, renovations (updated kitchen adds $10,000-30,000), location differences (busy road, view, school district), and days on market for active listings."}}
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <span class="article-badge">Property Valuation</span>
+        <h1>Comparative Market Analysis (CMA): Complete Guide for Property Managers</h1>
+        <div class="article-meta">PropertyCEO Team · March 2026 · 13 min read</div>
+
+        <p>A <strong>comparative market analysis</strong> (CMA) is one of the most fundamental skills in real estate and property management. Whether you're pricing a property for sale, setting rental rates, evaluating an investment opportunity, or advising a client, your ability to accurately analyze comparable properties determines your credibility and bottom line.</p>
+
+        <p>In this guide, we'll break down exactly what a CMA is, how to perform one step by step, what adjustments to make, how CMAs differ from appraisals, and — critically for property managers — how to use CMAs for optimal rental pricing.</p>
+
+        <div class="highlight-box">
+            <p>💡 Why this matters: Properties priced correctly sell 3x faster and rent 2x faster than overpriced ones. Underpricing leaves money on the table. A solid CMA prevents both problems.</p>
+        </div>
+
+        <h2>What Is a Comparative Market Analysis?</h2>
+
+        <p>A <strong>comparative market analysis (CMA)</strong> is a method of estimating a property's value by analyzing recently sold, pending, and currently listed properties that are similar in size, condition, features, and location. Real estate professionals call these similar properties "comparables" or "comps."</p>
+
+        <p>The core logic is simple: if three similar homes in the same neighborhood recently sold for $290,000, $305,000, and $295,000, your subject property is probably worth somewhere around $295,000 — with adjustments for specific differences.</p>
+
+        <p>CMAs are used for multiple purposes:</p>
+        <ul>
+            <li><strong>Listing price decisions:</strong> Helping sellers price their property competitively</li>
+            <li><strong>Offer strategy:</strong> Helping buyers determine a fair offer price</li>
+            <li><strong>Rental rate optimization:</strong> Setting rents at market rate to minimize vacancy</li>
+            <li><strong>Investment analysis:</strong> Evaluating purchase opportunities and estimating ARV (after-repair value)</li>
+            <li><strong>Portfolio valuation:</strong> Estimating current portfolio value for financing or reporting</li>
+        </ul>
+
+        <h2>How to Do a Comparative Market Analysis: Step by Step</h2>
+
+        <h3>Step 1: Define Your Subject Property</h3>
+        <p>Start by documenting the key characteristics of the property you're analyzing:</p>
+        <ul>
+            <li>Address and neighborhood</li>
+            <li>Property type (single-family, condo, townhouse, multi-family)</li>
+            <li>Year built</li>
+            <li>Square footage (living area and lot size)</li>
+            <li>Bedrooms and bathrooms</li>
+            <li>Garage type and size</li>
+            <li>Condition (renovated, dated, needs work)</li>
+            <li>Notable features (pool, view, corner lot, HOA)</li>
+            <li>Recent upgrades or renovations</li>
+        </ul>
+
+        <h3>Step 2: Search for Comparable Properties</h3>
+        <p>Find 3-6 properties that are as similar as possible to your subject. The best comps share these criteria:</p>
+
+        <table>
+            <tr><th>Criteria</th><th>Ideal Range</th><th>Acceptable Range</th></tr>
+            <tr><td>Location</td><td>Same subdivision/block</td><td>Within 0.5-1 mile</td></tr>
+            <tr><td>Sale date</td><td>Last 3 months</td><td>Last 6 months</td></tr>
+            <tr><td>Square footage</td><td>Within 10%</td><td>Within 20%</td></tr>
+            <tr><td>Bedrooms</td><td>Same count</td><td>±1 bedroom</td></tr>
+            <tr><td>Bathrooms</td><td>Same count</td><td>±1 bathroom</td></tr>
+            <tr><td>Property type</td><td>Same type</td><td>Same type only</td></tr>
+            <tr><td>Year built</td><td>Within 5 years</td><td>Within 15 years</td></tr>
+            <tr><td>Condition</td><td>Similar</td><td>Adjust if different</td></tr>
+        </table>
+
+        <p>Use these data sources to find comps:</p>
+        <ul>
+            <li><strong>MLS (Multiple Listing Service):</strong> The gold standard — most complete and accurate data</li>
+            <li><strong>County tax records:</strong> Sale prices, square footage, lot size, year built</li>
+            <li><strong>Zillow/Redfin/Realtor.com:</strong> Good for quick research, but less reliable than MLS</li>
+            <li><strong>Property management software:</strong> Some platforms track rental comps in your portfolio area</li>
+        </ul>
+
+        <h3>Step 3: Gather Data on Each Comp</h3>
+        <p>For each comparable property, collect:</p>
+        <ul>
+            <li>Sale price (or list price for active listings)</li>
+            <li>Sale date</li>
+            <li>Days on market</li>
+            <li>Square footage and price per square foot</li>
+            <li>Bedrooms, bathrooms, garage</li>
+            <li>Lot size</li>
+            <li>Condition and upgrades</li>
+            <li>Any concessions (seller credits, closing cost assistance)</li>
+        </ul>
+
+        <h3>Step 4: Make Adjustments</h3>
+        <p>No two properties are identical, so you need to adjust comp prices to account for differences. The key principle: <strong>you adjust the comp to match the subject property, not the other way around.</strong></p>
+
+        <p>If the comp has something the subject doesn't (e.g., a pool), subtract the value of that feature from the comp's sale price. If the subject has something the comp doesn't, add the value.</p>
+
+        <p>Common adjustment amounts (these vary by market — use local data when available):</p>
+
+        <table>
+            <tr><th>Feature</th><th>Typical Adjustment</th></tr>
+            <tr><td>Square footage</td><td>$20-60 per sq ft (market dependent)</td></tr>
+            <tr><td>Extra bedroom</td><td>+$5,000 to $15,000</td></tr>
+            <tr><td>Extra bathroom</td><td>+$3,000 to $10,000</td></tr>
+            <tr><td>Garage (2-car vs none)</td><td>+$8,000 to $20,000</td></tr>
+            <tr><td>Pool</td><td>+$10,000 to $30,000</td></tr>
+            <tr><td>Updated kitchen</td><td>+$10,000 to $30,000</td></tr>
+            <tr><td>Updated bathrooms</td><td>+$5,000 to $15,000 each</td></tr>
+            <tr><td>Lot size (per acre)</td><td>Varies significantly</td></tr>
+            <tr><td>Age difference</td><td>$500-2,000 per year</td></tr>
+            <tr><td>Condition (good vs fair)</td><td>$10,000 to $30,000</td></tr>
+            <tr><td>Location (busy road vs quiet)</td><td>-$5,000 to -$20,000</td></tr>
+        </table>
+
+        <h3>Step 5: Calculate the Adjusted Price Range</h3>
+        <p>After adjustments, each comp will have an adjusted sale price. Your subject property's estimated value falls within the range of these adjusted prices. Most analysts use a weighted average, giving more weight to the most similar comps.</p>
+
+        <div class="highlight-box">
+            <p>📊 Example: Three adjusted comps come in at $292,000, $298,000, and $305,000. The estimated value range is $292,000-$305,000. If Comp #2 is the most similar, you might weigh it more heavily and estimate around $297,000-$300,000.</p>
+        </div>
+
+        <h3>Step 6: Consider Market Context</h3>
+        <p>Numbers don't tell the whole story. Factor in:</p>
+        <ul>
+            <li><strong>Market direction:</strong> Are values trending up, down, or flat? A 3-month-old comp in a rising market may understate current value.</li>
+            <li><strong>Days on market trends:</strong> Declining DOM suggests increased demand and potentially higher values.</li>
+            <li><strong>Inventory levels:</strong> Low inventory = upward pressure on prices.</li>
+            <li><strong>Seasonal factors:</strong> Spring listings typically sell for more than winter listings in most markets.</li>
+            <li><strong>Economic conditions:</strong> Interest rate changes, local employment trends, new developments.</li>
+        </ul>
+
+        <h2>CMA vs. Appraisal: Key Differences</h2>
+
+        <table>
+            <tr><th>Feature</th><th>CMA</th><th>Appraisal</th></tr>
+            <tr><td>Performed by</td><td>Real estate agent, property manager</td><td>Licensed appraiser</td></tr>
+            <tr><td>Cost</td><td>Usually free (from agent)</td><td>$300-$600+</td></tr>
+            <tr><td>Legal standing</td><td>Informal opinion of value</td><td>Legally binding valuation</td></tr>
+            <tr><td>Required for</td><td>Listing, pricing, strategy</td><td>Mortgage lending</td></tr>
+            <tr><td>Methodology</td><td>Primarily sales comparison</td><td>Sales comparison + cost + income approaches</td></tr>
+            <tr><td>Physical inspection</td><td>Usually exterior only or no visit</td><td>Full interior and exterior inspection</td></tr>
+            <tr><td>Turnaround</td><td>Same day to 48 hours</td><td>1-3 weeks</td></tr>
+            <tr><td>Regulation</td><td>Minimal</td><td>Heavily regulated (USPAP standards)</td></tr>
+        </table>
+
+        <p>Both are valuable tools, but they serve different purposes. For <a href="/blog/property-management-fees-2025.html">property management</a> decisions like rental pricing and portfolio evaluation, CMAs are sufficient and far more practical. Appraisals are needed primarily when lenders are involved.</p>
+
+        <div class="cta-inline">
+            <h3>📋 Get Our Free Property Valuation Checklist</h3>
+            <p>Download our step-by-step CMA template with adjustment guidelines, data sources, and presentation format ready to use for your next property analysis.</p>
+            <a href="/free-checklist/" class="btn-primary">Download Free Checklist</a>
+        </div>
+
+        <h2>Using CMAs for Rental Pricing</h2>
+
+        <p>For property managers, the most frequent use of CMA methodology is setting and adjusting rental rates. Here's how to do a rental CMA:</p>
+
+        <h3>Finding Rental Comps</h3>
+        <p>Instead of recent sales, look for:</p>
+        <ul>
+            <li><strong>Active rental listings:</strong> What are similar properties currently listed for? These show what landlords think the market will bear.</li>
+            <li><strong>Recently rented properties:</strong> What did similar properties actually rent for? This is the most reliable data point.</li>
+            <li><strong>Your own portfolio:</strong> What are similar units in your portfolio renting for? Track this data religiously.</li>
+        </ul>
+
+        <p>Sources for rental comps include Zillow Rental Manager, Rentometer, Apartments.com, Craigslist, Facebook Marketplace, and your local MLS (many track rental listings).</p>
+
+        <h3>Rental Adjustment Factors</h3>
+        <p>Rental adjustments are different from sales adjustments. Focus on:</p>
+        <ul>
+            <li><strong>Bedrooms/bathrooms:</strong> The strongest predictor of rental rate</li>
+            <li><strong>In-unit laundry:</strong> Adds $50-150/month in most markets</li>
+            <li><strong>Parking:</strong> Dedicated parking adds $50-200/month in urban areas</li>
+            <li><strong>Pet policy:</strong> Pet-friendly properties can command $25-50/month pet rent plus deposit</li>
+            <li><strong>Utilities included:</strong> Adjust for any utilities included in rent</li>
+            <li><strong>Condition and updates:</strong> Renovated units command 10-20% premiums</li>
+            <li><strong>Amenities:</strong> Pool, gym, in-unit W/D, dishwasher, central air</li>
+        </ul>
+
+        <h3>Setting the Right Rental Rate</h3>
+        <p>After analyzing rental comps, consider these pricing strategies:</p>
+        <ul>
+            <li><strong>Market rate:</strong> Price at the median of your adjusted comps. Best for balanced markets.</li>
+            <li><strong>Slightly below market:</strong> Price 3-5% below median to minimize vacancy. Best for markets with high turnover costs.</li>
+            <li><strong>Premium pricing:</strong> Price 5-10% above median if your property has superior features. Expect longer time to lease.</li>
+        </ul>
+
+        <p>The ideal strategy depends on your priorities. If vacancy costs you $2,000/month and a rent reduction of $100/month fills the unit two weeks faster, the lower rate is more profitable. Understanding <a href="/blog/cap-rate-real-estate-guide.html">cap rates</a> and <a href="/blog/cash-on-cash-return-calculator.html">cash-on-cash returns</a> helps you make these calculations.</p>
+
+        <h2>Common CMA Mistakes to Avoid</h2>
+
+        <ul>
+            <li><strong>Using too few comps:</strong> Three is a minimum. One or two comps don't establish a reliable range.</li>
+            <li><strong>Ignoring condition differences:</strong> A renovated comp and a dated subject property are not comparable without significant adjustments.</li>
+            <li><strong>Using stale data:</strong> In active markets, comps older than 3 months may not reflect current conditions.</li>
+            <li><strong>Over-adjusting:</strong> Too many or too large adjustments indicate the comp isn't actually comparable. If you're adjusting more than 15-20% of the sale price, find a better comp.</li>
+            <li><strong>Ignoring concessions:</strong> A comp that sold for $300,000 with $10,000 in seller concessions effectively sold for $290,000.</li>
+            <li><strong>Confirmation bias:</strong> Don't cherry-pick comps that support a predetermined value. Include all relevant comps, even if they challenge your expectations.</li>
+            <li><strong>Comparing different property types:</strong> A condo is not comparable to a single-family home, even if they have the same square footage and bedroom count.</li>
+        </ul>
+
+        <h2>CMA Presentation Tips</h2>
+
+        <p>Whether you're presenting a CMA to a property owner, investor, or using it internally, how you present the data matters:</p>
+
+        <ul>
+            <li><strong>Lead with the conclusion:</strong> Start with your recommended price/range, then support it with data.</li>
+            <li><strong>Show your work:</strong> Include photos of comps, adjustment breakdowns, and market context. Transparency builds trust.</li>
+            <li><strong>Address objections proactively:</strong> If a property owner thinks their home is worth more, show why the data suggests otherwise. Include any active listings at higher prices and note their days on market.</li>
+            <li><strong>Provide a range, not a single number:</strong> A CMA is an estimate, not an exact science. A range is more honest and gives flexibility for pricing strategy.</li>
+            <li><strong>Update regularly:</strong> Attach a date to every CMA and note when it should be refreshed. Market conditions change — your analysis should too.</li>
+        </ul>
+
+        <div class="cta-inline">
+            <h3>🎓 Master Property Valuation & Pricing</h3>
+            <p>Our Growth Playbook course covers CMA methodology, rental pricing optimization, portfolio valuation, and the financial analysis skills every property manager needs.</p>
+            <a href="/courses/growth-playbook.html" class="btn-primary">Explore the Growth Playbook</a>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What is a comparative market analysis (CMA)?</h3>
+        <p>A comparative market analysis (CMA) is an evaluation of a property's value based on recently sold, pending, and active comparable properties (comps) in the same area. CMAs analyze similar properties by size, condition, features, and location to estimate what a subject property is worth in the current market. CMAs are commonly prepared by real estate agents and property managers.</p>
+
+        <h3>What is the difference between a CMA and an appraisal?</h3>
+        <p>A CMA is an informal market analysis typically prepared by a real estate agent or property manager using MLS data. An appraisal is a formal, legally binding property valuation performed by a licensed appraiser. Appraisals are required by lenders for mortgage transactions, while CMAs are used for listing decisions, pricing strategy, and market research. Appraisals typically cost $300-600, while CMAs are often provided free by agents.</p>
+
+        <h3>How many comparable properties should a CMA include?</h3>
+        <p>A strong CMA typically includes 3-6 comparable properties. Ideally, you want at least 3 recently sold comps (within the last 3-6 months), plus a few active listings and pending sales for current market context. Using too few comps risks skewing the analysis, while too many can dilute the relevance if less similar properties are included.</p>
+
+        <h3>Can I do a CMA for rental pricing?</h3>
+        <p>Yes. A rental CMA (sometimes called a rental market analysis or rent comp analysis) uses comparable rental listings and recently rented properties instead of sales data. You compare similar properties by bedrooms, bathrooms, square footage, condition, amenities, and location to determine the optimal rental rate for your property.</p>
+
+        <h3>How often should property managers update their CMA?</h3>
+        <p>Property managers should update their CMA at least annually, and ideally every 6 months or whenever market conditions shift significantly. For rental properties, update your rental CMA before each lease renewal to ensure you're charging market rate. In rapidly changing markets, quarterly updates may be warranted.</p>
+
+        <h3>What adjustments should be made in a CMA?</h3>
+        <p>Common CMA adjustments include: square footage differences ($20-50 per sq ft depending on market), bedroom/bathroom count, lot size, garage (add $5,000-15,000), pool (add $10,000-30,000), age and condition differences, renovations (updated kitchen adds $10,000-30,000), location differences (busy road, view, school district), and days on market for active listings.</p>
+
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: var(--accent);">Blog</a> | <a href="/courses/growth-playbook.html" style="color: var(--accent);">Courses</a></p>
+    </footer>
+</body>
+</html>
