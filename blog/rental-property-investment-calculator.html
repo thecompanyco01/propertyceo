@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property Investment Calculator — ROI, Cash Flow, Cap Rate & More (2026)</title>
+    <meta name="description" content="Free rental property investment calculator. Calculate ROI, cash flow, cap rate, and cash-on-cash return instantly. Includes educational guide on every metric and what good numbers look like.">
+    <meta name="keywords" content="rental property investment calculator, rental property calculator, investment property calculator, rental ROI calculator, rental cash flow calculator">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/rental-property-investment-calculator">
+    <meta property="og:title" content="Rental Property Investment Calculator — ROI, Cash Flow, Cap Rate & More (2026)">
+    <meta property="og:description" content="Free rental property investment calculator. Calculate ROI, cash flow, cap rate, and cash-on-cash return instantly with educational guides.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Rental Property Investment Calculator — ROI, Cash Flow, Cap Rate & More (2026)","description":"Free rental property investment calculator with ROI, cash flow, cap rate, and cash-on-cash return analysis.","author":{"@type":"Organization","name":"PropertyCEO"},"datePublished":"2026-03-08","dateModified":"2026-03-08"}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}.logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}.back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}article{max-width:720px;margin:0 auto;padding:40px 24px 80px}.article-badge{display:inline-block;background:rgba(233,69,96,.15);color:var(--accent);padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:20px}h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-1.5px}.article-meta{color:var(--text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}h2{font-size:26px;font-weight:800;margin:48px 0 16px;letter-spacing:-.5px}h3{font-size:20px;font-weight:700;margin:32px 0 12px}p{margin-bottom:20px;color:var(--text-muted);font-size:17px}strong{color:var(--text)}ul,ol{margin:0 0 24px 24px;color:var(--text-muted)}li{margin-bottom:8px;font-size:17px}.data-badge{display:inline-block;background:rgba(0,180,255,.12);color:#00b4ff;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:700;margin-bottom:8px}table{width:100%;border-collapse:collapse;margin:24px 0}th{text-align:left;padding:12px 16px;background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:700}td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;color:var(--text-muted)}.highlight-box{background:var(--card-bg);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}.cta-inline{background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(22,33,62,.8));border:1px solid rgba(233,69,96,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}.cta-inline h3{margin-top:0;color:var(--text)}.email-form{display:flex;gap:12px;max-width:420px;margin:16px auto 0}.email-form input{flex:1;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:15px;font-family:inherit;outline:none}.email-form input:focus{border-color:var(--accent)}.email-form input::placeholder{color:var(--text-muted)}.btn-primary{padding:14px 24px;background:var(--accent);color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}.btn-primary:hover{background:#d63851}.form-success{display:none;color:#00d26a;font-weight:600;font-size:16px;padding:16px}footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,.05)}@media(max-width:600px){nav{padding:20px}.email-form{flex-direction:column}}
+
+        /* Calculator Styles */
+        .calculator-container{background:var(--card-bg);border-radius:16px;padding:32px;margin:32px 0;border:1px solid rgba(255,255,255,.08)}
+        .calc-section{margin-bottom:24px}
+        .calc-section h3{margin:0 0 16px;font-size:18px;color:var(--accent)}
+        .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .calc-field{display:flex;flex-direction:column;gap:4px}
+        .calc-field label{font-size:13px;color:var(--text-muted);font-weight:600}
+        .calc-field input{padding:12px 14px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:16px;font-family:inherit;outline:none}
+        .calc-field input:focus{border-color:var(--accent)}
+        .calc-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:10px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:8px;letter-spacing:.5px}
+        .calc-btn:hover{background:#d63851}
+        .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+        .result-card{background:rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,.06)}
+        .result-card .result-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;font-weight:700;letter-spacing:1px}
+        .result-card .result-value{font-size:28px;font-weight:900;color:var(--text);margin:8px 0 4px}
+        .result-card .result-note{font-size:12px;color:var(--text-muted)}
+        .result-card.positive .result-value{color:#00d26a}
+        .result-card.negative .result-value{color:#e94560}
+        .result-card.highlight{border-color:var(--accent);background:rgba(233,69,96,.08)}
+        .results-detail{margin-top:24px;background:rgba(255,255,255,.03);border-radius:12px;padding:20px}
+        .results-detail h4{font-size:16px;margin-bottom:12px;color:var(--text)}
+        .detail-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;color:var(--text-muted)}
+        .detail-row:last-child{border-bottom:none}
+        .detail-row .label{color:var(--text-muted)}
+        .detail-row .value{color:var(--text);font-weight:600}
+        @media(max-width:600px){.calc-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <nav><a href="/" class="logo">Property<span>CEO</span></a><a href="/blog" class="back-link">← Blog</a></nav>
+    <article>
+        <div class="article-badge">Tools</div>
+        <h1>Rental Property Investment Calculator</h1>
+        <div class="article-meta">March 8, 2026 · 15 min read · By PropertyCEO</div>
+
+        <p><span class="data-badge">📊 1,000 monthly searches for "rental property investment calculator"</span></p>
+
+        <p>Analyzing a rental property investment requires more than gut feeling. You need to know the <strong>cap rate, cash-on-cash return, monthly cash flow, and total ROI</strong> before you make an offer. This free calculator does all the math for you — and the guide below explains what every number means and what "good" looks like.</p>
+
+        <!-- CALCULATOR -->
+        <div class="calculator-container" id="calculator">
+            <div class="calc-section">
+                <h3>🏠 Purchase Details</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Purchase Price ($)</label>
+                        <input type="number" id="purchasePrice" value="250000" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Down Payment (%)</label>
+                        <input type="number" id="downPaymentPct" value="25" min="0" max="100">
+                    </div>
+                    <div class="calc-field">
+                        <label>Closing Costs ($)</label>
+                        <input type="number" id="closingCosts" value="7500" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Rehab / Repair Costs ($)</label>
+                        <input type="number" id="rehabCosts" value="0" min="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>💰 Loan Details</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="interestRate" value="7.0" min="0" max="30" step="0.125">
+                    </div>
+                    <div class="calc-field">
+                        <label>Loan Term (years)</label>
+                        <input type="number" id="loanTerm" value="30" min="1" max="40">
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>📈 Income</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Monthly Rent ($)</label>
+                        <input type="number" id="monthlyRent" value="2000" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Other Monthly Income ($)</label>
+                        <input type="number" id="otherIncome" value="0" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Vacancy Rate (%)</label>
+                        <input type="number" id="vacancyRate" value="5" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <h3>💸 Monthly Expenses</h3>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Property Tax ($/mo)</label>
+                        <input type="number" id="propertyTax" value="250" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Insurance ($/mo)</label>
+                        <input type="number" id="insurance" value="125" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>HOA ($/mo)</label>
+                        <input type="number" id="hoa" value="0" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Maintenance ($/mo)</label>
+                        <input type="number" id="maintenance" value="150" min="0">
+                    </div>
+                    <div class="calc-field">
+                        <label>Property Management (%)</label>
+                        <input type="number" id="mgmtFee" value="10" min="0" max="100">
+                    </div>
+                    <div class="calc-field">
+                        <label>Other Expenses ($/mo)</label>
+                        <input type="number" id="otherExpenses" value="0" min="0">
+                    </div>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateInvestment()">Calculate Investment Returns</button>
+
+            <div id="results" style="display:none">
+                <div class="results-grid">
+                    <div class="result-card highlight" id="cashFlowCard">
+                        <div class="result-label">Monthly Cash Flow</div>
+                        <div class="result-value" id="cashFlowResult">$0</div>
+                        <div class="result-note">After all expenses & debt</div>
+                    </div>
+                    <div class="result-card" id="cocCard">
+                        <div class="result-label">Cash-on-Cash Return</div>
+                        <div class="result-value" id="cocResult">0%</div>
+                        <div class="result-note">Annual return on cash invested</div>
+                    </div>
+                    <div class="result-card" id="capRateCard">
+                        <div class="result-label">Cap Rate</div>
+                        <div class="result-value" id="capRateResult">0%</div>
+                        <div class="result-note">NOI ÷ Purchase Price</div>
+                    </div>
+                    <div class="result-card" id="roiCard">
+                        <div class="result-label">Total ROI (Year 1)</div>
+                        <div class="result-value" id="roiResult">0%</div>
+                        <div class="result-note">Cash flow + equity buildup</div>
+                    </div>
+                </div>
+
+                <div class="results-detail">
+                    <h4>Detailed Breakdown</h4>
+                    <div class="detail-row"><span class="label">Gross Monthly Income</span><span class="value" id="detailGross">$0</span></div>
+                    <div class="detail-row"><span class="label">Vacancy Loss</span><span class="value" id="detailVacancy">$0</span></div>
+                    <div class="detail-row"><span class="label">Effective Gross Income</span><span class="value" id="detailEGI">$0</span></div>
+                    <div class="detail-row"><span class="label">Operating Expenses</span><span class="value" id="detailExpenses">$0</span></div>
+                    <div class="detail-row"><span class="label">Net Operating Income (NOI)</span><span class="value" id="detailNOI">$0</span></div>
+                    <div class="detail-row"><span class="label">Monthly Mortgage Payment</span><span class="value" id="detailMortgage">$0</span></div>
+                    <div class="detail-row"><span class="label">Monthly Cash Flow</span><span class="value" id="detailCashFlow">$0</span></div>
+                    <div class="detail-row"><span class="label">Annual Cash Flow</span><span class="value" id="detailAnnualCF">$0</span></div>
+                    <div class="detail-row"><span class="label">Total Cash Invested</span><span class="value" id="detailCashInvested">$0</span></div>
+                    <div class="detail-row"><span class="label">Loan Amount</span><span class="value" id="detailLoan">$0</span></div>
+                    <div class="detail-row"><span class="label">Year 1 Principal Paydown</span><span class="value" id="detailPrincipal">$0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATIONAL CONTENT -->
+        <h2>Understanding Your Investment Metrics</h2>
+
+        <p>Numbers without context are meaningless. Here's what each metric tells you — and what "good" looks like in 2026's market.</p>
+
+        <h2>Monthly Cash Flow</h2>
+
+        <p>Cash flow is the money left over after <strong>all expenses are paid</strong> — mortgage, property tax, insurance, maintenance, management fees, and vacancy reserves. It's the most tangible measure of whether an investment works.</p>
+
+        <p><strong>How it's calculated:</strong></p>
+        <p>Monthly Cash Flow = Gross Rent - Vacancy Loss - Operating Expenses - Mortgage Payment</p>
+
+        <p><strong>What good looks like:</strong></p>
+        <ul>
+            <li><strong>$100-$200/month per unit:</strong> Acceptable for appreciation markets (coastal cities, high-growth areas)</li>
+            <li><strong>$200-$400/month per unit:</strong> Good for cash flow markets (Midwest, Southeast)</li>
+            <li><strong>$400+/month per unit:</strong> Excellent — but verify the numbers carefully. If it looks too good, something's usually wrong.</li>
+            <li><strong>Negative cash flow:</strong> Means you're paying out of pocket every month. Only acceptable if you have a strong appreciation thesis.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>💡 Many investors chase cash flow and ignore appreciation, or vice versa. The best investments deliver both — modest cash flow ($150-$300/unit) in markets with solid appreciation potential (3-5%/year). See our guide to <a href="/blog/rental-property-cash-flow" style="color:var(--accent)">rental property cash flow</a> for deeper analysis.</p>
+        </div>
+
+        <h2>Cap Rate (Capitalization Rate)</h2>
+
+        <p>Cap rate measures the <strong>property's return independent of financing.</strong> It answers: "If I paid all cash, what would my annual return be?"</p>
+
+        <p><strong>Formula:</strong> Cap Rate = (Net Operating Income ÷ Purchase Price) × 100</p>
+
+        <p>NOI is annual income minus operating expenses (but NOT mortgage payments). This makes cap rate useful for comparing properties regardless of how they're financed.</p>
+
+        <p><strong>What good looks like:</strong></p>
+        <table>
+            <tr><th>Cap Rate</th><th>Market Type</th><th>Risk/Return Profile</th></tr>
+            <tr><td>3-5%</td><td>Gateway cities (NYC, SF, LA)</td><td>Lower cash flow, higher appreciation potential</td></tr>
+            <tr><td>5-7%</td><td>Secondary markets (Nashville, Tampa, Denver)</td><td>Balanced cash flow and appreciation</td></tr>
+            <tr><td>7-10%</td><td>Cash flow markets (Cleveland, Memphis, Birmingham)</td><td>Higher cash flow, lower appreciation</td></tr>
+            <tr><td>10%+</td><td>High-risk or distressed markets</td><td>High cash flow but higher tenant/property risk</td></tr>
+        </table>
+
+        <p>For a standalone cap rate analysis tool, see our <a href="/blog/cap-rate-calculator" style="color:var(--accent)">cap rate calculator</a>.</p>
+
+        <h2>Cash-on-Cash Return</h2>
+
+        <p>Cash-on-cash return measures the <strong>annual return on the actual cash you invested</strong> — not the total property value. This is arguably the most useful metric for leveraged investors because it accounts for the power of financing.</p>
+
+        <p><strong>Formula:</strong> Cash-on-Cash Return = (Annual Cash Flow ÷ Total Cash Invested) × 100</p>
+
+        <p>Total cash invested includes your down payment, closing costs, and any rehab costs — everything you paid out of pocket.</p>
+
+        <p><strong>What good looks like:</strong></p>
+        <ul>
+            <li><strong>4-6%:</strong> Acceptable in high-appreciation markets</li>
+            <li><strong>8-12%:</strong> Good — this is where most successful investors land</li>
+            <li><strong>12-15%:</strong> Excellent</li>
+            <li><strong>15%+:</strong> Outstanding — but double-check your assumptions. Are you being realistic about vacancy and maintenance?</li>
+        </ul>
+
+        <p>For a dedicated cash-on-cash calculator, see our <a href="/blog/cash-on-cash-return-calculator" style="color:var(--accent)">cash-on-cash return calculator</a>.</p>
+
+        <h2>Total ROI (Return on Investment)</h2>
+
+        <p>Total ROI goes beyond cash flow to include <strong>equity buildup through mortgage paydown.</strong> Every mortgage payment includes a principal portion that increases your equity — this is a real return even though you don't see it as cash in your bank account.</p>
+
+        <p><strong>Formula:</strong> Total ROI = ((Annual Cash Flow + Annual Principal Paydown) ÷ Total Cash Invested) × 100</p>
+
+        <p>Note: This calculator shows Year 1 ROI. In reality, your ROI improves over time as the principal portion of your mortgage payment increases (amortization) and rents increase (inflation/market growth).</p>
+
+        <h2>The 1% Rule — Quick Screening Tool</h2>
+
+        <p>The 1% rule is a quick rule of thumb: <strong>monthly rent should be at least 1% of the purchase price.</strong> A $250,000 property should rent for at least $2,500/month.</p>
+
+        <p>In 2026, the 1% rule is very difficult to hit in most markets, especially coastal and high-growth cities. Properties meeting the 1% rule are typically found in Midwest and Southeast cash flow markets. Use it as a quick screen, not a hard rule — many excellent investments fall at 0.7-0.9%.</p>
+
+        <h2>Common Expense Mistakes in Rental Property Analysis</h2>
+
+        <p>The #1 reason investors lose money is <strong>underestimating expenses.</strong> Here are the expenses most new investors miss or undercount:</p>
+
+        <ol>
+            <li><strong>Vacancy:</strong> Budget 5-8% of gross rent, even in hot markets. Every property will have vacancy eventually.</li>
+            <li><strong>Maintenance and repairs:</strong> Budget 8-12% of gross rent, or $100-$200/month per unit. Older properties need more. New construction needs less (initially).</li>
+            <li><strong>Capital expenditures (CapEx):</strong> Separate from maintenance. Budget $100-$200/month for future big-ticket items — roof, HVAC, water heater, flooring. These are the expenses that blindside investors. See our <a href="/blog/rental-property-expenses-guide" style="color:var(--accent)">rental property expenses guide</a> for a complete breakdown.</li>
+            <li><strong>Property management:</strong> Even if you self-manage, budget 8-10% for management. You may want to hire a manager later, or your time has a cost. See our guide on <a href="/blog/how-much-do-property-managers-charge" style="color:var(--accent)">how much property managers charge</a>.</li>
+            <li><strong>Insurance:</strong> Get actual quotes, don't guess. <a href="/blog/landlord-insurance-guide" style="color:var(--accent)">Landlord insurance</a> is more expensive than homeowner's insurance.</li>
+            <li><strong>Property taxes:</strong> Taxes may increase after purchase (reassessment). Check with the county assessor.</li>
+        </ol>
+
+        <h2>Financing and Its Impact on Returns</h2>
+
+        <p>Leverage (using borrowed money) amplifies your returns — both positive and negative:</p>
+
+        <table>
+            <tr><th>Scenario</th><th>All Cash</th><th>75% LTV at 7%</th></tr>
+            <tr><td>Purchase price</td><td>$250,000</td><td>$250,000</td></tr>
+            <tr><td>Cash invested</td><td>$250,000</td><td>$70,000</td></tr>
+            <tr><td>Annual NOI</td><td>$15,000</td><td>$15,000</td></tr>
+            <tr><td>Annual debt service</td><td>$0</td><td>$14,952</td></tr>
+            <tr><td>Annual cash flow</td><td>$15,000</td><td>$48</td></tr>
+            <tr><td>Cap rate</td><td>6.0%</td><td>6.0%</td></tr>
+            <tr><td>Cash-on-cash return</td><td>6.0%</td><td>0.07%</td></tr>
+        </table>
+
+        <p>This example shows a critical reality of 2026's high-interest-rate environment: <strong>properties that look good on a cap rate basis may generate almost zero cash flow when financed at 7%.</strong> The math that worked at 3.5% rates doesn't work at 7%.</p>
+
+        <p>For financing options, see our guides on <a href="/blog/rental-property-financing-guide" style="color:var(--accent)">rental property financing</a> and <a href="/blog/dscr-loan-guide" style="color:var(--accent)">DSCR loans</a>.</p>
+
+        <h2>How to Use This Calculator for Deal Analysis</h2>
+
+        <ol>
+            <li><strong>Start conservative:</strong> Use realistic (not optimistic) numbers for rent, vacancy, and expenses. It's better to be pleasantly surprised than financially devastated.</li>
+            <li><strong>Stress test:</strong> Run the numbers with 10% vacancy, $300/month maintenance, and a rent that's $100 below what you think you'll get. If the deal still works, it's solid.</li>
+            <li><strong>Compare alternatives:</strong> Run the calculator on multiple properties to compare. The best deal isn't always the cheapest property — it's the one with the best risk-adjusted returns.</li>
+            <li><strong>Factor in your goals:</strong> Cash flow investors should prioritize monthly cash flow and CoC return. Appreciation investors should focus on market fundamentals and accept lower cash flow.</li>
+            <li><strong>Don't forget taxes:</strong> Rental income is taxable, but <a href="/blog/rental-property-tax-deductions" style="color:var(--accent)">rental property tax deductions</a> (depreciation, mortgage interest, expenses) can significantly reduce your tax burden. Consult a CPA for your specific situation.</li>
+        </ol>
+
+        <p>For a comprehensive approach to evaluating properties, see our guides on <a href="/blog/how-to-buy-rental-property" style="color:var(--accent)">how to buy rental property</a> and <a href="/blog/real-estate-investing-for-beginners" style="color:var(--accent)">real estate investing for beginners</a>.</p>
+
+        <div class="cta-inline">
+            <h3>More calculators, guides & tools for investors</h3>
+            <p>PropertyCEO builds free tools and expert guides for rental property investors and managers. Join the waitlist.</p>
+            <form class="email-form" id="blog-cta-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+            <div class="form-success" id="blog-cta-success">✅ You're on the list!</div>
+        </div>
+    </article>
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers who want to build real businesses.</p></footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+    function calculateInvestment(){
+        const pp=parseFloat(document.getElementById('purchasePrice').value)||0;
+        const dpPct=parseFloat(document.getElementById('downPaymentPct').value)||0;
+        const cc=parseFloat(document.getElementById('closingCosts').value)||0;
+        const rehab=parseFloat(document.getElementById('rehabCosts').value)||0;
+        const rate=parseFloat(document.getElementById('interestRate').value)||0;
+        const term=parseFloat(document.getElementById('loanTerm').value)||30;
+        const rent=parseFloat(document.getElementById('monthlyRent').value)||0;
+        const other=parseFloat(document.getElementById('otherIncome').value)||0;
+        const vacPct=parseFloat(document.getElementById('vacancyRate').value)||0;
+        const tax=parseFloat(document.getElementById('propertyTax').value)||0;
+        const ins=parseFloat(document.getElementById('insurance').value)||0;
+        const hoa=parseFloat(document.getElementById('hoa').value)||0;
+        const maint=parseFloat(document.getElementById('maintenance').value)||0;
+        const mgmtPct=parseFloat(document.getElementById('mgmtFee').value)||0;
+        const otherExp=parseFloat(document.getElementById('otherExpenses').value)||0;
+
+        const dp=pp*(dpPct/100);
+        const loan=pp-dp;
+        const totalCashInvested=dp+cc+rehab;
+        const grossMonthly=rent+other;
+        const vacancyLoss=grossMonthly*(vacPct/100);
+        const egi=grossMonthly-vacancyLoss;
+        const mgmtCost=egi*(mgmtPct/100);
+        const totalExpenses=tax+ins+hoa+maint+mgmtCost+otherExp;
+        const monthlyNOI=egi-totalExpenses;
+        const annualNOI=monthlyNOI*12;
+
+        // Mortgage calculation
+        let monthlyMortgage=0;
+        let yearPrincipal=0;
+        if(loan>0&&rate>0){
+            const r=rate/100/12;
+            const n=term*12;
+            monthlyMortgage=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+            // Calculate year 1 principal paydown
+            let balance=loan;
+            for(let i=0;i<12;i++){
+                const intPmt=balance*(rate/100/12);
+                const prinPmt=monthlyMortgage-intPmt;
+                balance-=prinPmt;
+                yearPrincipal+=prinPmt;
+            }
+        }else if(loan>0&&rate===0){
+            monthlyMortgage=loan/(term*12);
+            yearPrincipal=monthlyMortgage*12;
+        }
+
+        const monthlyCF=monthlyNOI-monthlyMortgage;
+        const annualCF=monthlyCF*12;
+        const capRate=pp>0?(annualNOI/pp)*100:0;
+        const coc=totalCashInvested>0?(annualCF/totalCashInvested)*100:0;
+        const totalROI=totalCashInvested>0?((annualCF+yearPrincipal)/totalCashInvested)*100:0;
+
+        // Display results
+        document.getElementById('results').style.display='block';
+        const fmt=n=>'$'+Math.round(n).toLocaleString();
+        const fmtPct=n=>n.toFixed(1)+'%';
+
+        document.getElementById('cashFlowResult').textContent=fmt(monthlyCF);
+        document.getElementById('cocResult').textContent=fmtPct(coc);
+        document.getElementById('capRateResult').textContent=fmtPct(capRate);
+        document.getElementById('roiResult').textContent=fmtPct(totalROI);
+
+        const cfCard=document.getElementById('cashFlowCard');
+        cfCard.classList.toggle('positive',monthlyCF>=0);
+        cfCard.classList.toggle('negative',monthlyCF<0);
+        const cocCard=document.getElementById('cocCard');
+        cocCard.classList.toggle('positive',coc>=8);
+        cocCard.classList.toggle('negative',coc<0);
+
+        document.getElementById('detailGross').textContent=fmt(grossMonthly)+'/mo';
+        document.getElementById('detailVacancy').textContent='-'+fmt(vacancyLoss)+'/mo';
+        document.getElementById('detailEGI').textContent=fmt(egi)+'/mo';
+        document.getElementById('detailExpenses').textContent='-'+fmt(totalExpenses)+'/mo';
+        document.getElementById('detailNOI').textContent=fmt(monthlyNOI)+'/mo';
+        document.getElementById('detailMortgage').textContent='-'+fmt(monthlyMortgage)+'/mo';
+        document.getElementById('detailCashFlow').textContent=fmt(monthlyCF)+'/mo';
+        document.getElementById('detailAnnualCF').textContent=fmt(annualCF)+'/yr';
+        document.getElementById('detailCashInvested').textContent=fmt(totalCashInvested);
+        document.getElementById('detailLoan').textContent=fmt(loan);
+        document.getElementById('detailPrincipal').textContent=fmt(yearPrincipal)+'/yr';
+
+        document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    // Auto-calculate on load
+    window.addEventListener('load',calculateInvestment);
+
+    document.getElementById('blog-cta-form').addEventListener('submit',function(e){e.preventDefault();const email=this.querySelector('input').value;fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,timestamp:new Date().toISOString(),source:'blog-rental-property-investment-calculator'})}).catch(()=>{});this.style.display='none';document.getElementById('blog-cta-success').style.display='block';});
+    </script>
+</body>
+</html>
