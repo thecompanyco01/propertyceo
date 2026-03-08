@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Rate Formula: How to Calculate & Use Capitalization Rate</title>
+    <meta name="description" content="Learn the cap rate formula (NOI ÷ Property Value), step-by-step calculation, what's a good cap rate, cap rates by market and property type, and real examples.">
+    <meta name="keywords" content="cap rate formula, capitalization rate, how to calculate cap rate, cap rate calculation, what is a good cap rate, cap rate real estate">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/cap-rate-formula-guide">
+    <meta property="og:title" content="Cap Rate Formula: How to Calculate & Use Capitalization Rate">
+    <meta property="og:description" content="Master the cap rate formula — step-by-step calculations, benchmarks by market and property type, and how professional investors use cap rates.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cap Rate Formula: How to Calculate & Use Capitalization Rate",
+        "description": "Master the cap rate formula — step-by-step calculations, benchmarks by market and property type, and how professional investors use cap rates.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the cap rate formula?", "acceptedAnswer": {"@type": "Answer", "text": "Cap Rate = Net Operating Income (NOI) ÷ Property Value (or Purchase Price) × 100. For example, a property with $60,000 NOI and a $1,000,000 value has a 6% cap rate."}},
+            {"@type": "Question", "name": "What is a good cap rate for rental property?", "acceptedAnswer": {"@type": "Answer", "text": "A 'good' cap rate depends on the market and property type. Generally, 4-5% in major metros, 5-7% in mid-tier markets, and 7-10%+ in secondary markets. Higher cap rates mean higher returns but often come with higher risk."}},
+            {"@type": "Question", "name": "What is the difference between cap rate and cash-on-cash return?", "acceptedAnswer": {"@type": "Answer", "text": "Cap rate measures return on the total property value (ignoring financing). Cash-on-cash return measures the return on your actual cash invested, including the effects of leverage. A property might have a 6% cap rate but a 12% cash-on-cash return when financed with a mortgage."}},
+            {"@type": "Question", "name": "Does cap rate include mortgage payments?", "acceptedAnswer": {"@type": "Answer", "text": "No. Cap rate uses Net Operating Income (NOI), which excludes mortgage payments. This makes cap rate useful for comparing properties regardless of financing terms."}},
+            {"@type": "Question", "name": "Can you use cap rate for single-family rentals?", "acceptedAnswer": {"@type": "Answer", "text": "You can calculate it, but single-family homes are primarily valued by comparable sales, not income. Cap rate is most useful for multifamily and commercial properties where value is directly tied to income."}},
+            {"@type": "Question", "name": "What does it mean when cap rates are compressed?", "acceptedAnswer": {"@type": "Answer", "text": "Cap rate compression means cap rates are falling, which indicates property values are rising faster than NOI. This typically happens in competitive markets with high demand. Compressed cap rates mean lower yields for buyers but higher values for sellers."}}
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Investment Analysis</div>
+        <h1>Cap Rate Formula: How to Calculate & Use Capitalization Rate</h1>
+        <div class="article-meta">March 8, 2026 · 14 min read · By PropertyCEO</div>
+
+        <p>The <strong>capitalization rate (cap rate)</strong> is the most widely used metric in commercial and multifamily real estate. It tells you the rate of return a property generates based on its income and value — without considering financing. If you invest in income-producing real estate, you need to understand the cap rate formula inside and out.</p>
+
+        <p>In this guide, we'll break down exactly how to calculate cap rate, what makes a "good" cap rate, how cap rates vary by market and property type, and how professionals actually use this metric. For a broader overview, see our <a href="/blog/cap-rate-real-estate-guide.html" style="color: var(--accent);">complete guide to cap rates in real estate</a>.</p>
+
+        <h2>The Cap Rate Formula</h2>
+
+        <div class="highlight-box">
+            <p><strong>Cap Rate = Net Operating Income (NOI) ÷ Property Value × 100</strong></p>
+        </div>
+
+        <p>That's it. Two numbers, one division. But the simplicity is deceptive — understanding what goes into each number and what the result means is where the real skill lies.</p>
+
+        <h3>Breaking Down the Components</h3>
+
+        <p><strong>Net Operating Income (NOI):</strong> The property's total income minus operating expenses. NOI excludes mortgage payments, capital expenditures, depreciation, and income taxes. For a deep dive, read our <a href="/blog/net-operating-income-guide.html" style="color: var(--accent);">complete NOI guide</a>.</p>
+
+        <p><strong>Property Value:</strong> This is typically the purchase price (for acquisitions) or current market value (for properties you own). Some analysts also use the asking price to evaluate whether a listing is fairly priced.</p>
+
+        <h2>Step-by-Step Cap Rate Calculation</h2>
+
+        <p>Let's walk through two real examples:</p>
+
+        <h3>Example 1: 8-Unit Apartment Building</h3>
+
+        <p><strong>Property details:</strong></p>
+        <ul>
+            <li>Purchase price: $850,000</li>
+            <li>8 units at $1,100/month = $105,600/year gross potential rent</li>
+            <li>Vacancy (6%): −$6,336</li>
+            <li>Other income (laundry, parking): +$3,600</li>
+            <li><strong>Gross Operating Income: $102,864</strong></li>
+        </ul>
+
+        <p><strong>Operating expenses:</strong></p>
+        <ul>
+            <li>Property taxes: $9,800</li>
+            <li>Insurance: $4,200</li>
+            <li>Management (10%): $10,286</li>
+            <li>Maintenance: $7,500</li>
+            <li>Utilities: $4,800</li>
+            <li>Other: $3,200</li>
+            <li><strong>Total expenses: $39,786</strong></li>
+        </ul>
+
+        <p><strong>NOI = $102,864 − $39,786 = $63,078</strong></p>
+
+        <div class="highlight-box">
+            <p><strong>Cap Rate = $63,078 ÷ $850,000 × 100 = 7.42%</strong></p>
+        </div>
+
+        <h3>Example 2: Single-Tenant Retail (NNN Lease)</h3>
+
+        <p><strong>Property details:</strong></p>
+        <ul>
+            <li>Purchase price: $1,200,000</li>
+            <li>Annual NNN rent: $72,000</li>
+            <li>Tenant pays all operating expenses (taxes, insurance, maintenance)</li>
+            <li>Landlord expenses: $1,200/year (legal, accounting)</li>
+        </ul>
+
+        <p><strong>NOI = $72,000 − $1,200 = $70,800</strong></p>
+
+        <div class="highlight-box">
+            <p><strong>Cap Rate = $70,800 ÷ $1,200,000 × 100 = 5.90%</strong></p>
+        </div>
+
+        <p>The apartment building has a higher cap rate (7.42%) because it carries more risk: management intensity, vacancy risk, and maintenance. The NNN retail property has a lower cap rate (5.90%) because it's essentially a passive bond-like investment with a corporate tenant.</p>
+
+        <h2>Three Ways to Use the Cap Rate Formula</h2>
+
+        <p>The cap rate formula is versatile. You can rearrange it to solve for any of the three variables:</p>
+
+        <h3>1. Calculate Return (Most Common)</h3>
+        <p><strong>Cap Rate = NOI ÷ Property Value</strong></p>
+        <p>Use case: "Is this property priced fairly?" If cap rate is above market average, it may be underpriced. Below average, it may be overpriced.</p>
+
+        <h3>2. Estimate Property Value</h3>
+        <p><strong>Property Value = NOI ÷ Cap Rate</strong></p>
+        <p>Use case: "What should this property be worth?" If NOI is $75,000 and the market cap rate is 6.5%, the estimated value is $75,000 ÷ 0.065 = <strong>$1,153,846</strong>.</p>
+
+        <h3>3. Determine Required NOI</h3>
+        <p><strong>NOI = Property Value × Cap Rate</strong></p>
+        <p>Use case: "How much income does this property need to justify its price?" A $1M property in a 7% cap rate market needs $70,000 in NOI to be fairly priced.</p>
+
+        <div class="highlight-box">
+            <p>💡 The value estimation formula is how commercial properties are actually valued. Unlike residential real estate (where comps drive value), income properties are valued by their NOI and the prevailing cap rate. Increase your NOI, increase your property's value.</p>
+        </div>
+
+        <p>Want to run these numbers instantly? Use our <a href="/blog/cap-rate-calculator.html" style="color: var(--accent);">free cap rate calculator</a>.</p>
+
+        <h2>What Is a Good Cap Rate?</h2>
+
+        <p>There's no single "good" cap rate. It depends on market, property type, risk level, and your investment goals. Here are general benchmarks:</p>
+
+        <table>
+            <tr><th>Cap Rate Range</th><th>Risk/Return Profile</th><th>Typical Scenarios</th></tr>
+            <tr><td>3-4%</td><td>Low yield, lowest risk</td><td>Prime urban markets (NYC, SF, LA), Class A properties, credit tenants</td></tr>
+            <tr><td>5-6%</td><td>Moderate yield, moderate risk</td><td>Strong secondary markets, well-maintained multifamily, stabilized assets</td></tr>
+            <tr><td>7-8%</td><td>Higher yield, higher risk</td><td>Tertiary markets, older properties, smaller multifamily, some value-add</td></tr>
+            <tr><td>9-12%</td><td>High yield, highest risk</td><td>Distressed properties, high-crime areas, significant deferred maintenance</td></tr>
+        </table>
+
+        <p><strong>The key principle:</strong> Cap rate reflects risk. Higher cap rates compensate investors for taking on more risk (vacancy, management intensity, location, tenant quality). Lower cap rates indicate lower-risk, more stable investments.</p>
+
+        <h3>Cap Rates by Property Type (2025-2026 Averages)</h3>
+
+        <table>
+            <tr><th>Property Type</th><th>Average Cap Rate</th></tr>
+            <tr><td>Multifamily (Class A, urban)</td><td>4.5 - 5.5%</td></tr>
+            <tr><td>Multifamily (Class B/C, suburban)</td><td>5.5 - 7.5%</td></tr>
+            <tr><td>Office (Class A)</td><td>6.0 - 7.5%</td></tr>
+            <tr><td>Retail (NNN, credit tenant)</td><td>5.0 - 6.5%</td></tr>
+            <tr><td>Retail (Strip center)</td><td>6.5 - 8.5%</td></tr>
+            <tr><td>Industrial/Warehouse</td><td>5.0 - 7.0%</td></tr>
+            <tr><td>Self-Storage</td><td>5.5 - 7.5%</td></tr>
+            <tr><td>Single-Family Rental (SFR)</td><td>4.0 - 6.0%</td></tr>
+        </table>
+
+        <h3>Cap Rates by Market (2025-2026 Multifamily)</h3>
+
+        <table>
+            <tr><th>Market</th><th>Typical Cap Rate</th></tr>
+            <tr><td>New York City</td><td>4.0 - 5.0%</td></tr>
+            <tr><td>San Francisco</td><td>4.0 - 5.0%</td></tr>
+            <tr><td>Los Angeles</td><td>4.5 - 5.5%</td></tr>
+            <tr><td>Dallas/Austin</td><td>5.0 - 6.0%</td></tr>
+            <tr><td>Atlanta</td><td>5.5 - 6.5%</td></tr>
+            <tr><td>Charlotte/Tampa</td><td>5.5 - 7.0%</td></tr>
+            <tr><td>Cleveland/Memphis</td><td>7.0 - 9.0%</td></tr>
+            <tr><td>Midwest secondary</td><td>7.5 - 10.0%</td></tr>
+        </table>
+
+        <h2>Cap Rate Compression vs. Expansion</h2>
+
+        <p>You'll hear these terms frequently in commercial real estate. Here's what they mean:</p>
+
+        <h3>Cap Rate Compression</h3>
+        <p><strong>Cap rates are falling</strong> — meaning property values are rising faster than NOI. This happens when:</p>
+        <ul>
+            <li>More capital flows into real estate (high demand for properties)</li>
+            <li>Interest rates decrease (making real estate more attractive vs. bonds)</li>
+            <li>Investor confidence is high</li>
+            <li>A market becomes more desirable (gentrification, job growth)</li>
+        </ul>
+        <p><strong>Impact:</strong> Great for sellers (higher values), tough for buyers (lower yields). A property worth $1M at a 7% cap rate is worth $1.4M if cap rates compress to 5%.</p>
+
+        <h3>Cap Rate Expansion</h3>
+        <p><strong>Cap rates are rising</strong> — meaning property values are falling relative to NOI. This happens when:</p>
+        <ul>
+            <li>Interest rates increase (making bonds more competitive)</li>
+            <li>Economic uncertainty rises</li>
+            <li>Specific market deterioration (population decline, job losses)</li>
+            <li>Oversupply of new construction</li>
+        </ul>
+        <p><strong>Impact:</strong> Tough for sellers (lower values), opportunity for buyers (higher yields). A $1.4M property at a 5% cap rate drops to $1M if cap rates expand to 7%.</p>
+
+        <div class="highlight-box">
+            <p>💡 Rising interest rates and cap rate expansion caused significant valuation adjustments in 2023-2024. Understanding this relationship is critical for timing acquisitions and dispositions.</p>
+        </div>
+
+        <h2>Cap Rate vs. Cash-on-Cash Return</h2>
+
+        <p>These are the two most commonly confused metrics. Here's the distinction:</p>
+
+        <table>
+            <tr><th>Metric</th><th>Formula</th><th>Includes Financing?</th><th>Measures</th></tr>
+            <tr><td>Cap Rate</td><td>NOI ÷ Property Value</td><td>No</td><td>Return on total property value</td></tr>
+            <tr><td>Cash-on-Cash Return</td><td>Annual Cash Flow ÷ Total Cash Invested</td><td>Yes</td><td>Return on YOUR money</td></tr>
+        </table>
+
+        <p><strong>Example showing the difference:</strong></p>
+        <ul>
+            <li>Property price: $1,000,000</li>
+            <li>NOI: $70,000</li>
+            <li>Down payment (25%): $250,000</li>
+            <li>Closing costs: $15,000</li>
+            <li>Annual mortgage payment: $48,000</li>
+            <li>Annual cash flow: $70,000 − $48,000 = $22,000</li>
+        </ul>
+
+        <p><strong>Cap rate: $70,000 ÷ $1,000,000 = 7.0%</strong></p>
+        <p><strong>Cash-on-cash return: $22,000 ÷ $265,000 = 8.3%</strong></p>
+
+        <p>The cap rate is 7%, but your cash-on-cash return is 8.3% because leverage amplifies returns. This is positive leverage — your cost of debt (mortgage rate) is below the cap rate. When mortgage rates exceed the cap rate, leverage works against you (negative leverage).</p>
+
+        <p>Calculate your own returns with our <a href="/blog/cash-on-cash-return-calculator.html" style="color: var(--accent);">cash-on-cash return calculator</a>.</p>
+
+        <h2>Limitations of Cap Rate</h2>
+
+        <p>Cap rate is powerful but has real blind spots:</p>
+
+        <ol>
+            <li><strong>Ignores financing.</strong> Two investors buying the same property with different loan terms will have the same cap rate but wildly different returns. Cap rate doesn't capture leverage.</li>
+            <li><strong>Assumes current NOI is sustainable.</strong> If rents are artificially high, vacancy is temporarily low, or expenses are deferred, the cap rate is misleading.</li>
+            <li><strong>Doesn't account for appreciation.</strong> A 4% cap rate property in Austin may outperform a 9% cap rate property in a declining market once appreciation is included.</li>
+            <li><strong>One-year snapshot.</strong> Cap rate uses a single year's NOI. It doesn't capture growth trends, lease expirations, or upcoming capital needs.</li>
+            <li><strong>Not ideal for single-family.</strong> SFR values are driven by comparable sales, not cap rates. Calculating cap rate on a single-family home can yield misleading comparisons.</li>
+            <li><strong>Ignores capital expenditure needs.</strong> A property with a 9% cap rate but needing a $100K roof next year isn't really a 9% investment.</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p>⚠️ Never buy a property based on cap rate alone. Use it alongside NOI analysis, cash-on-cash return, DSCR, <a href="/blog/operating-expense-ratio-guide.html" style="color: var(--accent);">operating expense ratio (OER)</a>, and a thorough inspection. Cap rate is one tool in your toolbox — not the only tool.</p>
+        </div>
+
+        <h2>How Professional Investors Use Cap Rates</h2>
+
+        <h3>1. Quick Deal Screening</h3>
+        <p>Most investors have a target cap rate range for their market. Properties outside that range are immediately filtered out. This saves hours of detailed analysis on overpriced deals.</p>
+
+        <h3>2. Pricing Offers</h3>
+        <p>Work backward from your target cap rate to determine your max offer price. If you need a 7% cap rate and the NOI is $56,000, your max price is $56,000 ÷ 0.07 = $800,000.</p>
+
+        <h3>3. Value-Add Analysis</h3>
+        <p>Calculate cap rate on both current NOI and projected NOI after improvements. A property might trade at a 6% cap rate on current income but a 9% cap rate on pro forma income after renovations and rent increases — that's the value-add spread.</p>
+
+        <h3>4. Market Comparison</h3>
+        <p>Compare cap rates across markets to find where your dollar goes furthest. A $500K investment in a 7% cap rate market generates $35,000 NOI vs. $25,000 in a 5% market — a $10,000/year difference.</p>
+
+        <h3>5. Portfolio Monitoring</h3>
+        <p>Track cap rates on your existing properties annually. If a property's cap rate (based on current value) has compressed below your threshold, it might be time to sell and redeploy capital into higher-yielding markets.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What is the cap rate formula?</h3>
+        <p>Cap Rate = Net Operating Income (NOI) ÷ Property Value × 100. NOI is total income minus operating expenses (excluding mortgage payments, CapEx, depreciation, and taxes).</p>
+
+        <h3>What is a good cap rate for rental property?</h3>
+        <p>It varies by market and property type. Generally: 4-5% in major metros (NYC, SF, LA), 5-7% in mid-tier markets (Atlanta, Charlotte, Tampa), and 7-10%+ in secondary markets (Cleveland, Memphis). Higher cap rates = higher returns but higher risk.</p>
+
+        <h3>What is the difference between cap rate and cash-on-cash return?</h3>
+        <p>Cap rate measures return on the total property value (ignoring financing). Cash-on-cash return measures the return on your actual cash invested, accounting for mortgage payments and leverage. A property might have a 6% cap rate but a 10% cash-on-cash return when financed.</p>
+
+        <h3>Does cap rate include mortgage payments?</h3>
+        <p>No. Cap rate uses NOI, which excludes all debt service. This makes it useful for comparing properties regardless of how they're financed.</p>
+
+        <h3>Can you use cap rate for single-family rentals?</h3>
+        <p>You can calculate it, but it's less meaningful. Single-family homes are primarily valued by comparable sales, not income. Cap rate is most useful for multifamily (5+ units) and commercial properties.</p>
+
+        <h3>What does cap rate compression mean?</h3>
+        <p>Cap rate compression means cap rates are falling — property values are rising faster than incomes. This happens when demand for properties is high, interest rates are low, or a market is becoming more desirable. Great for sellers, challenging for buyers.</p>
+
+        <h2>The Bottom Line</h2>
+
+        <p>The cap rate formula is simple, but applying it skillfully separates novice investors from professionals. Remember these key principles:</p>
+
+        <ul>
+            <li><strong>Cap Rate = NOI ÷ Property Value</strong> — two numbers, one division</li>
+            <li>Higher cap rates = higher risk and higher potential return</li>
+            <li>Always compare cap rates within the same market and property type</li>
+            <li>Use cap rate for screening and valuation, not as your sole decision-making tool</li>
+            <li>Understand cap rate compression/expansion to time your acquisitions</li>
+            <li>Combine cap rate with <a href="/blog/net-operating-income-guide.html" style="color: var(--accent);">NOI analysis</a>, cash-on-cash return, and physical inspection</li>
+        </ul>
+
+        <p>Ready to run your own cap rate analysis? Try our <a href="/blog/cap-rate-calculator.html" style="color: var(--accent);">free cap rate calculator</a> or dive deeper with the <a href="/blog/rental-property-investment-calculator.html" style="color: var(--accent);">full rental property investment calculator</a>.</p>
+
+        <div class="cta-inline">
+            <h3>Ready to Scale Your Property Portfolio?</h3>
+            <p>Get the PropertyCEO Growth Playbook — the exact strategies property managers use to go from 50 to 500+ doors.</p>
+            <a href="/courses/growth-playbook.html" class="btn-primary">Get the Playbook →</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: var(--accent);">Blog</a> | <a href="/courses/" style="color: var(--accent);">Courses</a></p>
+    </footer>
+</body>
+</html>
