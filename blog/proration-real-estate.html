@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proration in Real Estate: How It Works & How to Calculate It | PropertyCEO</title>
+    <meta name="description" content="Learn how proration works in real estate — property tax proration, rent proration, HOA fee proration, and step-by-step calculation examples. Essential guide for investors and property managers.">
+    <meta name="keywords" content="proration real estate, property tax proration, rent proration, proration calculator, proration at closing, HOA proration, how to prorate">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/proration-real-estate">
+    <meta property="og:title" content="Proration in Real Estate: How It Works & How to Calculate It">
+    <meta property="og:description" content="Complete guide to proration in real estate — property taxes, rent, HOA fees, and calculation examples for investors and property managers.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Proration in Real Estate: How It Works & How to Calculate It",
+        "description": "Complete guide to proration in real estate including property tax proration, rent proration, HOA fee proration, and step-by-step calculation examples.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is proration in real estate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Proration is the process of dividing certain property expenses — such as property taxes, rent, HOA fees, and utility bills — between the buyer and seller based on the closing date. Each party pays their fair share for the time they owned or will own the property during the billing period."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you calculate property tax proration?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate property tax proration: (1) Determine the annual property tax amount. (2) Divide by 365 to get the daily rate. (3) Count the number of days the seller owned the property in the current tax period. (4) Multiply the daily rate by the seller's days of ownership. The result is the seller's share. Example: $4,380 annual tax ÷ 365 = $12/day. If closing is March 15, the seller owes 74 days × $12 = $888."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who pays prorated expenses at closing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Both the buyer and seller pay their proportional share. If the seller has prepaid expenses (like property taxes paid for the full year), the buyer reimburses the seller for the unused portion. If the seller owes expenses that haven't been paid yet, the seller credits the buyer at closing to cover the seller's share."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between proration using 365 days vs 360 days?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 365-day method (actual/actual) divides expenses based on the actual number of days in a year and is the most precise. The 360-day method (banker's year) assumes each month has 30 days and is simpler to calculate. Which method is used depends on local custom and the purchase agreement. Both are accepted, but the 365-day method is more common in residential real estate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is rent prorated when selling a rental property?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When selling a rental property with tenants, rent is prorated between seller and buyer based on the closing date. The seller keeps rent for days before closing, and the buyer receives rent for days from closing onward. If rent was already collected for the full month, the seller credits the buyer their portion at closing. Security deposits are also transferred to the buyer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are prorated expenses shown on the closing statement?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all prorated expenses appear on the closing disclosure (formerly HUD-1 settlement statement). They show up as credits or debits to each party. Review the settlement statement carefully before closing to ensure proration calculations are correct — errors do happen and can cost you hundreds or thousands of dollars."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+        th { background: var(--card-bg); color: var(--text); padding: 12px 16px; text-align: left; font-weight: 700; }
+        td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--text-muted); }
+        .calc-box { background: var(--card-bg); border-radius: 12px; padding: 24px; margin: 24px 0; font-family: monospace; }
+        .calc-box p { margin-bottom: 8px; font-size: 15px; color: var(--text); }
+        .calc-box .result { color: var(--accent); font-weight: 700; font-size: 17px; margin-top: 12px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog" class="back-link">← All Articles</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Real Estate Math</div>
+        <h1>Proration in Real Estate: How It Works & How to Calculate It</h1>
+        <div class="article-meta">March 8, 2026 · 10 min read · By PropertyCEO</div>
+
+        <p>When you buy or sell a property, expenses don't stop on closing day. Property taxes are still due, the HOA still charges monthly fees, and tenants still owe rent. So how do you fairly split these costs between buyer and seller?</p>
+
+        <p>The answer is <strong>proration</strong> — and getting it right can mean the difference between pocketing hundreds of extra dollars at closing or leaving money on the table.</p>
+
+        <p>This guide explains what proration is, how to calculate it for property taxes, rent, HOA fees, and other expenses, with step-by-step examples you can apply to your next transaction.</p>
+
+        <div class="highlight-box">
+            <p>💡 Key takeaway: Proration divides property expenses between buyer and seller based on the closing date. Each party pays only for the days they own the property during a billing period. It's calculated on the closing statement and affects your net proceeds or costs.</p>
+        </div>
+
+        <h2>What Is Proration in Real Estate?</h2>
+
+        <p>Proration is the <strong>proportional division of ongoing property expenses</strong> between the buyer and seller at closing. Since property costs like taxes, insurance, and HOA fees are typically billed in advance or in arrears, proration ensures each party pays only for the time they actually own the property.</p>
+
+        <p>Here's a simple example: If annual property taxes are $3,650 and you close on July 1 (exactly halfway through the year), the seller is responsible for $1,825 (January 1 – June 30) and the buyer is responsible for $1,825 (July 1 – December 31).</p>
+
+        <p>Prorations appear as <strong>credits or debits</strong> on the closing disclosure (settlement statement). If the seller has already paid an expense for the full period, the buyer credits the seller for the unused portion. If the seller hasn't paid yet, the seller credits the buyer to cover the seller's share.</p>
+
+        <h3>What Gets Prorated?</h3>
+        <p>The most common prorated items at closing include:</p>
+        <ul>
+            <li><strong>Property taxes</strong> (the biggest proration item)</li>
+            <li><strong>Rent</strong> (when selling occupied rental properties)</li>
+            <li><strong>HOA fees</strong> (homeowner association dues)</li>
+            <li><strong>Utility bills</strong> (water, sewer, sometimes gas/electric)</li>
+            <li><strong>Insurance premiums</strong> (if the policy transfers)</li>
+            <li><strong>Special assessments</strong></li>
+            <li><strong>Mortgage interest</strong> (for the seller's remaining loan)</li>
+        </ul>
+
+        <h2>How Proration Is Calculated</h2>
+
+        <p>There are two common methods for calculating prorations:</p>
+
+        <h3>365-Day Method (Actual/Actual)</h3>
+        <p>This is the most precise and most common method for residential real estate. It divides the annual expense by 365 (or 366 in a leap year) to get a daily rate, then multiplies by the number of days each party owns the property.</p>
+
+        <p><strong>Formula:</strong></p>
+        <div class="calc-box">
+            <p>Daily Rate = Annual Expense ÷ 365</p>
+            <p>Seller's Share = Daily Rate × Days Seller Owns Property</p>
+            <p>Buyer's Share = Daily Rate × Days Buyer Owns Property</p>
+        </div>
+
+        <h3>360-Day Method (Banker's Year)</h3>
+        <p>This method assumes each month has 30 days (30 × 12 = 360). It's simpler but less precise. It's sometimes used in commercial real estate and in some local markets.</p>
+
+        <p><strong>Formula:</strong></p>
+        <div class="calc-box">
+            <p>Monthly Rate = Annual Expense ÷ 12</p>
+            <p>Daily Rate = Monthly Rate ÷ 30</p>
+            <p>Seller's Share = Daily Rate × Days Seller Owns Property</p>
+        </div>
+
+        <p>Which method is used depends on your local market customs and what's specified in the purchase agreement. Always check the contract.</p>
+
+        <h2>Property Tax Proration: Step-by-Step Example</h2>
+
+        <p>Property tax proration is the most significant and most common proration at closing. Here's how to calculate it:</p>
+
+        <h3>Example 1: Taxes Paid in Arrears</h3>
+        <p>In many states, property taxes are paid <em>in arrears</em> — meaning you pay at the end of the tax period for the year that already passed.</p>
+
+        <div class="calc-box">
+            <p><strong>Scenario:</strong></p>
+            <p>Annual property tax: $4,380</p>
+            <p>Tax year: January 1 – December 31</p>
+            <p>Closing date: September 15</p>
+            <p>Taxes paid in arrears (not yet paid for current year)</p>
+            <p></p>
+            <p><strong>Calculation (365-day method):</strong></p>
+            <p>Daily rate: $4,380 ÷ 365 = $12.00/day</p>
+            <p>Seller owned Jan 1 – Sep 14 = 257 days</p>
+            <p>Seller's share: 257 × $12.00 = $3,084.00</p>
+            <p></p>
+            <p class="result">→ Seller credits buyer $3,084.00 at closing</p>
+        </div>
+
+        <p>Since the seller hasn't paid the taxes yet and won't be around when they come due, the seller gives the buyer a credit at closing. The buyer then pays the full tax bill when it arrives.</p>
+
+        <h3>Example 2: Taxes Paid in Advance</h3>
+        <p>In some states, property taxes are paid <em>in advance</em> — meaning the seller has already paid for the full year.</p>
+
+        <div class="calc-box">
+            <p><strong>Scenario:</strong></p>
+            <p>Annual property tax: $6,000</p>
+            <p>Tax year: January 1 – December 31</p>
+            <p>Closing date: April 1</p>
+            <p>Seller already paid full year's taxes</p>
+            <p></p>
+            <p><strong>Calculation (365-day method):</strong></p>
+            <p>Daily rate: $6,000 ÷ 365 = $16.44/day</p>
+            <p>Buyer will own Apr 1 – Dec 31 = 275 days</p>
+            <p>Buyer's share: 275 × $16.44 = $4,521.00</p>
+            <p></p>
+            <p class="result">→ Buyer credits seller $4,521.00 at closing</p>
+        </div>
+
+        <p>Since the seller already paid taxes for the entire year, the buyer reimburses the seller for the portion of the year they'll own the property.</p>
+
+        <div class="highlight-box">
+            <p>⚠️ Important: In some areas, the tax year doesn't align with the calendar year. For example, in California, the fiscal tax year runs July 1 – June 30. Always verify your local tax year before calculating prorations.</p>
+        </div>
+
+        <h2>Rent Proration: Selling Occupied Rental Properties</h2>
+
+        <p>When you sell a rental property with tenants in place, rent collected for the month of closing must be prorated between buyer and seller.</p>
+
+        <h3>Example: Rent Proration</h3>
+
+        <div class="calc-box">
+            <p><strong>Scenario:</strong></p>
+            <p>Monthly rent: $1,800</p>
+            <p>Closing date: March 20</p>
+            <p>Tenant already paid March rent to seller</p>
+            <p></p>
+            <p><strong>Calculation:</strong></p>
+            <p>Daily rate: $1,800 ÷ 31 (days in March) = $58.06/day</p>
+            <p>Seller keeps: Mar 1 – Mar 19 = 19 days × $58.06 = $1,103.14</p>
+            <p>Buyer gets: Mar 20 – Mar 31 = 12 days × $58.06 = $696.72</p>
+            <p></p>
+            <p class="result">→ Seller credits buyer $696.72 at closing for buyer's share of March rent</p>
+        </div>
+
+        <h3>Don't Forget Security Deposits</h3>
+        <p>When selling a rental property, security deposits transfer to the buyer at closing. This isn't technically a proration — it's a full transfer. The buyer becomes responsible for returning the deposit when the tenant moves out. Make sure the security deposit transfer is explicitly documented on the closing statement.</p>
+
+        <p>For more on managing rental properties effectively, check out our <a href="/courses/growth-playbook.html">Property Management Growth Playbook</a>.</p>
+
+        <h2>HOA Fee Proration</h2>
+
+        <p>Homeowner association dues are prorated similarly to property taxes. The calculation depends on whether dues are paid monthly, quarterly, or annually, and whether they're paid in advance or arrears.</p>
+
+        <h3>Example: HOA Proration</h3>
+
+        <div class="calc-box">
+            <p><strong>Scenario:</strong></p>
+            <p>Quarterly HOA dues: $900 (Jan-Mar quarter)</p>
+            <p>Closing date: February 15</p>
+            <p>Seller already paid Q1 dues</p>
+            <p></p>
+            <p><strong>Calculation:</strong></p>
+            <p>Quarter = 90 days (Jan 1 – Mar 31)</p>
+            <p>Daily rate: $900 ÷ 90 = $10.00/day</p>
+            <p>Buyer's portion: Feb 15 – Mar 31 = 45 days × $10.00 = $450.00</p>
+            <p></p>
+            <p class="result">→ Buyer credits seller $450.00 at closing</p>
+        </div>
+
+        <h3>Special Assessments</h3>
+        <p>HOAs sometimes levy special assessments for major repairs or improvements. How these are handled at closing depends on the purchase agreement. Typically:</p>
+        <ul>
+            <li>If the assessment was levied before closing, the seller pays it</li>
+            <li>If the assessment is levied after closing, the buyer pays it</li>
+            <li>Some contracts specifically address pending assessments — always check</li>
+        </ul>
+
+        <div class="cta-inline">
+            <h3>📋 Free Property Management Growth Checklist</h3>
+            <p>From proration to profit — get the complete checklist for building and scaling your property management business.</p>
+            <a href="/free-checklist/" class="btn-primary">Get the Free Checklist →</a>
+        </div>
+
+        <h2>Utility Proration</h2>
+
+        <p>Utility bills are often prorated at closing, though the method varies:</p>
+
+        <ul>
+            <li><strong>Water/Sewer:</strong> Usually prorated based on the most recent bill. Some title companies contact the utility company for a final reading.</li>
+            <li><strong>Gas/Electric:</strong> Typically transferred rather than prorated. The seller closes their account on closing day, and the buyer opens a new one.</li>
+            <li><strong>Trash/Recycling:</strong> Often billed with property taxes and prorated accordingly.</li>
+        </ul>
+
+        <p>The <a href="/blog/escrow-process-guide.html">escrow agent</a> typically handles utility prorations as part of the closing process.</p>
+
+        <h2>Proration Day: Whose Day Is It?</h2>
+
+        <p>One detail that catches many people off guard: <strong>who "owns" the closing day?</strong> Does the buyer or seller pay for the day of closing?</p>
+
+        <p>The answer varies by market and contract, but the most common convention is:</p>
+        <ul>
+            <li><strong>Buyer owns the closing day</strong> — the seller is charged through the day before closing, and the buyer's charges start on the closing date</li>
+            <li>Some markets give the closing day to the seller</li>
+            <li>The purchase agreement should specify — if it doesn't, ask before closing</li>
+        </ul>
+
+        <p>On a $6,000/year property tax, one day's difference is about $16.44. It's not a fortune, but over a career of buying and selling properties, those dollars add up.</p>
+
+        <h2>Proration Tips for Property Managers and Investors</h2>
+
+        <ol>
+            <li><strong>Verify tax amounts:</strong> Don't rely on the listing's stated tax amount. Check the county assessor's website for the actual current tax bill. Taxes may have been reassessed recently.</li>
+            <li><strong>Check for supplemental taxes:</strong> In states like California, a property reassessment at sale triggers supplemental tax bills that arrive after closing. Budget for these.</li>
+            <li><strong>Review the closing statement carefully:</strong> Proration errors are surprisingly common. Calculate each proration yourself and compare to the settlement statement.</li>
+            <li><strong>Negotiate proration terms:</strong> Some items are negotiable. For example, you might negotiate that the seller pays all of a pending special assessment rather than prorating it.</li>
+            <li><strong>Track prorations for tax purposes:</strong> Prorated expenses affect your tax basis and deductions. Document everything and share with your accountant.</li>
+            <li><strong>Use the <a href="/blog/cap-rate-formula-guide.html">cap rate formula</a></strong> when evaluating whether prorated rents and expenses affect your target returns on investment properties.</li>
+        </ol>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What is proration in real estate?</h3>
+        <p>Proration is the process of dividing certain property expenses — such as property taxes, rent, HOA fees, and utility bills — between the buyer and seller based on the closing date. Each party pays their fair share for the time they owned or will own the property during the billing period.</p>
+
+        <h3>How do you calculate property tax proration?</h3>
+        <p>To calculate property tax proration: (1) Determine the annual property tax amount. (2) Divide by 365 to get the daily rate. (3) Count the number of days the seller owned the property in the current tax period. (4) Multiply the daily rate by the seller's days of ownership. The result is the seller's share. Example: $4,380 annual tax ÷ 365 = $12/day. If closing is September 15, the seller owes 257 days × $12 = $3,084.</p>
+
+        <h3>Who pays prorated expenses at closing?</h3>
+        <p>Both the buyer and seller pay their proportional share. If the seller has prepaid expenses (like property taxes paid for the full year), the buyer reimburses the seller for the unused portion. If the seller owes expenses that haven't been paid yet, the seller credits the buyer at closing to cover the seller's share.</p>
+
+        <h3>What is the difference between proration using 365 days vs 360 days?</h3>
+        <p>The 365-day method (actual/actual) divides expenses based on the actual number of days in a year and is the most precise. The 360-day method (banker's year) assumes each month has 30 days and is simpler to calculate. Which method is used depends on local custom and the purchase agreement. Both are accepted, but the 365-day method is more common in residential real estate.</p>
+
+        <h3>How is rent prorated when selling a rental property?</h3>
+        <p>When selling a rental property with tenants, rent is prorated between seller and buyer based on the closing date. The seller keeps rent for days before closing, and the buyer receives rent for days from closing onward. If rent was already collected for the full month, the seller credits the buyer their portion at closing. Security deposits are also transferred to the buyer.</p>
+
+        <h3>Are prorated expenses shown on the closing statement?</h3>
+        <p>Yes, all prorated expenses appear on the closing disclosure (formerly HUD-1 settlement statement). They show up as credits or debits to each party. Review the settlement statement carefully before closing to ensure proration calculations are correct — errors do happen and can cost you hundreds or thousands of dollars.</p>
+
+        <div class="cta-inline">
+            <h3>🎓 Master Real Estate Finance</h3>
+            <p>Proration is just one piece of the financial puzzle. Our Growth Playbook teaches you how to analyze deals, manage cash flow, and build a profitable PM business.</p>
+            <a href="/courses/growth-playbook.html" class="btn-primary">Explore the Growth Playbook →</a>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>Proration may seem like a minor detail in the grand scheme of a real estate transaction, but the numbers add up — especially when you're managing multiple properties. Understanding how prorations work gives you the confidence to review closing statements, catch errors, and negotiate better terms.</p>
+
+        <p>As a property manager or investor, you'll encounter prorations in every transaction. Master the calculations now, and you'll save yourself time, money, and headaches for every deal to come.</p>
+
+        <p><strong>Related articles:</strong></p>
+        <ul>
+            <li><a href="/blog/escrow-process-guide.html">The Escrow Process Explained: Step-by-Step Guide</a></li>
+            <li><a href="/blog/title-insurance-guide.html">Title Insurance: What It Is & Why You Need It</a></li>
+            <li><a href="/blog/cap-rate-formula-guide.html">Cap Rate Formula: How to Calculate It</a></li>
+            <li><a href="/blog/cash-on-cash-return-calculator.html">Cash on Cash Return Calculator</a></li>
+        </ul>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved.</p>
+    </footer>
+</body>
+</html>
