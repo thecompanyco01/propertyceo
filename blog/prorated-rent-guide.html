@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prorated Rent: How to Calculate It (Formulas, Examples & Templates)</title>
+    <meta name="description" content="Learn how to calculate prorated rent with simple formulas and real examples. Covers daily rate methods, move-in/move-out proration, and free calculator.">
+    <meta name="keywords" content="prorated rent, how to calculate prorated rent, prorated rent formula, prorated rent calculator, daily rent calculation, move-in prorated rent">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/prorated-rent-guide">
+    <meta property="og:title" content="Prorated Rent: How to Calculate It (Formulas, Examples & Templates)">
+    <meta property="og:description" content="Complete guide to prorated rent — formulas, examples, when it applies, and a free calculator for landlords and property managers.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Prorated Rent: How to Calculate It (Formulas, Examples & Templates)",
+        "description": "Complete guide to prorated rent — formulas, examples, when it applies, and a free calculator for landlords and property managers.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-09",
+        "dateModified": "2026-03-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is prorated rent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prorated rent is a partial rent payment calculated based on the exact number of days a tenant occupies a unit during a billing period, rather than charging the full monthly amount. It ensures tenants only pay for the days they actually live in the property."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you calculate prorated rent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Divide the monthly rent by the number of days in the month to get the daily rate, then multiply by the number of days the tenant will occupy the unit. For example, $1,500 rent ÷ 30 days = $50/day × 15 days = $750 prorated rent."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is a landlord required to prorate rent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most states do not legally require landlords to prorate rent, but it is standard industry practice and expected by tenants. Some states and local jurisdictions do have specific rules, so check your local landlord-tenant laws."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When is prorated rent typically charged?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prorated rent is most commonly charged when a tenant moves in or out on a date other than the first or last day of the month. It can also apply during lease renewals with rate changes or mid-month lease terminations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use the number of days in the month or a standard 30 days?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Both methods are acceptable. Using actual days in the month (28, 29, 30, or 31) is more precise and generally preferred. Using a standard 30-day month simplifies calculations. The method should be specified in your lease agreement for consistency."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can prorated rent apply to commercial leases?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, prorated rent applies to commercial leases as well. Commercial leases often use a 365-day annual method: (Annual Rent ÷ 365) × Number of Days. This ensures consistency regardless of the month length."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .toc { background: var(--card-bg); border-radius: 12px; padding: 24px 32px; margin: 32px 0; }
+        .toc h3 { margin: 0 0 12px 0; font-size: 16px; color: var(--text); }
+        .toc ul { list-style: none; margin: 0; padding: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a { color: var(--accent); font-size: 15px; }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); text-decoration: none; }
+        .faq-section { margin: 48px 0; }
+        .faq-item { background: var(--card-bg); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .faq-item h3 { margin: 0 0 8px 0; color: var(--text); font-size: 18px; }
+        .faq-item p { margin: 0; color: var(--text-muted); font-size: 16px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article>
+        <div class="article-badge">Landlord Essentials</div>
+        <h1>Prorated Rent: How to Calculate It (Formulas, Examples & Templates)</h1>
+        <div class="article-meta">March 9, 2026 · 14 min read · By PropertyCEO</div>
+
+        <p>Whether a tenant is moving in on the 15th or moving out on the 22nd, <strong>prorated rent</strong> ensures they only pay for the days they actually occupy the unit. It's one of the most common calculations in property management — and getting it wrong can cause disputes, accounting headaches, and even legal issues.</p>
+
+        <p>This guide covers everything landlords and property managers need to know about prorating rent: the formulas, step-by-step examples, when proration applies, and how to handle it in your lease agreements.</p>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#what-is">What Is Prorated Rent?</a></li>
+                <li><a href="#when-applies">When Does Prorated Rent Apply?</a></li>
+                <li><a href="#formulas">Prorated Rent Formulas (3 Methods)</a></li>
+                <li><a href="#examples">Step-by-Step Calculation Examples</a></li>
+                <li><a href="#move-in">Prorated Rent for Move-In</a></li>
+                <li><a href="#move-out">Prorated Rent for Move-Out</a></li>
+                <li><a href="#lease">How to Include Proration in Your Lease</a></li>
+                <li><a href="#commercial">Prorated Rent for Commercial Leases</a></li>
+                <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+
+        <h2 id="what-is">What Is Prorated Rent?</h2>
+
+        <p><strong>Prorated rent</strong> is a partial rent payment that corresponds to the exact number of days a tenant occupies a rental unit during an incomplete billing period. Instead of charging the full monthly rent when a tenant moves in mid-month, you calculate a daily rate and charge only for the days they'll be living there.</p>
+
+        <p>For example, if monthly rent is $1,500 and a tenant moves in on March 16th, they shouldn't pay the full $1,500 for March. Instead, you'd prorate rent for the remaining 16 days of the month — roughly $774.</p>
+
+        <div class="highlight-box">
+            <p><strong>Key principle:</strong> Prorated rent = Daily rate × Number of days the tenant occupies the unit during an incomplete month.</p>
+        </div>
+
+        <p>Proration is a standard practice across the property management industry. It builds trust with tenants, avoids disputes, and ensures your accounting reflects the actual occupancy period. Most <a href="/blog/property-management-fees-2025.html">property management companies</a> handle proration automatically through their software.</p>
+
+        <h2 id="when-applies">When Does Prorated Rent Apply?</h2>
+
+        <p>Prorated rent most commonly applies in these situations:</p>
+
+        <h3>1. Mid-Month Move-In</h3>
+        <p>The most common scenario. A tenant signs a lease starting on the 10th or the 15th — they only pay for the remaining days in that first month. This is especially frequent when tenants need to align move-in dates with the end of their previous lease.</p>
+
+        <h3>2. Mid-Month Move-Out</h3>
+        <p>When a lease ends on a date other than the last day of the month, the tenant's final payment covers only the days they occupied the unit. This also applies when a tenant provides a <a href="/blog/30-day-notice-to-vacate.html">30-day notice to vacate</a> that results in a mid-month departure.</p>
+
+        <h3>3. Lease Start Date Adjustments</h3>
+        <p>If a unit isn't ready on the original move-in date due to repairs or renovations, proration helps adjust the first month's rent accordingly. This protects both parties and maintains a fair financial arrangement.</p>
+
+        <h3>4. Rent Increases Mid-Cycle</h3>
+        <p>When a rent increase takes effect on a date other than the start of a billing period, proration calculates the split between the old and new rates for that transitional month.</p>
+
+        <h3>5. Early Lease Termination</h3>
+        <p>If both parties agree to an early termination, prorated rent covers the tenant's final partial month. This often comes into play with <a href="/blog/cash-for-keys.html">cash for keys</a> agreements or negotiated early exits.</p>
+
+        <h2 id="formulas">Prorated Rent Formulas (3 Methods)</h2>
+
+        <p>There are three widely used methods for calculating prorated rent. Each produces a slightly different result, so it's important to specify which method you use in your lease agreement.</p>
+
+        <h3>Method 1: Actual Days in the Month (Most Accurate)</h3>
+
+        <div class="highlight-box">
+            <p><strong>Daily Rate = Monthly Rent ÷ Actual Days in Month</strong><br>
+            <strong>Prorated Rent = Daily Rate × Days Occupied</strong></p>
+        </div>
+
+        <p>This is the most precise method and the one most property managers prefer. It accounts for the varying lengths of different months (28, 29, 30, or 31 days).</p>
+
+        <p><strong>Example:</strong> $1,800 rent, move-in on March 20th (31-day month)<br>
+        Daily Rate = $1,800 ÷ 31 = $58.06<br>
+        Days Occupied = 12 (March 20–31)<br>
+        Prorated Rent = $58.06 × 12 = <strong>$696.77</strong></p>
+
+        <h3>Method 2: Standard 30-Day Month (Simplest)</h3>
+
+        <div class="highlight-box">
+            <p><strong>Daily Rate = Monthly Rent ÷ 30</strong><br>
+            <strong>Prorated Rent = Daily Rate × Days Occupied</strong></p>
+        </div>
+
+        <p>This method assumes every month has 30 days, regardless of the actual calendar. It's simpler but can result in tenants paying slightly more or less than their proportional share in months with 28 or 31 days.</p>
+
+        <p><strong>Example:</strong> $1,800 rent, move-in on March 20th<br>
+        Daily Rate = $1,800 ÷ 30 = $60.00<br>
+        Days Occupied = 12<br>
+        Prorated Rent = $60.00 × 12 = <strong>$720.00</strong></p>
+
+        <h3>Method 3: Annual/365-Day Method (Commercial Standard)</h3>
+
+        <div class="highlight-box">
+            <p><strong>Daily Rate = (Monthly Rent × 12) ÷ 365</strong><br>
+            <strong>Prorated Rent = Daily Rate × Days Occupied</strong></p>
+        </div>
+
+        <p>This method converts the monthly rent to an annual figure, then divides by 365 to get the most consistent daily rate. It's the standard for <a href="/blog/triple-net-lease-guide.html">commercial leases</a> and produces the most uniform daily rate year-round.</p>
+
+        <p><strong>Example:</strong> $1,800 rent, move-in on March 20th<br>
+        Daily Rate = ($1,800 × 12) ÷ 365 = $59.18<br>
+        Days Occupied = 12<br>
+        Prorated Rent = $59.18 × 12 = <strong>$710.14</strong></p>
+
+        <h3>Comparison of Methods</h3>
+
+        <table>
+            <tr><th>Method</th><th>Daily Rate</th><th>Prorated Amount (12 days)</th><th>Best For</th></tr>
+            <tr><td>Actual Days (31)</td><td>$58.06</td><td>$696.77</td><td>Residential (most accurate)</td></tr>
+            <tr><td>Standard 30-Day</td><td>$60.00</td><td>$720.00</td><td>Quick calculations</td></tr>
+            <tr><td>Annual/365-Day</td><td>$59.18</td><td>$710.14</td><td>Commercial leases</td></tr>
+        </table>
+
+        <h2 id="examples">Step-by-Step Calculation Examples</h2>
+
+        <h3>Example 1: Tenant Moves In on the 15th</h3>
+        <p><strong>Scenario:</strong> Monthly rent is $2,000. Tenant moves in on April 15th. April has 30 days.</p>
+        <ol>
+            <li>Daily rate: $2,000 ÷ 30 = $66.67</li>
+            <li>Days occupied: April 15–30 = 16 days</li>
+            <li>Prorated rent: $66.67 × 16 = <strong>$1,066.72</strong></li>
+        </ol>
+        <p>The tenant pays $1,066.72 for April, then $2,000 for each full month starting May 1st.</p>
+
+        <h3>Example 2: Tenant Moves Out on the 10th</h3>
+        <p><strong>Scenario:</strong> Monthly rent is $1,400. Tenant's lease ends June 10th. June has 30 days.</p>
+        <ol>
+            <li>Daily rate: $1,400 ÷ 30 = $46.67</li>
+            <li>Days occupied: June 1–10 = 10 days</li>
+            <li>Prorated rent: $46.67 × 10 = <strong>$466.70</strong></li>
+        </ol>
+
+        <h3>Example 3: February Proration (Leap Year Matters)</h3>
+        <p><strong>Scenario:</strong> Monthly rent is $1,600. Tenant moves in February 20th, 2026 (28-day February).</p>
+        <ol>
+            <li>Daily rate: $1,600 ÷ 28 = $57.14</li>
+            <li>Days occupied: Feb 20–28 = 9 days</li>
+            <li>Prorated rent: $57.14 × 9 = <strong>$514.29</strong></li>
+        </ol>
+        <p>In a leap year (29 days), the same calculation yields $496.55 — a $17.74 difference. This is why specifying your proration method matters.</p>
+
+        <h3>Example 4: Rent Increase Mid-Month</h3>
+        <p><strong>Scenario:</strong> Rent increases from $1,200 to $1,300 effective July 16th. July has 31 days.</p>
+        <ol>
+            <li>Old rate for days 1–15: ($1,200 ÷ 31) × 15 = $580.65</li>
+            <li>New rate for days 16–31: ($1,300 ÷ 31) × 16 = $670.97</li>
+            <li>Total July rent: $580.65 + $670.97 = <strong>$1,251.62</strong></li>
+        </ol>
+
+        <h2 id="move-in">Prorated Rent for Move-In</h2>
+
+        <p>When a tenant moves in mid-month, here's the standard process:</p>
+
+        <ol>
+            <li><strong>Calculate the prorated amount</strong> using your chosen formula</li>
+            <li><strong>Collect at move-in:</strong> First month's prorated rent + security deposit (and sometimes the next full month's rent)</li>
+            <li><strong>Document it:</strong> The lease should clearly state the prorated amount, the proration period, and when full rent payments begin</li>
+            <li><strong>Set the recurring date:</strong> Most landlords prorate the first partial month and then have full rent due on the 1st of each subsequent month</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p><strong>Pro Tip:</strong> Some landlords prefer to collect the prorated rent plus the next full month's rent at move-in. This provides a financial cushion and aligns the tenant to a standard 1st-of-the-month payment schedule immediately.</p>
+        </div>
+
+        <h2 id="move-out">Prorated Rent for Move-Out</h2>
+
+        <p>Prorated move-out rent works similarly, but there are a few additional considerations:</p>
+
+        <ul>
+            <li><strong>Lease end date:</strong> If the lease specifies an end date mid-month, prorate through that date</li>
+            <li><strong>Notice period:</strong> If the tenant gives a 30-day notice that lands mid-month, prorate accordingly</li>
+            <li><strong>Overpayment refunds:</strong> If the tenant already paid the full month's rent, calculate the prorated amount and refund the difference</li>
+            <li><strong>Security deposit:</strong> The prorated refund and <a href="/blog/security-deposit-laws.html">security deposit return</a> are separate — don't combine them</li>
+        </ul>
+
+        <p>Always document the move-out proration calculation in writing and provide it to the tenant along with their final statement.</p>
+
+        <h2 id="lease">How to Include Proration in Your Lease</h2>
+
+        <p>Your lease agreement should include a clear proration clause. Here's what it should cover:</p>
+
+        <ul>
+            <li><strong>The proration method:</strong> Specify whether you use actual days, 30-day, or 365-day calculation</li>
+            <li><strong>Move-in proration:</strong> State the exact prorated amount for the first partial month</li>
+            <li><strong>Move-out proration:</strong> Clarify that the tenant's final month will be prorated based on the lease end date</li>
+            <li><strong>Payment timing:</strong> When the prorated amount is due (at move-in, with the first rent payment, etc.)</li>
+        </ul>
+
+        <p>A sample lease clause might read:</p>
+
+        <div class="highlight-box">
+            <p><em>"Tenant's initial rent payment shall be prorated from [move-in date] through [end of month], calculated using the actual number of days in the month. The prorated amount of $[amount] is due at lease signing. Thereafter, full monthly rent of $[amount] is due on the 1st of each month."</em></p>
+        </div>
+
+        <h2 id="commercial">Prorated Rent for Commercial Leases</h2>
+
+        <p>Commercial lease proration follows the same principles but has some key differences:</p>
+
+        <ul>
+            <li><strong>365-day method is standard:</strong> Commercial leases almost always use the annual method for consistency</li>
+            <li><strong>Triple net considerations:</strong> In a <a href="/blog/triple-net-lease-guide.html">triple net (NNN) lease</a>, you may need to prorate the base rent AND the tenant's share of property taxes, insurance, and maintenance</li>
+            <li><strong>CAM charges:</strong> Common Area Maintenance charges may also need proration at lease commencement</li>
+            <li><strong>Free rent periods:</strong> Commercial leases sometimes offer free rent periods that affect proration timing</li>
+        </ul>
+
+        <p>If you're managing commercial properties, understanding how <a href="/blog/net-operating-income-guide.html">net operating income</a> interacts with prorated rent periods is essential for accurate financial reporting.</p>
+
+        <h2 id="mistakes">Common Mistakes to Avoid</h2>
+
+        <h3>1. Not Specifying the Method in the Lease</h3>
+        <p>If your lease doesn't state which proration method you'll use, you're inviting disputes. Always specify the calculation method in writing before the tenant moves in.</p>
+
+        <h3>2. Forgetting to Prorate at Move-Out</h3>
+        <p>Some landlords charge for the full final month even when the lease ends mid-month. This can lead to tenant complaints and potentially legal issues depending on your jurisdiction.</p>
+
+        <h3>3. Inconsistent Methods Across Properties</h3>
+        <p>If you manage multiple units, use the same proration method for all of them. Inconsistency creates confusion and can look discriminatory if challenged.</p>
+
+        <h3>4. Rounding Errors</h3>
+        <p>Always round to the nearest cent and keep your calculations documented. Small rounding differences add up across a portfolio and can cause bookkeeping headaches.</p>
+
+        <h3>5. Not Adjusting for Utilities</h3>
+        <p>If the tenant pays a flat utility fee bundled with rent, don't forget to prorate that amount as well. The same applies to any fixed monthly charges like parking, storage, or pet fees.</p>
+
+        <div class="cta-inline">
+            <h3>Master Property Management Operations</h3>
+            <p>Prorated rent is just one piece of the puzzle. Learn how to systematize every aspect of property management — from tenant screening to financial reporting.</p>
+            <a href="/courses/property-management-growth-playbook.html" class="btn-primary">Get the Growth Playbook →</a>
+        </div>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <h3>What is prorated rent?</h3>
+                <p>Prorated rent is a partial rent payment calculated based on the exact number of days a tenant occupies a unit during a billing period, rather than charging the full monthly amount. It ensures tenants only pay for the days they actually live in the property.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do you calculate prorated rent?</h3>
+                <p>Divide the monthly rent by the number of days in the month to get the daily rate, then multiply by the number of days the tenant will occupy the unit. For example, $1,500 rent ÷ 30 days = $50/day × 15 days = $750 prorated rent.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is a landlord required to prorate rent?</h3>
+                <p>Most states do not legally require landlords to prorate rent, but it is standard industry practice and expected by tenants. Some states and local jurisdictions do have specific rules requiring proration, so always check your local landlord-tenant laws.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>When is prorated rent typically charged?</h3>
+                <p>Prorated rent is most commonly charged when a tenant moves in or out on a date other than the first or last day of the month. It can also apply during lease renewals with rate changes or mid-month lease terminations.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Should I use the number of days in the month or a standard 30 days?</h3>
+                <p>Both methods are acceptable. Using actual days in the month (28, 29, 30, or 31) is more precise and generally preferred. Using a standard 30-day month simplifies calculations. The method should be specified in your lease agreement for consistency.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can prorated rent apply to commercial leases?</h3>
+                <p>Yes, prorated rent applies to commercial leases as well. Commercial leases often use a 365-day annual method: (Annual Rent ÷ 365) × Number of Days. This ensures consistency regardless of the month length.</p>
+            </div>
+        </div>
+
+        <h2>Related Articles</h2>
+        <ul>
+            <li><a href="/blog/proration-real-estate.html">Proration in Real Estate: How It Works & How to Calculate It</a></li>
+            <li><a href="/blog/property-management-fees-2025.html">Property Management Fees: Complete 2025 Breakdown</a></li>
+            <li><a href="/blog/vacancy-rate-guide.html">Vacancy Rate Guide: How to Calculate & Reduce Vacancies</a></li>
+            <li><a href="/blog/section-8-housing-landlord-guide.html">Section 8 Housing: Complete Landlord Guide</a></li>
+            <li><a href="/blog/rental-property-down-payment-guide.html">Rental Property Down Payment Guide</a></li>
+        </ul>
+
+    </article>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: #e94560;">Blog</a> · <a href="/courses.html" style="color: #e94560;">Courses</a></p>
+    </footer>
+</body>
+</html>
