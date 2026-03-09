@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depreciation Recapture: Complete Guide for Real Estate Investors</title>
+    <meta name="description" content="Learn how depreciation recapture works in real estate, tax rates, how to calculate it, and proven strategies to defer or reduce your tax bill when selling.">
+    <meta name="keywords" content="depreciation recapture, depreciation recapture tax, depreciation recapture real estate, section 1250, unrecaptured section 1250 gain, depreciation recapture rate">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/depreciation-recapture-guide">
+    <meta property="og:title" content="Depreciation Recapture: Complete Guide for Real Estate Investors">
+    <meta property="og:description" content="How depreciation recapture works in real estate, current tax rates, calculation examples, and strategies to minimize your tax bill when selling property.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Depreciation Recapture: Complete Guide for Real Estate Investors",
+        "description": "How depreciation recapture works in real estate, current tax rates, calculation examples, and strategies to minimize your tax bill when selling property.",
+        "author": {"@type": "Organization", "name": "PropertyCEO"},
+        "publisher": {"@type": "Organization", "name": "PropertyCEO"},
+        "datePublished": "2026-03-09",
+        "dateModified": "2026-03-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is depreciation recapture in real estate?", "acceptedAnswer": {"@type": "Answer", "text": "Depreciation recapture is a tax provision that requires real estate investors to pay taxes on the depreciation deductions they claimed during ownership when they sell the property. The IRS essentially 'recaptures' the tax benefit you received from depreciation by taxing a portion of your sale proceeds at a higher rate."}},
+            {"@type": "Question", "name": "What is the depreciation recapture tax rate?", "acceptedAnswer": {"@type": "Answer", "text": "For real estate, depreciation recapture on Section 1250 property (buildings) is taxed at a maximum rate of 25% under the unrecaptured Section 1250 gain rules. Personal property components (Section 1245 property like appliances and carpeting) are recaptured at your ordinary income tax rate, which can be as high as 37%."}},
+            {"@type": "Question", "name": "Can I avoid depreciation recapture?", "acceptedAnswer": {"@type": "Answer", "text": "You cannot permanently avoid depreciation recapture, but you can defer it. The most common strategy is a 1031 exchange, which allows you to defer both capital gains and depreciation recapture taxes by reinvesting proceeds into a like-kind property. Other strategies include installment sales, opportunity zone investments, or holding the property until death (stepped-up basis)."}},
+            {"@type": "Question", "name": "Do I have to pay depreciation recapture if I never claimed depreciation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS calculates depreciation recapture based on the depreciation you were 'allowed or allowable,' not just what you actually claimed. Even if you never took depreciation deductions, the IRS assumes you did and will tax you on the recapture amount. This is why it is critical to always claim your depreciation deductions."}},
+            {"@type": "Question", "name": "How do I calculate depreciation recapture?", "acceptedAnswer": {"@type": "Answer", "text": "To calculate depreciation recapture: (1) Determine your original cost basis, (2) subtract all depreciation taken (or allowed) to find your adjusted basis, (3) subtract your adjusted basis from the sale price to find total gain, (4) the depreciation recapture portion equals the lesser of your total gain or total depreciation claimed, taxed at up to 25%. Any remaining gain above that is taxed as long-term capital gains."}},
+            {"@type": "Question", "name": "What is the difference between Section 1245 and Section 1250 recapture?", "acceptedAnswer": {"@type": "Answer", "text": "Section 1245 applies to personal property like appliances, carpeting, and equipment — depreciation on these assets is recaptured at ordinary income tax rates (up to 37%). Section 1250 applies to real property (the building itself) — depreciation is recaptured at a maximum rate of 25% under the unrecaptured Section 1250 gain rules. Cost segregation studies can reclassify some building components as Section 1245 property for faster depreciation, but this means higher recapture rates upon sale."}},
+            {"@type": "Question", "name": "Does depreciation recapture apply to a 1031 exchange?", "acceptedAnswer": {"@type": "Answer", "text": "A properly executed 1031 exchange defers depreciation recapture taxes — you do not pay them at the time of the exchange. However, the recapture obligation carries over to the replacement property. When you eventually sell without doing another 1031 exchange, you will owe depreciation recapture on the cumulative depreciation from all properties in the exchange chain."}}
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a1a2e; --accent: #e94560; --accent-hover: #d63851; --bg: #0f0f1a; --card-bg: #16213e; --text: #eaeaea; --text-muted: #a0a0b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .article-badge { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .article-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        h2 { font-size: 26px; font-weight: 800; margin: 48px 0 16px; letter-spacing: -0.5px; }
+        h3 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: var(--text-muted); font-size: 17px; }
+        strong { color: var(--text); }
+        ul, ol { margin: 0 0 24px 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; font-size: 17px; }
+        .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 15px; }
+        th { color: var(--text); font-weight: 700; background: var(--card-bg); }
+        td { color: var(--text-muted); }
+        .toc { background: var(--card-bg); border-radius: 12px; padding: 24px 32px; margin: 32px 0; }
+        .toc h3 { margin-top: 0; font-size: 18px; }
+        .toc ul { list-style: none; margin: 0; padding: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a { color: var(--accent); text-decoration: none; font-size: 15px; }
+        .toc a:hover { text-decoration: underline; }
+        .cta-inline { background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(22,33,62,0.8)); border: 1px solid rgba(233,69,96,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+        .cta-inline h3 { margin-top: 0; color: var(--text); }
+        .cta-inline p { color: var(--text-muted); }
+        .btn-primary { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 600px) { nav { padding: 20px; } table { font-size: 13px; } th, td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+    </nav>
+
+    <article class="blog-post">
+        <span class="article-badge">Tax Strategy</span>
+        <h1>Depreciation Recapture: Complete Guide for Real Estate Investors</h1>
+        <div class="article-meta">PropertyCEO Team · March 9, 2026 · 18 min read</div>
+
+        <p>You've been claiming depreciation on your rental properties for years, reducing your taxable income by thousands of dollars annually. But what happens when you sell? The IRS wants its share back — and that's where <strong>depreciation recapture</strong> comes in.</p>
+
+        <p>Depreciation recapture catches many real estate investors off guard. They enjoy the tax benefits during ownership, only to face a substantial and unexpected tax bill at sale. Understanding how depreciation recapture works — and the strategies available to minimize or defer it — is essential for every serious property investor.</p>
+
+        <p>In this comprehensive guide, we'll break down exactly how depreciation recapture is calculated, current tax rates, real-world examples, and proven strategies to keep more of your profits when you sell.</p>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#what-is">What Is Depreciation Recapture?</a></li>
+                <li><a href="#how-it-works">How Depreciation Recapture Works</a></li>
+                <li><a href="#tax-rates">Depreciation Recapture Tax Rates</a></li>
+                <li><a href="#calculation">How to Calculate Depreciation Recapture</a></li>
+                <li><a href="#example">Step-by-Step Calculation Example</a></li>
+                <li><a href="#1245-vs-1250">Section 1245 vs Section 1250 Recapture</a></li>
+                <li><a href="#strategies">Strategies to Minimize Depreciation Recapture</a></li>
+                <li><a href="#cost-seg">Cost Segregation and Recapture Implications</a></li>
+                <li><a href="#common-mistakes">Common Mistakes to Avoid</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+
+        <h2 id="what-is">What Is Depreciation Recapture?</h2>
+
+        <p>Depreciation recapture is a tax provision that requires you to pay taxes on the depreciation deductions you claimed (or were entitled to claim) during the time you owned an investment property. When you sell a property for more than its depreciated (adjusted) basis, the IRS "recaptures" some of the tax benefit you received from those depreciation deductions.</p>
+
+        <p>Think of it this way: depreciation lowers your taxable income each year you own the property. When you sell, the IRS says, "You got a tax break by writing off the building's value. Now that you're selling for a profit, we want some of that benefit back."</p>
+
+        <div class="highlight-box">
+            <p><strong>Key Insight:</strong> Depreciation recapture applies even if you never actually claimed depreciation deductions. The IRS taxes you on the depreciation "allowed or allowable" — meaning you'll owe recapture taxes regardless. Always claim your depreciation.</p>
+        </div>
+
+        <p>For residential rental property, you depreciate the building (not the land) over 27.5 years using straight-line depreciation. For commercial property, the schedule is 39 years. Each year, you deduct a portion of the building's cost basis, reducing your taxable income. But all those deductions create a future tax liability when you sell.</p>
+
+        <h2 id="how-it-works">How Depreciation Recapture Works</h2>
+
+        <p>When you purchase a rental property, you establish a cost basis — the purchase price plus closing costs, minus the value of the land. Each year, you claim depreciation, which reduces your adjusted basis in the property.</p>
+
+        <p>When you sell, the IRS looks at two things:</p>
+
+        <ol>
+            <li><strong>The total depreciation you claimed (or could have claimed)</strong> — this is your potential recapture amount</li>
+            <li><strong>Your total gain on the sale</strong> — the difference between the sale price and your adjusted basis</li>
+        </ol>
+
+        <p>The depreciation recapture portion of your gain is taxed at a special rate (up to 25% for real property), separate from your regular capital gains. Any gain above the depreciation recapture amount is taxed at the lower long-term capital gains rate (0%, 15%, or 20% depending on your income).</p>
+
+        <h3>The Two-Layer Tax on Property Sales</h3>
+
+        <p>When you sell a profitable rental property, your gain is split into two layers:</p>
+
+        <ul>
+            <li><strong>Layer 1 — Depreciation Recapture:</strong> The portion of your gain attributable to depreciation is taxed at up to 25% (for Section 1250 property)</li>
+            <li><strong>Layer 2 — Capital Gain:</strong> Any gain above the recaptured depreciation is taxed at long-term capital gains rates (typically 15% or 20%)</li>
+        </ul>
+
+        <p>Additionally, high-income earners may owe the 3.8% Net Investment Income Tax (NIIT) on top of both layers, bringing the effective rates to 28.8% on recapture and up to 23.8% on capital gains.</p>
+
+        <h2 id="tax-rates">Depreciation Recapture Tax Rates</h2>
+
+        <p>The tax rate on depreciation recapture depends on the type of property and the depreciation method used:</p>
+
+        <table>
+            <tr>
+                <th>Property Type</th>
+                <th>IRS Section</th>
+                <th>Recapture Rate</th>
+            </tr>
+            <tr>
+                <td>Real property (buildings)</td>
+                <td>Section 1250</td>
+                <td>Up to 25%</td>
+            </tr>
+            <tr>
+                <td>Personal property (appliances, carpeting, etc.)</td>
+                <td>Section 1245</td>
+                <td>Ordinary income rate (up to 37%)</td>
+            </tr>
+            <tr>
+                <td>Land improvements (parking lots, fencing)</td>
+                <td>Section 1250</td>
+                <td>Up to 25%</td>
+            </tr>
+            <tr>
+                <td>Cost segregation components (5/7-year)</td>
+                <td>Section 1245</td>
+                <td>Ordinary income rate (up to 37%)</td>
+            </tr>
+        </table>
+
+        <div class="highlight-box">
+            <p><strong>Important:</strong> The 25% rate is a maximum. If your ordinary income tax rate is lower than 25%, you'll pay the lower rate on the recapture amount. However, most investors selling profitable properties are in higher tax brackets.</p>
+        </div>
+
+        <h2 id="calculation">How to Calculate Depreciation Recapture</h2>
+
+        <p>The formula for calculating depreciation recapture is straightforward:</p>
+
+        <ol>
+            <li><strong>Determine your original cost basis:</strong> Purchase price + closing costs + improvements − land value</li>
+            <li><strong>Calculate total depreciation taken:</strong> Annual depreciation × years of ownership</li>
+            <li><strong>Find your adjusted basis:</strong> Original cost basis − total depreciation taken</li>
+            <li><strong>Calculate total gain:</strong> Sale price − selling costs − adjusted basis</li>
+            <li><strong>Determine recapture amount:</strong> The lesser of total gain or total depreciation claimed</li>
+        </ol>
+
+        <p>The recapture amount is taxed at up to 25%. Any gain exceeding the recapture amount is taxed as long-term capital gains.</p>
+
+        <h2 id="example">Step-by-Step Calculation Example</h2>
+
+        <p>Let's walk through a realistic example to illustrate how depreciation recapture works in practice:</p>
+
+        <h3>The Scenario</h3>
+        <ul>
+            <li>Purchase price: $400,000 (building value: $320,000, land: $80,000)</li>
+            <li>Closing costs added to basis: $10,000</li>
+            <li>Total depreciable basis: $330,000</li>
+            <li>Owned for 10 years</li>
+            <li>Annual depreciation: $330,000 ÷ 27.5 = $12,000/year</li>
+            <li>Total depreciation claimed: $12,000 × 10 = $120,000</li>
+            <li>Sale price: $550,000</li>
+            <li>Selling costs: $35,000</li>
+        </ul>
+
+        <h3>The Math</h3>
+        <table>
+            <tr><th>Item</th><th>Amount</th></tr>
+            <tr><td>Original basis (building + closing costs)</td><td>$410,000</td></tr>
+            <tr><td>Less: Total depreciation</td><td>−$120,000</td></tr>
+            <tr><td>Adjusted basis</td><td>$290,000</td></tr>
+            <tr><td>Net sale price ($550K − $35K costs)</td><td>$515,000</td></tr>
+            <tr><td>Total gain</td><td>$225,000</td></tr>
+            <tr><td>Depreciation recapture (taxed at 25%)</td><td>$120,000 × 25% = $30,000</td></tr>
+            <tr><td>Capital gain ($225K − $120K, taxed at 15%)</td><td>$105,000 × 15% = $15,750</td></tr>
+            <tr><td><strong>Total tax on sale</strong></td><td><strong>$45,750</strong></td></tr>
+        </table>
+
+        <p>Without proper planning, this investor faces a $45,750 tax bill. With the strategies outlined below, they could defer or significantly reduce this amount.</p>
+
+        <h2 id="1245-vs-1250">Section 1245 vs Section 1250 Recapture</h2>
+
+        <p>Understanding the difference between Section 1245 and Section 1250 recapture is critical, especially if you've done a cost segregation study:</p>
+
+        <h3>Section 1250 — Real Property</h3>
+        <p>Section 1250 covers the building structure itself. For properties depreciated using the straight-line method (which is standard for real estate since 1986), the recapture is classified as "unrecaptured Section 1250 gain" and taxed at a maximum of 25%. This is the most common type of recapture for real estate investors.</p>
+
+        <h3>Section 1245 — Personal Property</h3>
+        <p>Section 1245 covers personal property components like appliances, carpeting, cabinetry, and certain land improvements. Depreciation on these items is recaptured at your ordinary income tax rate — which could be as high as 37%. If you've done a cost segregation study, some building components were reclassified as Section 1245 property to accelerate depreciation. This provides bigger upfront deductions but higher recapture rates at sale.</p>
+
+        <div class="highlight-box">
+            <p><strong>Cost Segregation Trade-off:</strong> Cost segregation studies accelerate depreciation (bigger deductions now), but reclassified components face Section 1245 recapture at ordinary income rates when you sell. The time value of money usually makes this trade-off worthwhile, but factor recapture into your exit strategy.</p>
+        </div>
+
+        <h2 id="strategies">Strategies to Minimize Depreciation Recapture</h2>
+
+        <p>While you cannot permanently eliminate depreciation recapture in most cases, several powerful strategies can defer or reduce the tax impact:</p>
+
+        <h3>1. 1031 Exchange</h3>
+        <p>A <strong>1031 exchange</strong> (also called a like-kind exchange) is the most popular strategy for deferring depreciation recapture. By reinvesting your sale proceeds into another qualifying investment property within strict timelines (45 days to identify, 180 days to close), you defer both capital gains and depreciation recapture taxes indefinitely.</p>
+        <p>You can continue doing 1031 exchanges throughout your investing career, deferring taxes on each transaction. The recapture obligation carries forward to each replacement property but is never triggered as long as you keep exchanging.</p>
+
+        <h3>2. Installment Sale</h3>
+        <p>An installment sale spreads the gain (and the associated recapture tax) over multiple tax years. Instead of receiving the full sale price at closing, the buyer pays you over time. This can keep you in lower tax brackets each year and spread the recapture tax impact. However, note that the IRS requires all depreciation recapture to be recognized in the year of sale, even in an installment sale — only the capital gain portion can be spread out.</p>
+
+        <h3>3. Hold Until Death (Stepped-Up Basis)</h3>
+        <p>If you hold the property until death, your heirs receive a stepped-up basis equal to the property's fair market value at the date of death. This eliminates all accumulated depreciation recapture and capital gains. For investors with a long time horizon or legacy planning goals, this is the most tax-efficient exit strategy.</p>
+
+        <h3>4. Qualified Opportunity Zone Investment</h3>
+        <p>Investing capital gains into a Qualified Opportunity Zone fund can defer and partially reduce capital gains taxes. While this primarily applies to the capital gain portion rather than depreciation recapture, it can be combined with other strategies for comprehensive tax planning.</p>
+
+        <h3>5. Charitable Remainder Trust (CRT)</h3>
+        <p>Contributing the property to a Charitable Remainder Trust before selling allows the trust to sell the property tax-free. You receive an income stream from the trust and a charitable deduction. This eliminates depreciation recapture and capital gains taxes while supporting philanthropic goals. This strategy works best for investors who don't need the full sale proceeds immediately.</p>
+
+        <h3>6. Convert to Primary Residence</h3>
+        <p>If you move into a rental property and live in it as your primary residence for at least 2 of the 5 years before selling, you may qualify for the Section 121 exclusion ($250,000 for singles, $500,000 for married couples). This can offset a significant portion of your gain, though depreciation recapture still applies for depreciation taken after May 6, 1997.</p>
+
+        <h2 id="cost-seg">Cost Segregation and Recapture Implications</h2>
+
+        <p>Cost segregation studies are a powerful tool for accelerating depreciation, but they have important implications for recapture:</p>
+
+        <p>When a cost segregation study reclassifies building components as personal property (5-year, 7-year, or 15-year assets), those components shift from Section 1250 to Section 1245. This means:</p>
+
+        <ul>
+            <li><strong>During ownership:</strong> You get larger depreciation deductions sooner (the benefit)</li>
+            <li><strong>At sale:</strong> Recapture on those components is at ordinary income rates (up to 37%) instead of the 25% maximum for Section 1250 property (the cost)</li>
+        </ul>
+
+        <p>The math typically favors cost segregation because of the time value of money — a dollar of tax savings today is worth more than a dollar of tax owed years from now. But if you plan to sell within a few years, the accelerated recapture could offset much of the benefit.</p>
+
+        <p><strong>Best practice:</strong> If you've done a cost segregation study, plan your exit using a 1031 exchange to defer the higher recapture taxes. This gives you the best of both worlds — accelerated deductions during ownership and deferred recapture at sale.</p>
+
+        <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+        <h3>1. Not Claiming Depreciation</h3>
+        <p>Some investors skip depreciation deductions, thinking this will reduce their recapture tax at sale. This is wrong. The IRS taxes you on depreciation "allowed or allowable" — you owe recapture whether you claimed the deductions or not. Always claim depreciation to get the tax benefit now.</p>
+
+        <h3>2. Forgetting About Recapture in Exit Planning</h3>
+        <p>Too many investors focus exclusively on capital gains when planning a sale and are blindsided by the depreciation recapture tax. Always factor recapture into your net proceeds calculation before listing a property.</p>
+
+        <h3>3. Missing the 1031 Exchange Deadlines</h3>
+        <p>The 45-day identification period and 180-day closing deadline for 1031 exchanges are strict. Missing them by even one day disqualifies the exchange, triggering full recapture and capital gains taxes. Work with a qualified intermediary and start identifying replacement properties before you close on the sale.</p>
+
+        <h3>4. Ignoring State Taxes</h3>
+        <p>Most states also tax depreciation recapture. Depending on your state, this can add another 3-13% to your total tax bill. Factor state taxes into your calculations, especially if the property is in a high-tax state.</p>
+
+        <h3>5. Not Working with a CPA</h3>
+        <p>Depreciation recapture involves complex tax calculations that interact with your overall tax situation. A qualified CPA who specializes in real estate can identify optimal strategies and ensure you don't overpay. The cost of professional advice is trivial compared to the potential tax savings.</p>
+
+        <div class="cta-inline">
+            <h3>Master Real Estate Tax Strategy</h3>
+            <p>The PropertyCEO Growth Playbook covers depreciation recapture, 1031 exchanges, cost segregation, and 20+ other tax strategies used by professional investors to build wealth faster.</p>
+            <a href="/buy" class="btn-primary">Get the Growth Playbook — $197</a>
+        </div>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <h3>What is depreciation recapture in real estate?</h3>
+        <p>Depreciation recapture is a tax provision that requires real estate investors to pay taxes on the depreciation deductions they claimed during ownership when they sell the property. The IRS essentially "recaptures" the tax benefit you received from depreciation by taxing a portion of your sale proceeds at a higher rate than regular capital gains.</p>
+
+        <h3>What is the depreciation recapture tax rate?</h3>
+        <p>For real estate buildings (Section 1250 property), depreciation recapture is taxed at a maximum rate of 25% under the unrecaptured Section 1250 gain rules. Personal property components (Section 1245 property like appliances and carpeting) are recaptured at your ordinary income tax rate, which can be as high as 37%. High-income earners may also owe the 3.8% Net Investment Income Tax.</p>
+
+        <h3>Can I avoid depreciation recapture?</h3>
+        <p>You cannot permanently avoid depreciation recapture in most cases, but you can defer it. The most common strategy is a 1031 exchange, which allows you to defer both capital gains and depreciation recapture taxes by reinvesting proceeds into a like-kind property. Holding property until death provides a stepped-up basis that eliminates recapture entirely for your heirs.</p>
+
+        <h3>Do I have to pay depreciation recapture if I never claimed depreciation?</h3>
+        <p>Yes. The IRS calculates depreciation recapture based on the depreciation you were "allowed or allowable," not just what you actually claimed. Even if you never took depreciation deductions, the IRS assumes you did and will tax you on the recapture amount. This is why it is critical to always claim your depreciation deductions — you'll owe the tax regardless.</p>
+
+        <h3>How do I calculate depreciation recapture?</h3>
+        <p>To calculate depreciation recapture: (1) Determine your original cost basis, (2) subtract all depreciation taken (or allowed) to find your adjusted basis, (3) subtract your adjusted basis from the net sale price to find total gain, (4) the depreciation recapture portion equals the lesser of your total gain or total depreciation claimed, taxed at up to 25%. Any remaining gain above that is taxed as long-term capital gains.</p>
+
+        <h3>What is the difference between Section 1245 and Section 1250 recapture?</h3>
+        <p>Section 1245 applies to personal property like appliances, carpeting, and equipment — depreciation on these assets is recaptured at ordinary income tax rates (up to 37%). Section 1250 applies to real property (the building itself) — depreciation is recaptured at a maximum rate of 25%. Cost segregation studies reclassify some building components as Section 1245 property for faster depreciation, but this means higher recapture rates upon sale.</p>
+
+        <h3>Does depreciation recapture apply to a 1031 exchange?</h3>
+        <p>A properly executed 1031 exchange defers depreciation recapture taxes — you do not pay them at the time of the exchange. However, the recapture obligation carries over to the replacement property. When you eventually sell without doing another 1031 exchange, you will owe depreciation recapture on the cumulative depreciation from all properties in the exchange chain.</p>
+
+    </article>
+
+    <footer>
+        <p>© 2026 PropertyCEO. All rights reserved. | <a href="/blog/" style="color: var(--accent);">Back to Blog</a></p>
+    </footer>
+</body>
+</html>
