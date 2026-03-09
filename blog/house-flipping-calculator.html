@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Flipping Calculator: Estimate Your Flip Profit Before You Buy (2026)</title>
+    <meta name="description" content="Free house flipping calculator to estimate your flip profit before you buy. Enter purchase price, rehab costs, holding costs, and ARV to see your net profit instantly.">
+    <meta name="keywords" content="house flipping calculator, flip calculator, house flip profit calculator, fix and flip calculator, flipping houses calculator">
+    <link rel="canonical" href="https://propertyceo.vercel.app/blog/house-flipping-calculator">
+    <meta property="og:title" content="House Flipping Calculator: Estimate Your Flip Profit Before You Buy">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"House Flipping Calculator","description":"Free house flipping calculator — estimate rehab costs, holding costs, selling costs, and net profit before you buy.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--accent:#e94560;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0;--success:#00d26a}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}.logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}.back-link{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}article{max-width:720px;margin:0 auto;padding:40px 24px 80px}h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-1.5px}.article-meta{color:var(--text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}h2{font-size:26px;font-weight:800;margin:48px 0 16px;letter-spacing:-.5px}h3{font-size:20px;font-weight:700;margin:32px 0 12px}p{margin-bottom:20px;color:var(--text-muted);font-size:17px}strong{color:var(--text)}ul,ol{margin:0 0 24px 24px;color:var(--text-muted)}li{margin-bottom:8px;font-size:17px}.data-badge{display:inline-block;background:rgba(0,180,255,.12);color:#00b4ff;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:700;margin-bottom:8px}
+        .calc-container{background:var(--card-bg);border:2px solid rgba(233,69,96,.2);border-radius:20px;padding:36px;margin:32px 0}
+        .calc-container h2{margin-top:0;text-align:center;font-size:24px}
+        .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+        .calc-field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--text)}
+        .calc-field input{width:100%;padding:14px 16px;border:2px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.05);color:white;font-size:18px;font-family:inherit;outline:none}
+        .calc-field input:focus{border-color:var(--accent)}
+        .calc-field .input-hint{font-size:12px;color:var(--text-muted);margin-top:4px}
+        .calc-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:8px;transition:background .2s}
+        .calc-btn:hover{background:#d63851}
+        .calc-result{text-align:center;padding:24px;margin-top:20px;border-radius:16px;display:none}
+        .calc-result.show{display:block}
+        .calc-result .big-number{font-size:56px;font-weight:900;letter-spacing:-2px}
+        .calc-result .big-number.good{color:var(--success)}
+        .calc-result .big-number.ok{color:#ffc107}
+        .calc-result .big-number.low{color:var(--accent)}
+        .calc-result .verdict{font-size:18px;font-weight:600;margin-top:8px}
+        .calc-result .breakdown{text-align:left;background:rgba(0,0,0,.2);border-radius:12px;padding:16px;margin-top:16px;font-size:14px;color:var(--text-muted)}
+        .calc-result .breakdown div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        table{width:100%;border-collapse:collapse;margin:24px 0}th{text-align:left;padding:12px 16px;background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:700}td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;color:var(--text-muted)}
+        .highlight-box{background:var(--card-bg);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}
+        .cta-box{background:linear-gradient(135deg,rgba(233,69,96,.15),rgba(22,33,62,.9));border:2px solid rgba(233,69,96,.3);border-radius:20px;padding:40px;text-align:center;margin:48px 0}.cta-box h3{margin-top:0;color:var(--text);font-size:24px}.cta-box p{color:var(--text-muted);max-width:520px;margin:12px auto 24px}.cta-box .btn-primary{display:inline-block;padding:16px 40px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;text-decoration:none;transition:background .2s}.cta-box .btn-primary:hover{background:#d63851}.cta-box .price{font-size:14px;color:var(--text-muted);margin-top:12px}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,.05)}
+        @media(max-width:600px){nav{padding:20px}.calc-grid{grid-template-columns:1fr}.calc-result .big-number{font-size:42px}}
+    </style>
+</head>
+<body>
+    <nav><a href="/" class="logo">Property<span>CEO</span></a><a href="/blog" class="back-link">← Blog</a></nav>
+    <article>
+        <h1>House Flipping Calculator: Estimate Your Flip Profit Before You Buy</h1>
+        <div class="article-meta">Free tool · Updated March 2026 · By PropertyCEO</div>
+
+        <p><span class="data-badge">📊 1,000 monthly searches for "house flipping calculator" — KD 0</span></p>
+
+        <p>Every successful house flip starts with one thing: <strong>the numbers</strong>. Before you sign a purchase agreement, before you hire a contractor, before you even walk the property a second time — you need to know whether the deal actually makes money.</p>
+
+        <p>That's what this <strong>house flipping calculator</strong> does. Plug in your purchase price, estimated rehab costs, holding costs, selling costs, and after-repair value (ARV), and you'll see your projected net profit and return on investment instantly. No guesswork. No surprises.</p>
+
+        <div class="calc-container">
+            <h2>🔨 House Flipping Profit Calculator</h2>
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label>Purchase Price ($)</label>
+                    <input type="number" id="purchasePrice" placeholder="180000" value="">
+                    <div class="input-hint">What you're paying for the property</div>
+                </div>
+                <div class="calc-field">
+                    <label>After-Repair Value / ARV ($)</label>
+                    <input type="number" id="arv" placeholder="310000" value="">
+                    <div class="input-hint">Estimated sale price after renovations</div>
+                </div>
+                <div class="calc-field">
+                    <label>Rehab / Renovation Costs ($)</label>
+                    <input type="number" id="rehabCosts" placeholder="55000" value="">
+                    <div class="input-hint">Materials, labor, permits, contingency</div>
+                </div>
+                <div class="calc-field">
+                    <label>Closing Costs — Purchase ($)</label>
+                    <input type="number" id="closingBuy" placeholder="3600" value="">
+                    <div class="input-hint">Typically 1-2% of purchase price</div>
+                </div>
+                <div class="calc-field">
+                    <label>Holding Costs — Total ($)</label>
+                    <input type="number" id="holdingCosts" placeholder="8500" value="">
+                    <div class="input-hint">Loan payments, taxes, insurance, utilities during hold</div>
+                </div>
+                <div class="calc-field">
+                    <label>Selling Costs ($)</label>
+                    <input type="number" id="sellingCosts" placeholder="21700" value="">
+                    <div class="input-hint">Agent commissions (5-6%) + closing costs (1-2%)</div>
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calculateFlip()">Calculate Flip Profit</button>
+            <div class="calc-result" id="calcResult">
+                <div class="big-number" id="flipResult">—</div>
+                <div class="verdict" id="flipVerdict"></div>
+                <div class="breakdown" id="flipBreakdown"></div>
+            </div>
+        </div>
+
+        <h2>How the House Flipping Calculator Works</h2>
+
+        <p>This calculator uses the standard fix-and-flip profit formula that professional flippers rely on:</p>
+
+        <div class="highlight-box">
+            <p>📐 Net Profit = ARV − Purchase Price − Rehab Costs − Closing Costs (Buy) − Holding Costs − Selling Costs</p>
+        </div>
+
+        <p>Let's break down each input so you can estimate your numbers accurately, even if this is your first flip.</p>
+
+        <h3>Purchase Price</h3>
+        <p>This is the amount you're paying (or plan to offer) for the property. For a flip to work, you typically need to buy at a significant discount to market value. Most experienced flippers follow the <strong>70% rule</strong>: don't pay more than 70% of the ARV minus repair costs.</p>
+
+        <div class="highlight-box">
+            <p>📐 70% Rule: Maximum Purchase Price = (ARV × 0.70) − Rehab Costs</p>
+        </div>
+
+        <p>For example, if the ARV is $300,000 and rehab costs are $50,000, your maximum offer should be ($300,000 × 0.70) − $50,000 = <strong>$160,000</strong>.</p>
+
+        <h3>After-Repair Value (ARV)</h3>
+        <p>ARV is the estimated market value of the property <strong>after</strong> all renovations are complete. This is the most important — and most dangerous — number in any flip. Overestimate ARV and your "profitable" deal turns into a loss.</p>
+
+        <p>To estimate ARV accurately:</p>
+        <ul>
+            <li><strong>Pull comps:</strong> Look at 3-5 recently sold properties within 0.5 miles that are similar in size, age, and condition (post-renovation)</li>
+            <li><strong>Use price per square foot:</strong> Calculate $/sqft from comps, then multiply by your property's square footage</li>
+            <li><strong>Be conservative:</strong> Use the median of your comps, not the highest sale. Markets can shift during your renovation period</li>
+            <li><strong>Verify with an agent:</strong> A local real estate agent who works with investors can provide a broker price opinion (BPO) or comparative market analysis (CMA)</li>
+        </ul>
+
+        <h3>Rehab / Renovation Costs</h3>
+        <p>This is where most new flippers get burned. Renovation costs almost always exceed initial estimates. Here are typical cost ranges per square foot for different renovation levels:</p>
+
+        <table>
+            <tr><th>Renovation Level</th><th>Cost per Sq Ft</th><th>Typical Scope</th></tr>
+            <tr><td>Cosmetic</td><td>$15 – $30</td><td>Paint, flooring, fixtures, landscaping</td></tr>
+            <tr><td>Moderate</td><td>$30 – $60</td><td>Kitchen/bath remodel, new HVAC, some structural</td></tr>
+            <tr><td>Major</td><td>$60 – $120</td><td>Full gut, foundation work, additions, new systems</td></tr>
+            <tr><td>Luxury Finish</td><td>$100 – $200+</td><td>High-end finishes, custom work, smart home</td></tr>
+        </table>
+
+        <p><strong>Pro tip:</strong> Always add a 10-20% contingency on top of your contractor's estimate. Unexpected issues — mold, bad wiring, plumbing surprises — are the norm, not the exception.</p>
+
+        <h3>Closing Costs (Purchase)</h3>
+        <p>When you buy the property, you'll pay closing costs that typically run <strong>1-2% of the purchase price</strong>. This includes title insurance, escrow fees, recording fees, attorney costs (in some states), and any loan origination fees if you're financing the purchase.</p>
+
+        <p>If you're using a hard money lender, origination fees alone can be 1-3 points (1-3% of the loan amount). Factor these in.</p>
+
+        <h3>Holding Costs</h3>
+        <p>Holding costs are the expenses you pay every month that you own the property. They add up fast, especially if your renovation runs behind schedule. Common holding costs include:</p>
+
+        <ul>
+            <li><strong>Loan payments:</strong> If you financed the purchase with a hard money loan (common rates: 10-14% interest), monthly payments are your biggest holding cost</li>
+            <li><strong>Property taxes:</strong> Pro-rate the annual tax bill for your hold period</li>
+            <li><strong>Insurance:</strong> Builder's risk or vacant property insurance (often higher than standard homeowner's)</li>
+            <li><strong>Utilities:</strong> Electric, water, gas — contractors need these to work</li>
+            <li><strong>HOA fees:</strong> If applicable, these don't stop during renovation</li>
+        </ul>
+
+        <p>The average house flip takes <strong>4-6 months</strong> from purchase to sale. Budget holding costs for at least 6 months. If you can shorten your renovation timeline, holding costs shrink and your profit grows.</p>
+
+        <h3>Selling Costs</h3>
+        <p>When you sell the finished flip, you'll pay:</p>
+
+        <ul>
+            <li><strong>Real estate agent commissions:</strong> Typically 5-6% of the sale price (split between buyer's and seller's agents)</li>
+            <li><strong>Seller closing costs:</strong> Title insurance, transfer taxes, escrow fees — usually 1-2% of the sale price</li>
+            <li><strong>Staging and marketing:</strong> Professional photos, staging furniture ($1,500-$3,000 is common)</li>
+            <li><strong>Buyer concessions:</strong> In some markets, buyers may negotiate seller-paid closing costs or repairs</li>
+        </ul>
+
+        <p>A safe estimate is <strong>7-8% of ARV</strong> for total selling costs. On a $300,000 sale, that's $21,000-$24,000.</p>
+
+        <h2>What's a Good Profit on a House Flip?</h2>
+
+        <p>The answer depends on the deal size and your risk tolerance, but here are industry benchmarks:</p>
+
+        <table>
+            <tr><th>Metric</th><th>Target</th><th>Why It Matters</th></tr>
+            <tr><td>Net Profit</td><td>$30,000 – $50,000+</td><td>Minimum to justify the risk and effort</td></tr>
+            <tr><td>ROI (Return on Investment)</td><td>15% – 25%+</td><td>Measures efficiency of capital deployed</td></tr>
+            <tr><td>Profit Margin</td><td>10% – 15% of ARV</td><td>Quick gauge of deal quality</td></tr>
+            <tr><td>Annualized ROI</td><td>40%+</td><td>Accounts for how fast you turn capital</td></tr>
+        </table>
+
+        <p>If your calculator shows a <strong>net profit below $20,000</strong>, proceed with extreme caution. One unexpected cost overrun — a roof replacement, a foundation issue, a market dip — can wipe out a thin margin entirely.</p>
+
+        <h2>The 70% Rule: A Quick Sanity Check</h2>
+
+        <p>Before you even open this calculator, experienced flippers use the 70% rule as a quick filter. It states that you should pay no more than <strong>70% of the ARV minus repair costs</strong> for a flip property.</p>
+
+        <p>This rule automatically builds in margin for holding costs, selling costs, and profit. It's not perfect for every market (in hot markets, some flippers use 75-80%), but it's a reliable screening tool to quickly eliminate bad deals.</p>
+
+        <h3>Why Deals Fail the 70% Rule</h3>
+        <ul>
+            <li><strong>Overpaying at auction:</strong> Bidding wars push prices above profitable levels</li>
+            <li><strong>Emotional buying:</strong> Falling in love with a property's "potential" instead of running numbers</li>
+            <li><strong>Overestimating ARV:</strong> Assuming the highest comp is realistic rather than the median</li>
+            <li><strong>Underestimating rehab:</strong> Using optimistic contractor bids without adding contingency</li>
+        </ul>
+
+        <h2>Common House Flipping Mistakes (and How to Avoid Them)</h2>
+
+        <ol>
+            <li><strong>Skipping the inspection:</strong> Even for a gut renovation, you need to know about structural issues, environmental hazards (lead paint, asbestos), and code violations before you buy. Budget $400-$600 for a thorough inspection.</li>
+            <li><strong>Over-improving for the neighborhood:</strong> Don't put $80,000 worth of finishes in a $200,000 neighborhood. Your renovation level should match what comparable homes offer — not exceed it.</li>
+            <li><strong>Ignoring holding costs:</strong> A 2-month delay in renovation doesn't just cost you contractor time. It costs loan interest, insurance, taxes, and utilities. Time is your enemy on a flip.</li>
+            <li><strong>Not having a contractor lined up:</strong> Your renovation timeline starts the day you close. If you don't have a vetted contractor ready to start, you're burning holding costs while searching.</li>
+            <li><strong>Forgetting about taxes:</strong> Short-term capital gains (flips held under 12 months) are taxed as ordinary income. That means 22-37% in federal taxes depending on your bracket, plus state taxes. Always factor taxes into your true profit calculation.</li>
+        </ol>
+
+        <h2>How to Find Deals That Actually Work</h2>
+
+        <p>The math is simple. Finding properties where the math works — that's the hard part. Here are the most reliable deal sources for house flippers:</p>
+
+        <ul>
+            <li><strong>Foreclosure auctions:</strong> Court-ordered sales often price properties below market. But you're buying as-is with limited inspection access.</li>
+            <li><strong>Wholesalers:</strong> Investors who put properties under contract and assign them to you for a fee. Good wholesalers bring deals that already pass the 70% rule.</li>
+            <li><strong>Direct mail / driving for dollars:</strong> Target distressed properties (overgrown yards, boarded windows, code violations) with direct outreach to owners.</li>
+            <li><strong>MLS deals:</strong> Rare, but properties that have sat on market 60+ days with multiple price reductions can sometimes work.</li>
+            <li><strong>Estate sales and probate:</strong> Inherited properties where heirs want a quick cash sale can offer excellent margins.</li>
+        </ul>
+
+        <h2>House Flipping Calculator: Sample Deal Walkthrough</h2>
+
+        <p>Let's run through a realistic example to show how the numbers come together:</p>
+
+        <table>
+            <tr><th>Item</th><th>Amount</th><th>Notes</th></tr>
+            <tr><td>Purchase Price</td><td>$165,000</td><td>Off-market deal from a wholesaler</td></tr>
+            <tr><td>Closing Costs (Buy)</td><td>$3,300</td><td>2% of purchase price</td></tr>
+            <tr><td>Rehab Costs</td><td>$52,000</td><td>Kitchen, 2 baths, flooring, paint, landscaping</td></tr>
+            <tr><td>Holding Costs (5 months)</td><td>$9,500</td><td>Hard money interest + taxes + insurance + utilities</td></tr>
+            <tr><td>ARV (Sale Price)</td><td>$295,000</td><td>Based on 4 comps within 0.3 miles</td></tr>
+            <tr><td>Selling Costs</td><td>$20,650</td><td>7% of ARV (agent commissions + closing)</td></tr>
+            <tr><td><strong>Net Profit</strong></td><td><strong>$44,550</strong></td><td><strong>ROI: 19.4% on total investment</strong></td></tr>
+        </table>
+
+        <p>That's a solid deal. The flipper invested $229,800 total and walked away with $44,550 in profit — a 19.4% return in 5 months. Annualized, that's nearly 47% ROI.</p>
+
+        <h2>Should You Finance or Pay Cash?</h2>
+
+        <p>Both approaches work, but they change your profit calculation significantly:</p>
+
+        <ul>
+            <li><strong>Cash buyers</strong> eliminate loan interest from holding costs, close faster (attractive to sellers), and avoid origination fees. But your capital is tied up in one deal at a time.</li>
+            <li><strong>Hard money / private money</strong> lets you flip with less capital and do multiple deals simultaneously. But interest rates (10-14%) and origination fees (1-3 points) eat into profit.</li>
+            <li><strong>Conventional loans</strong> offer the best rates but are rarely practical for flips due to slow closing times and condition requirements.</li>
+        </ul>
+
+        <p>The right choice depends on your available capital and deal flow. Many successful flippers start with cash on their first deal, prove the concept, then scale using leverage on subsequent flips.</p>
+
+        <div class="cta-box">
+            <h3>Ready to Build a Property Business That Scales?</h3>
+            <p>The PropertyCEO Growth Playbook teaches you how to systematize deal analysis, marketing, and operations — so you can go from one flip to a repeatable, profitable property business.</p>
+            <a href="/buy" class="btn-primary">Get the Growth Playbook — $197</a>
+            <div class="price">One-time purchase · Instant access · No subscription</div>
+        </div>
+
+        <h2>Related Calculators</h2>
+        <ul>
+            <li><a href="/blog/cap-rate-calculator" style="color:var(--accent)">Cap Rate Calculator</a></li>
+            <li><a href="/blog/cash-on-cash-return-calculator" style="color:var(--accent)">Cash on Cash Return Calculator</a></li>
+            <li><a href="/blog/rental-property-roi-calculator" style="color:var(--accent)">Rental Property ROI Calculator</a></li>
+        </ul>
+    </article>
+    <footer><p>&copy; 2026 PropertyCEO. Built for property managers and investors who want to build real businesses.</p></footer>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+    function calculateFlip(){
+        const pp=parseFloat(document.getElementById('purchasePrice').value)||0;
+        const arv=parseFloat(document.getElementById('arv').value)||0;
+        const rehab=parseFloat(document.getElementById('rehabCosts').value)||0;
+        const closeBuy=parseFloat(document.getElementById('closingBuy').value)||0;
+        const holding=parseFloat(document.getElementById('holdingCosts').value)||0;
+        const selling=parseFloat(document.getElementById('sellingCosts').value)||0;
+
+        if(pp<=0||arv<=0){alert('Please enter at least the purchase price and ARV');return}
+
+        const totalCosts=pp+rehab+closeBuy+holding+selling;
+        const netProfit=arv-totalCosts;
+        const roi=totalCosts>0?((netProfit/totalCosts)*100):0;
+        const profitMargin=arv>0?((netProfit/arv)*100):0;
+        const maxOffer=(arv*0.70)-rehab;
+
+        const el=document.getElementById('calcResult');
+        const numEl=document.getElementById('flipResult');
+        const verdictEl=document.getElementById('flipVerdict');
+        const breakdownEl=document.getElementById('flipBreakdown');
+
+        const sign=netProfit>=0?'+$':'-$';
+        const absProfit=Math.abs(netProfit);
+        numEl.textContent=(netProfit>=0?'+$':'-$')+absProfit.toLocaleString(undefined,{maximumFractionDigits:0});
+        numEl.className='big-number '+(netProfit>=30000?'good':netProfit>=10000?'ok':'low');
+
+        let verdict='';
+        if(netProfit>=50000)verdict='🟢 Excellent deal — strong profit margin with room for surprises';
+        else if(netProfit>=30000)verdict='🟢 Solid deal — good profit if your estimates hold';
+        else if(netProfit>=15000)verdict='🟡 Thin margin — one cost overrun could erase your profit';
+        else if(netProfit>=0)verdict='🟠 Barely profitable — high risk of breaking even or losing money';
+        else verdict='🔴 This deal loses money. Walk away or renegotiate the purchase price.';
+
+        verdictEl.textContent=verdict;
+
+        breakdownEl.innerHTML=`
+            <div><span>After-Repair Value (ARV)</span><span>$${arv.toLocaleString()}</span></div>
+            <div><span>Purchase Price</span><span>-$${pp.toLocaleString()}</span></div>
+            <div><span>Rehab / Renovation Costs</span><span>-$${rehab.toLocaleString()}</span></div>
+            <div><span>Closing Costs (Purchase)</span><span>-$${closeBuy.toLocaleString()}</span></div>
+            <div><span>Holding Costs</span><span>-$${holding.toLocaleString()}</span></div>
+            <div><span>Selling Costs</span><span>-$${selling.toLocaleString()}</span></div>
+            <div style="border-top:2px solid rgba(255,255,255,.15);padding-top:8px;margin-top:4px"><span><strong>Net Profit</strong></span><span><strong>${netProfit>=0?'+':''}$${netProfit.toLocaleString()}</strong></span></div>
+            <div><span><strong>ROI</strong></span><span><strong>${roi.toFixed(1)}%</strong></span></div>
+            <div><span><strong>Profit Margin (% of ARV)</strong></span><span><strong>${profitMargin.toFixed(1)}%</strong></span></div>
+            <div style="border-top:2px solid rgba(255,255,255,.15);padding-top:8px;margin-top:4px"><span>70% Rule Max Offer</span><span>$${maxOffer.toLocaleString(undefined,{maximumFractionDigits:0})}</span></div>
+            <div><span>Total Investment</span><span>$${totalCosts.toLocaleString()}</span></div>
+        `;
+        el.classList.add('show');
+    }
+    </script>
+</body>
+</html>
