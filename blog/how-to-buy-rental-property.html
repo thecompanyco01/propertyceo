@@ -233,5 +233,41 @@
             <p style="margin-top: 0.5rem;"><a href="/blog/">Blog</a> · <a href="/courses">Products</a> · <a href="/free-checklist/">Free Checklist</a></p>
         </div>
     </footer>
+    <script defer data-domain="thepropertyceo.com" src="https://plausible.io/js/script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+<!-- Email Capture Bar -->
+<div id="email-bar" style="position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#16213e,#1a1a2e);border-top:2px solid rgba(233,69,96,0.4);padding:16px 24px;z-index:9999;transform:translateY(100%);transition:transform 0.4s ease;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+<div style="flex:1;min-width:200px;max-width:400px">
+<div style="font-size:15px;font-weight:800;color:#eaeaea;margin-bottom:2px">📋 Free PM Growth Checklist</div>
+<div style="font-size:13px;color:#a0a0b0">The 10-step framework top PMs use to add 50+ doors/quarter</div>
+</div>
+<form id="capture-form" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<input type="email" id="capture-email" placeholder="Enter your email" required style="padding:10px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#eaeaea;font-size:14px;font-family:inherit;min-width:220px;outline:none">
+<button type="submit" style="padding:10px 20px;border-radius:8px;border:none;background:#e94560;color:white;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap">Get Free Checklist →</button>
+</form>
+<button onclick="document.getElementById('email-bar').style.transform='translateY(100%)';sessionStorage.setItem('bar-dismissed','1')" style="background:none;border:none;color:#a0a0b0;cursor:pointer;font-size:18px;padding:4px 8px;line-height:1" aria-label="Close">✕</button>
+</div>
+<script>
+(function(){
+if(sessionStorage.getItem('bar-dismissed'))return;
+var bar=document.getElementById('email-bar');
+var shown=false;
+function showBar(){if(!shown&&!sessionStorage.getItem('bar-dismissed')){shown=true;bar.style.transform='translateY(0)';}}
+setTimeout(showBar,15000);
+var scrollCheck=function(){if(window.scrollY>800)showBar();};
+window.addEventListener('scroll',scrollCheck,{passive:true});
+document.getElementById('capture-form').addEventListener('submit',function(e){
+e.preventDefault();
+var email=document.getElementById('capture-email').value;
+var btn=this.querySelector('button');
+btn.textContent='Sending...';btn.disabled=true;
+fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,timestamp:new Date().toISOString()})})
+.then(function(r){return r.json()})
+.then(function(){btn.textContent='✓ Check your email!';btn.style.background='#00d26a';sessionStorage.setItem('bar-dismissed','1');setTimeout(function(){bar.style.transform='translateY(100%)';},3000);})
+.catch(function(){btn.textContent='Try again';btn.disabled=false;});
+});
+})();
+</script>
+
 </body>
 </html>
