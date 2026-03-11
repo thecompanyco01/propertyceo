@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You — Your Purchase is Ready | PropertyCEO</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary:#1a1a2e;--accent:#e94560;--accent-hover:#d63851;--bg:#0f0f1a;--card-bg:#16213e;--text:#eaeaea;--text-muted:#a0a0b0;--success:#00d26a}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+        nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}
+        .logo{font-size:24px;font-weight:800;text-decoration:none;color:var(--text)}
+        .logo span{color:var(--accent)}
+        .container{max-width:800px;margin:0 auto;padding:40px 24px 80px;text-align:center}
+        .success-icon{font-size:64px;margin-bottom:20px}
+        h1{font-size:36px;font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
+        h1 span{color:var(--success)}
+        .subtitle{color:var(--text-muted);font-size:18px;margin-bottom:40px}
+        .download-section{margin:40px 0}
+        .download-section h2{font-size:24px;font-weight:800;margin-bottom:24px;letter-spacing:-0.5px}
+        .download-card{background:var(--card-bg);border-radius:16px;padding:24px 28px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border:1px solid rgba(255,255,255,0.05);text-align:left}
+        .download-card .info h3{font-size:16px;font-weight:700;margin-bottom:4px}
+        .download-card .info p{color:var(--text-muted);font-size:13px;margin:0}
+        .download-btn{display:inline-block;background:var(--success);color:white;padding:10px 24px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:all 0.2s}
+        .download-btn:hover{background:#00b85d;transform:translateY(-1px)}
+        .download-btn.secondary{background:transparent;border:2px solid var(--success);color:var(--success)}
+        .download-btn.secondary:hover{background:rgba(0,210,106,0.1)}
+        .product-group{margin:32px 0;padding:24px 0;border-top:1px solid rgba(255,255,255,0.05)}
+        .product-group:first-child{border-top:none}
+        .product-group h3{font-size:18px;font-weight:800;margin-bottom:16px;text-align:left}
+        .product-group .badge{display:inline-block;background:rgba(0,210,106,0.15);color:var(--success);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-left:8px}
+        .help-section{background:var(--card-bg);border-radius:16px;padding:32px;margin-top:48px;border:1px solid rgba(255,255,255,0.05)}
+        .help-section h3{font-size:18px;font-weight:700;margin-bottom:12px}
+        .help-section p{color:var(--text-muted);font-size:15px;margin:0}
+        .help-section a{color:var(--accent);text-decoration:none}
+        footer{text-align:center;padding:40px;color:var(--text-muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.05);margin-top:60px}
+        footer a{color:var(--accent);text-decoration:none}
+
+        /* Product-specific sections - shown/hidden by JS */
+        .product-downloads{display:none}
+        .product-downloads.active{display:block}
+
+        @media(max-width:600px){
+            .container{padding:24px 16px 60px}
+            h1{font-size:28px}
+            .download-card{flex-direction:column;align-items:flex-start}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Property<span>CEO</span></a>
+    </nav>
+
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Thank You for Your <span>Purchase!</span></h1>
+        <p class="subtitle">Your files are ready to download. We've also sent a confirmation email with your download links.</p>
+
+        <!-- Growth Playbook Downloads -->
+        <div class="product-downloads" id="playbook-downloads">
+            <div class="download-section">
+                <h2>📘 The PM Growth Playbook</h2>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>Growth Playbook (PDF)</h3>
+                        <p>50 pages · 10,800+ words · 8 chapters of growth strategy</p>
+                    </div>
+                    <a href="/downloads/growth-playbook.pdf" class="download-btn" download>⬇ Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toolkit Downloads -->
+        <div class="product-downloads" id="toolkit-downloads">
+            <div class="download-section">
+                <h2>🎯 Owner Acquisition Toolkit</h2>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>Owner Acquisition Toolkit (PDF)</h3>
+                        <p>42 pages · 56 ready-to-use templates, scripts & sequences</p>
+                    </div>
+                    <a href="/downloads/owner-acquisition-toolkit.pdf" class="download-btn" download>⬇ Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial Model Downloads -->
+        <div class="product-downloads" id="financial-downloads">
+            <div class="download-section">
+                <h2>💰 PM Financial Model</h2>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>Business P&L Model (Excel)</h3>
+                        <p>Revenue model, expense tracking, 12-month projection, 3-year growth plan</p>
+                    </div>
+                    <a href="/downloads/pm-business-pnl.xlsx" class="download-btn" download>⬇ Download Excel</a>
+                </div>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>Unit Economics Calculator (Excel)</h3>
+                        <p>Per-door profitability analysis, portfolio view, scenario modeling</p>
+                    </div>
+                    <a href="/downloads/unit-economics-calculator.xlsx" class="download-btn" download>⬇ Download Excel</a>
+                </div>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>KPI Dashboard Tracker (Excel)</h3>
+                        <p>Monthly KPI tracking with industry benchmarks and auto-scoring</p>
+                    </div>
+                    <a href="/downloads/kpi-dashboard.xlsx" class="download-btn" download>⬇ Download Excel</a>
+                </div>
+                <div class="download-card">
+                    <div class="info">
+                        <h3>Financial Model Guide (PDF)</h3>
+                        <p>Setup guide explaining every formula, metric, and how to customize</p>
+                    </div>
+                    <a href="/downloads/financial-model-guide.pdf" class="download-btn secondary" download>⬇ Download Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bundle / Pro - shows everything -->
+        <div class="product-downloads" id="bundle-downloads">
+            <div class="download-section">
+                <h2>📦 Your Complete Bundle</h2>
+                <p style="color:var(--text-muted);margin-bottom:24px">All PropertyCEO products included. Download each file below.</p>
+
+                <div class="product-group">
+                    <h3>📘 Growth Playbook</h3>
+                    <div class="download-card">
+                        <div class="info">
+                            <h3>Growth Playbook (PDF)</h3>
+                            <p>50 pages · 10,800+ words · 8 chapters</p>
+                        </div>
+                        <a href="/downloads/growth-playbook.pdf" class="download-btn" download>⬇ Download</a>
+                    </div>
+                </div>
+
+                <div class="product-group">
+                    <h3>🎯 Owner Acquisition Toolkit</h3>
+                    <div class="download-card">
+                        <div class="info">
+                            <h3>Acquisition Toolkit (PDF)</h3>
+                            <p>42 pages · 56 templates & scripts</p>
+                        </div>
+                        <a href="/downloads/owner-acquisition-toolkit.pdf" class="download-btn" download>⬇ Download</a>
+                    </div>
+                </div>
+
+                <div class="product-group">
+                    <h3>💰 Financial Model</h3>
+                    <div class="download-card">
+                        <div class="info"><h3>Business P&L Model</h3><p>Excel spreadsheet with formulas</p></div>
+                        <a href="/downloads/pm-business-pnl.xlsx" class="download-btn" download>⬇ Download</a>
+                    </div>
+                    <div class="download-card" style="margin-top:12px">
+                        <div class="info"><h3>Unit Economics Calculator</h3><p>Per-door profitability analysis</p></div>
+                        <a href="/downloads/unit-economics-calculator.xlsx" class="download-btn" download>⬇ Download</a>
+                    </div>
+                    <div class="download-card" style="margin-top:12px">
+                        <div class="info"><h3>KPI Dashboard Tracker</h3><p>Monthly KPI tracking with benchmarks</p></div>
+                        <a href="/downloads/kpi-dashboard.xlsx" class="download-btn" download>⬇ Download</a>
+                    </div>
+                    <div class="download-card" style="margin-top:12px">
+                        <div class="info"><h3>Financial Model Guide</h3><p>Setup instructions & reference</p></div>
+                        <a href="/downloads/financial-model-guide.pdf" class="download-btn secondary" download>⬇ Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fallback: show all downloads if no product param -->
+        <div class="product-downloads" id="all-downloads">
+            <div class="download-section">
+                <h2>Your Downloads</h2>
+                <div class="download-card">
+                    <div class="info"><h3>📘 Growth Playbook (PDF)</h3><p>50 pages · 8 chapters of growth strategy</p></div>
+                    <a href="/downloads/growth-playbook.pdf" class="download-btn" download>⬇ Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="info"><h3>🎯 Acquisition Toolkit (PDF)</h3><p>42 pages · 56 templates & scripts</p></div>
+                    <a href="/downloads/owner-acquisition-toolkit.pdf" class="download-btn" download>⬇ Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="info"><h3>💰 Business P&L Model (Excel)</h3><p>Revenue, expenses, projections</p></div>
+                    <a href="/downloads/pm-business-pnl.xlsx" class="download-btn" download>⬇ Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="info"><h3>📊 Unit Economics Calculator (Excel)</h3><p>Per-door profitability analysis</p></div>
+                    <a href="/downloads/unit-economics-calculator.xlsx" class="download-btn" download>⬇ Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="info"><h3>📈 KPI Dashboard Tracker (Excel)</h3><p>Monthly tracking with benchmarks</p></div>
+                    <a href="/downloads/kpi-dashboard.xlsx" class="download-btn" download>⬇ Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="info"><h3>📖 Financial Model Guide (PDF)</h3><p>Setup guide & reference</p></div>
+                    <a href="/downloads/financial-model-guide.pdf" class="download-btn secondary" download>⬇ Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="help-section">
+            <h3>Need Help?</h3>
+            <p>Questions about your purchase or the content? Email us at <a href="mailto:hello@thepropertyceo.com">hello@thepropertyceo.com</a> — we typically respond within 24 hours.</p>
+            <p style="margin-top:12px">Bookmark this page to access your downloads anytime.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PropertyCEO. All rights reserved. | <a href="/">Home</a> | <a href="/blog">Blog</a> | <a href="/buy">Products</a></p>
+    </footer>
+
+    <script>
+    // Show the right product downloads based on URL parameter
+    (function(){
+        var params = new URLSearchParams(window.location.search);
+        var product = params.get('product');
+        
+        var map = {
+            'playbook': 'playbook-downloads',
+            'toolkit': 'toolkit-downloads',
+            'financial': 'financial-downloads',
+            'bundle': 'bundle-downloads',
+            'pro': 'bundle-downloads'
+        };
+        
+        var target = map[product] || 'all-downloads';
+        document.getElementById(target).classList.add('active');
+    })();
+    </script>
+    <script defer data-domain="thepropertyceo.com" src="https://plausible.io/js/script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
